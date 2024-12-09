@@ -21,14 +21,14 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 
 // Material Kit 2 React examples
-import RotatingCard from "examples/Cards/RotatingCard";
-import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
-import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
+import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 
 function Information() {
   return (
@@ -39,24 +39,24 @@ function Information() {
             <RotatingCard>
               <RotatingCardFront
                 image={bgFront}
-                icon="touch_app"
+                icon="phone"
                 title={
                   <>
-                    Feel the
+                    Indian jaya
                     <br />
-                    Material Kit
+                    081212154019
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="                                                                                          "
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Hubungi Kami"
+                // description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "https://wa.me/081212154019",
+                  label: "Klik Disini",
                 }}
               />
             </RotatingCard>
@@ -66,16 +66,16 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  title="Free Pemasangan"
+                  description="Gratis jasa pemasangan produk yang telah dipesan oleh konsumen."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  title="Free Survey"
+                  description="Gratis untuk survei menuju lokasi konsumen dalam mengukur produk yang dipesan
+."
                 />
               </Grid>
             </Grid>
@@ -83,15 +83,15 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  title="Free Ongkir"
+                  description="Gratis untuk jasa pengiriman area Jabodetabek."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
+                  title="Free Gambar Kerja"
+                  description="Gratis unutk biaya gambar kerja sebagai gambaran produk untuk Konsumen."
                 />
               </Grid>
             </Grid>

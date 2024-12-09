@@ -16,21 +16,17 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
+import Carousel from "react-material-ui-carousel";
 
 // Material Kit 2 React examples
-import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
+// import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
 
 function Information() {
   return (
@@ -44,43 +40,70 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Trusted by over</MKTypography>
+          <MKTypography variant="h2">Telah Dipercaya Oleh</MKTypography>
           <MKTypography variant="h2" color="info" textGradient mb={2}>
-            1,679,477+ web developers
+            2.000+ Customer
           </MKTypography>
           <MKTypography variant="body1" color="text" mb={2}>
-            Many Fortune 500 companies, startups, universities and governmental institutions love
-            Creative Tim&apos;s products.
+            Selama pengalaman 15 Tahun ini kami telah mengerjakan berbagai macam project dan telah
+            melayani 2000+ Costumer.
           </MKTypography>
         </Grid>
-        <Grid container spacing={3} sx={{ mt: 8 }}>
+        {/* <Grid container spacing={3} sx={{ mt: 8 }}>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Nick Willever"
+              name="Ahmad Subakir"
               date="1 day ago"
-              review="This is an excellent product, the documentation is excellent and helped me get things done more efficiently."
+              review="Sudah lebih dari 15 tahun Bengkel Las India Jaya ada di sekitar sini, dan saya sudah sering memesan berbagai produk las dari mereka. Teralis yang saya pesan terakhir ini sangat kuat dan desainnya elegan. Harganya juga terjangkau untuk kualitas yang diberikan. Saya tidak ragu merekomendasikan mereka ke teman-teman saya!"
               rating={5}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
               color="info"
-              name="Shailesh Kushwaha"
+              name="Rahmat Hidayat"
               date="1 week ago"
-              review="I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!"
+              review="Layanan dari India Jaya benar-benar luar biasa! Saya membuat kanopi untuk garasi, dan hasilnya lebih dari ekspektasi. Timnya sangat profesional, ramah, dan detail dalam pekerjaannya. Saya sudah menjadi pelanggan setia selama bertahun-tahun, dan mereka selalu konsisten memberikan hasil terbaik. Terima kasih, India Jaya!"
               rating={5}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Samuel Kamuli"
+              name="Agus Setiawan"
               date="3 weeks ago"
-              review="Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to spend more time on the backend!."
+              review="Saya sangat puas dengan hasil kerja Bengkel Las India Jaya. Saya memesan pagar untuk rumah, dan hasilnya sangat rapi serta kokoh. Proses pengerjaannya juga cepat, dan mereka sangat komunikatif dalam menyesuaikan desain sesuai keinginan saya. Lokasinya strategis di Pondok Petir, jadi mudah diakses. Highly recommended!."
               rating={5}
             />
           </Grid>
-        </Grid>
-        <Divider sx={{ my: 6 }} />
+        </Grid> */}
+        <Carousel autoPlay={true} interval={2000}>
+          <Grid item xs={12} md={6} lg={4}>
+            <DefaultReviewCard
+              name="Ahmad Subakir"
+              date="1 hari yang lalu"
+              review="Sudah lebih dari 15 tahun Bengkel Las India Jaya ada di sekitar sini, dan saya sudah sering memesan berbagai produk las dari mereka. Teralis yang saya pesan terakhir ini sangat kuat dan desainnya elegan. Harganya juga terjangkau untuk kualitas yang diberikan. Saya tidak ragu merekomendasikan mereka ke teman-teman saya!"
+              rating={5}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <DefaultReviewCard
+              color="info"
+              name="Rahmat Hidayat"
+              date="1 minggu yang lalu"
+              review="Layanan dari India Jaya benar-benar luar biasa! Saya membuat kanopi untuk garasi, dan hasilnya lebih dari ekspektasi. Timnya sangat profesional, ramah, dan detail dalam pekerjaannya. Saya sudah menjadi pelanggan setia selama bertahun-tahun, dan mereka selalu konsisten memberikan hasil terbaik. Terima kasih, India Jaya!"
+              rating={5}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <DefaultReviewCard
+              name="Agus Setiawan"
+              date="3 minggu yang lalu"
+              review="Saya sangat puas dengan hasil kerja Bengkel Las India Jaya. Saya memesan pagar untuk rumah, dan hasilnya sangat rapi serta kokoh. Proses pengerjaannya juga cepat, dan mereka sangat komunikatif dalam menyesuaikan desain sesuai keinginan saya. Lokasinya strategis di Pondok Petir, jadi mudah diakses. Highly recommended!."
+              rating={5}
+            />
+          </Grid>
+        </Carousel>
+        {/* <Divider sx={{ my: 6 }} />
         <Grid container spacing={3} justifyContent="center">
           <Grid item xs={6} md={4} lg={2}>
             <MKBox component="img" src={appleLogo} alt="Apple" width="100%" opacity={0.6} />
@@ -103,7 +126,7 @@ function Information() {
               opacity={0.6}
             />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </MKBox>
   );

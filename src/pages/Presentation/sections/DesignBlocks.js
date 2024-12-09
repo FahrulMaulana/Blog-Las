@@ -21,8 +21,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Presentation page components
@@ -73,17 +73,14 @@ function DesignBlocks() {
           <MKBadge
             variant="contained"
             color="info"
-            badgeContent="Infinite combinations"
+            badgeContent="Portofolio"
             container
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Huge collection of sections
+            Produk Kami
           </MKTypography>
-          <MKTypography variant="body1" color="text">
-            We have created multiple options for you to put together and customise into pixel
-            perfect pages.
-          </MKTypography>
+          <MKTypography variant="body1" color="text"></MKTypography>
         </Grid>
       </Container>
       <Container sx={{ mt: 6 }}>{renderData}</Container>

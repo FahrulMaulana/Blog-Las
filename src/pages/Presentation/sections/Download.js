@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Tooltip from "@mui/material/Tooltip";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -50,30 +49,30 @@ function Download() {
         <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
           <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography variant="h3" color="white">
-              Do you love this awesome
+              Tunggu Apalagi
             </MKTypography>
             <MKTypography variant="h3" color="white" mb={1}>
-              UI Kit for ReactJS &amp; MUI?
+              , Segera Hubungi Kami
             </MKTypography>
-            <MKTypography variant="body2" color="white" mb={6}>
+            {/* <MKTypography variant="body2" color="white" mb={6}>
               Cause if you do, it can be yours for FREE. Hit the button below to navigate to
               Creative Tim where you can find the Design System in HTML. Start a new project or give
               an old Bootstrap project a new look!
-            </MKTypography>
+            </MKTypography> */}
             <MKButton
               variant="gradient"
               color="info"
               size="large"
               component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
-              sx={{ mb: 2 }}
+              href=" https://wa.me/081212154019"
+              sx={{ mb: 2, mt: 4 }}
             >
-              Download Now
+              Hubungi Kami
             </MKButton>
           </Grid>
         </Container>
       </MKBox>
-      <Container>
+      {/* <Container>
         <Grid container item xs={6} mx="auto">
           <MKBox textAlign="center">
             <MKTypography variant="h3" mt={6} mb={3}>
@@ -181,7 +180,7 @@ function Download() {
             </Grid>
           </MKBox>
         </Grid>
-      </Container>
+      </Container> */}
     </MKBox>
   );
 }
