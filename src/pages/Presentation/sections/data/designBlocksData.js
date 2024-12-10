@@ -38,7 +38,8 @@ import teralis4 from "assets/images/teralis/teralis4.jpg";
 export default [
   {
     title: "Kanopi",
-    description: "A selection of 45 page sections that fit perfectly in any combination",
+    description:
+      "Pelindung praktis dengan desain modern untuk kenyamanan dan estetika bangunan Anda",
     items: [
       {
         image: `${kanopi1}`,
@@ -56,7 +57,7 @@ export default [
   },
   {
     title: "Pagar",
-    description: "30+ components that will help go through the pages",
+    description: "Kokoh dan elegan untuk keamanan serta keindahan properti Anda.",
     items: [
       {
         image: `${pagar7}`,
@@ -77,7 +78,7 @@ export default [
   },
   {
     title: "Tangga",
-    description: "50+ elements that you need for text manipulation and insertion",
+    description: "Kuat, fungsional, dan estetis untuk melengkapi ruang Anda.",
     items: [
       {
         image: `${tangga1}`,
@@ -95,7 +96,7 @@ export default [
   },
   {
     title: "Kusen Alumunium",
-    description: "20+ Fully coded components that popup from different places of the screen",
+    description: "Kuat, tahan karat, dan bergaya modern untuk pintu dan jendela Anda.",
     items: [
       {
         image: `${kusen1}`,
@@ -113,7 +114,7 @@ export default [
   },
   {
     title: "Teralis",
-    description: "80+ carefully crafted small elements that come with multiple colors and shapes",
+    description: "Perlindungan kokoh dengan desain estetis untuk keamanan dan keindahan rumah Anda",
     items: [
       {
         image: `${teralis}`,

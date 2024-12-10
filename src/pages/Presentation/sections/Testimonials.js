@@ -79,8 +79,17 @@ function Information() {
         <Carousel autoPlay={true} interval={2000}>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Ahmad Subakir"
-              date="1 hari yang lalu"
+              color="info"
+              name="Ujang Suryana"
+              date="1 minggu yang lalu"
+              review="Bengkel Las India Jaya selalu memberikan hasil yang memuaskan. Saya sering memesan berbagai produk las dari mereka, dan setiap kali hasilnya selalu bagus. Terakhir, saya memesan pagar dan sangat puas dengan kekokohan serta desainnya. Harganya juga terjangkau untuk kualitas yang diberikan. Sangat merekomendasikan bengkel ini!"
+              rating={5}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <DefaultReviewCard
+              name="Bagus Subakir"
+              date="1 bulan yang lalu"
               review="Sudah lebih dari 15 tahun Bengkel Las India Jaya ada di sekitar sini, dan saya sudah sering memesan berbagai produk las dari mereka. Teralis yang saya pesan terakhir ini sangat kuat dan desainnya elegan. Harganya juga terjangkau untuk kualitas yang diberikan. Saya tidak ragu merekomendasikan mereka ke teman-teman saya!"
               rating={5}
             />

@@ -34,7 +34,7 @@ function Counters() {
               count={15}
               suffix=" Tahun"
               title="Berpengalaman"
-              description="From buttons, to inputs, navbars, alerts or cards, you are covered"
+              description="Dengan lebih dari 15 tahun pengalaman, kami telah melayani berbagai kebutuhan pelanggan dengan hasil yang memuaskan dan kualitas terbaik."
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
@@ -43,7 +43,7 @@ function Counters() {
               count={100}
               suffix=".000"
               title="Mulai Dari"
-              description="Mix the sections, change the colors and unleash your creativity"
+              description="Kami menawarkan layanan dengan harga terjangkau, mulai dari hanya Rp 100.000, tanpa mengurangi kualitas dan ketelitian pengerjaan."
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
@@ -52,7 +52,7 @@ function Counters() {
               count={3}
               title="Estimasi"
               suffix=" Hari"
-              description="Save 3-4 weeks of work when you use our pre-made pages for your website"
+              description="Cepat dan tepat waktu! Kami dapat menyelesaikan pekerjaan Anda hanya dalam waktu 3 hari, tergantung pada tingkat kerumitan proyek."
             />
           </Grid>
         </Grid>

@@ -91,7 +91,7 @@ function Information() {
                 <DefaultInfoCard
                   icon="devices"
                   title="Free Gambar Kerja"
-                  description="Gratis unutk biaya gambar kerja sebagai gambaran produk untuk Konsumen."
+                  description="Gratis untuk biaya gambar kerja sebagai gambaran produk untuk Konsumen."
                 />
               </Grid>
             </Grid>
