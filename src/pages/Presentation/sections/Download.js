@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /*
 =========================================================
 * Material Kit 2 React - v2.1.0
@@ -46,26 +47,26 @@ function Download() {
           zIndex={1}
           opacity={0.2}
         />
-        <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
-          <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
-            <MKTypography variant="h3" color="white">
-              Tunggu Apalagi
-            </MKTypography>
-            <MKTypography variant="h3" color="white" mb={1}>
-              , Segera Hubungi Kami
-            </MKTypography>
-            <MKButton
-              variant="gradient"
-              color="info"
-              size="large"
-              component="a"
-              href=" https://wa.me/081212154019"
-              sx={{ mb: 2, mt: 4 }}
-            >
-              Hubungi Kami
-            </MKButton>
-          </Grid>
-        </Container>
+       <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
+  <Grid container item xs={12} md={7} direction="column" alignItems="center" mx="auto" textAlign="center">
+    <MKTypography variant="h3" color="white">
+      Tunggu Apalagi
+    </MKTypography>
+    <MKTypography variant="h3" color="white" mb={1}>
+      Segera Hubungi Kami
+    </MKTypography>
+    <MKButton
+      variant="gradient"
+      color="info"
+      size="large"
+      component="a"
+      href=" https://wa.me/081212154019"
+      sx={{ mb: 2, mt: 4 }}
+    >
+      Hubungi Kami
+    </MKButton>
+  </Grid>
+</Container>
       </MKBox>
     </MKBox>
   );
