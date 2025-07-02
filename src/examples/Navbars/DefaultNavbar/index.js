@@ -81,14 +81,17 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
-  const renderNavbarItems = routes.map(({ name, icon, href, route, collapse }) => (
+  const renderNavbarItems = routes.map(({ name, icon, route, collapse }) => (
     <DefaultNavbarDropdown
       key={name}
       name={name}
       icon={icon}
-      href={href}
-      route={route}
+      href={typeof route === "string" ? route : ""}
+      route={typeof route === "string" ? route : ""}
       collapse={Boolean(collapse)}
+      onClick={() => {
+        if (typeof route === "function") route();
+      }}
       onMouseEnter={({ currentTarget }) => {
         if (collapse) {
           setDropdown(currentTarget);

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
 =========================================================
 * Material Kit 2 React - v2.1.0
@@ -39,16 +40,23 @@ function DefaultNavbarMobile({ routes, open }) {
 
   const renderNavbarItems = routes.map(
     ({ name, icon, collapse: routeCollapses, href, route, collapse: navCollapse }) => (
-      <DefaultNavbarDropdown
-        key={name}
-        name={name}
-        icon={icon}
-        collapseStatus={name === collapse}
-        onClick={() => handleSetCollapse(name)}
-        href={href}
-        route={route}
-        collapse={Boolean(navCollapse)}
-      >
+<DefaultNavbarDropdown
+  key={name}
+  name={name}
+  icon={icon}
+  collapseStatus={name === collapse}
+  onClick={() => {
+    if (typeof route === "function") {
+      route(); // Eksekusi scroll handler
+      setCollapse(""); // Tutup dropdown jika sedang terbuka
+    } else {
+      handleSetCollapse(name); // Expand jika ada sub menu
+    }
+  }}
+  href={href}
+  route={typeof route !== "function" ? route : ""}
+  collapse={Boolean(navCollapse)}
+>
         <MKBox sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}>
           {routeCollapses &&
             routeCollapses.map((item) => (
