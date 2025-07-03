@@ -171,7 +171,7 @@ function Presentation() {
         zIndex="1000"
         sx={{
           cursor: "pointer",
-          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.)",
           borderRadius: "50%",
         }}
         onClick={() => window.open("https://wa.me/081212154019", "_blank")}
