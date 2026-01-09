@@ -23,7 +23,12 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 // @mui icons
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import CallIcon from '@mui/icons-material/Call';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import CheckIcon from '@mui/icons-material/Check';
+import HandshakeIcon from '@mui/icons-material/Handshake';
+// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import StarIcon from "@mui/icons-material/Star";
 import EngineeringIcon from "@mui/icons-material/Engineering";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -37,7 +42,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // Presentation page sections - Priority Load
-import Counters from "pages/Presentation/sections/Counters";
+// import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
 
 // Lazy Load untuk sections yang tidak critical
@@ -54,11 +59,13 @@ import bgImage from "assets/images/las.jpg";
 
 function Presentation() {
   const homeRef = useRef(null);
+  const layananRef = useRef(null);
   const benefitRef = useRef(null);
   const tentangKamiRef = useRef(null);
   const produkRef = useRef(null);
-  const kontakRef = useRef(null);
+  const prosesRef = useRef(null);
   const testiRef = useRef(null);
+  const kontakRef = useRef(null);
 
   const handleScroll = (ref) => {
     if (ref && ref.current) {
@@ -163,9 +170,10 @@ function Presentation() {
       <DefaultNavbar
         routes={[
           { name: "Beranda", route: () => handleScroll(homeRef) },
-          { name: "Kenapa Kami", route: () => handleScroll(benefitRef) },
+          { name: "Layanan", route: () => handleScroll(layananRef) },
           { name: "Tentang Kami", route: () => handleScroll(tentangKamiRef) },
-          { name: "Produk", route: () => handleScroll(produkRef) },
+          { name: "Portfolio", route: () => handleScroll(produkRef) },
+          { name: "Proses Kerja", route: () => handleScroll(prosesRef) },
           { name: "Testimoni", route: () => handleScroll(testiRef) },
           { name: "Kontak", route: () => handleScroll(kontakRef) },
         ]}
@@ -225,7 +233,7 @@ function Presentation() {
                 }}
               >
                 <MKTypography variant="button" color="white" fontWeight="bold">
-                  ⭐ Terpercaya Sejak 2015 | 1000+ Project Selesai
+                  Terpercaya Sejak 2015 | 1000+ Project Selesai
                 </MKTypography>
               </MKBox>
 
@@ -379,7 +387,7 @@ function Presentation() {
             <Grid item xs={12} lg={5}>
               <Grid container spacing={2}>
                 {[
-                  { icon: <EmojiEventsIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                  { icon: <ConstructionIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
                   { icon: <StarIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "4.9/5", label: "Rating Pelanggan", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
                   { icon: <EngineeringIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "10+", label: "Tahun Pengalaman", gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)" },
                   { icon: <LocalShippingIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "FREE", label: "Ongkir & Survey", gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)" },
@@ -387,7 +395,7 @@ function Presentation() {
                   <Grid item xs={6} key={index}>
                     <MKBox
                       borderRadius="2xl"
-                      p={3}
+                      p={4}
                       textAlign="center"
                       sx={{
                         position: "relative",
@@ -398,6 +406,7 @@ function Presentation() {
                         transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         animation: `fadeInRight 1s ease-out ${0.6 + index * 0.1}s backwards`,
                         overflow: "hidden",
+                        minHeight: "200px",
                         "&::before": {
                           content: '""',
                           position: "absolute",
@@ -429,13 +438,13 @@ function Presentation() {
                         {/* Icon with Glow Effect */}
                         <MKBox
                           sx={{
-                            mb: 1.5,
+                            mb: 2,
                             color: "rgba(255,255,255,0.95)",
-                            transform: "scale(1.7)",
+                            transform: "scale(2)",
                             filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
                             transition: "all 0.3s",
                             ".MuiBox-root:hover &": {
-                              transform: "scale(2) rotate(5deg)",
+                              transform: "scale(2.3) rotate(5deg)",
                               filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.3))",
                             },
                           }}
@@ -445,12 +454,12 @@ function Presentation() {
 
                         {/* Number */}
                         <MKTypography
-                          variant="h2"
+                          variant="h1"
                           fontWeight="bold"
                           sx={{
                             color: "rgba(255,255,255,0.95)",
                             textShadow: "0 2px 10px rgba(0,0,0,0.3)",
-                            mb: 0.5,
+                            mb: 1,
                             letterSpacing: "-0.5px",
                           }}
                         >
@@ -459,12 +468,12 @@ function Presentation() {
 
                         {/* Label */}
                         <MKTypography
-                          variant="button"
+                          variant="body1"
                           sx={{
                             color: "rgba(255,255,255,0.95)",
                             textShadow: "0 1px 3px rgba(0,0,0,0.2)",
                             fontWeight: "medium",
-                            fontSize: "0.875rem",
+                            fontSize: "1rem",
                           }}
                         >
                           {stat.label}
@@ -501,9 +510,134 @@ function Presentation() {
             left: 0,
             right: 0,
             height: "100px",
-            background: "linear-gradient(180deg, transparent 0%, #f8f9fa 100%)",
+            background: "linear-gradient(180deg, transparent 0%, #1b1c1dff 100%)",
           }}
         />
+      </MKBox>
+
+      {/* Layanan Kami Section */}
+      <MKBox ref={layananRef} component="section" py={8} pb={15} sx={{ backgroundColor: "#f8f9fa" }}>
+        <Container>
+          <Grid container spacing={3} mb={6}>
+            <Grid item xs={12} textAlign="center">
+              <MKTypography variant="h2" mb={2} fontWeight="bold">
+                Layanan Las Kami
+              </MKTypography>
+              <MKTypography variant="body1" color="text" mb={4}>
+                Kami menyediakan berbagai jasa las berkualitas tinggi untuk kebutuhan rumah dan komersial Anda
+              </MKTypography>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={4}>
+            {[
+              {
+                title: "Las Kanopi",
+                description: "Kanopi besi hollow, baja ringan, dan stainless dengan berbagai desain modern dan klasik",
+                link: "/services/las-kanopi",
+                icon: "🏠",
+                color: "#667eea"
+              },
+              {
+                title: "Las Pagar",
+                description: "Pagar minimalis, klasik, dan modern dengan material berkualitas dan desain custom",
+                link: "/services/las-pagar",
+                icon: "🚧",
+                color: "#4facfe"
+              },
+              {
+                title: "Las Tralis",
+                description: "Tralis jendela dan pintu dengan berbagai motif untuk keamanan rumah Anda",
+                link: "/services/las-tralis",
+                icon: "🔒",
+                color: "#1e3c72"
+              },
+              {
+                title: "Las Stainless",
+                description: "Tangga stainless, railing, dan ornamen dengan finishing premium dan tahan lama",
+                link: "/services/las-stainless",
+                icon: "✨",
+                color: "#3a7bd5"
+              }
+            ].map((service, index) => (
+              <Grid item xs={12} md={6} lg={3} key={index}>
+                <MKBox
+                  component="a"
+                  href={service.link}
+                  sx={{
+                    display: "block",
+                    textDecoration: "none",
+                    height: "100%",
+                  }}
+                >
+                  <MKBox
+                    borderRadius="xl"
+                    p={4}
+                    textAlign="center"
+                    sx={{
+                      height: "100%",
+                      background: "white",
+                      boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                      position: "relative",
+                      overflow: "hidden",
+                      "&::before": {
+                        content: '""',
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        height: "4px",
+                        background: `linear-gradient(90deg, ${service.color}, ${service.color}dd)`,
+                        transform: "scaleX(0)",
+                        transition: "transform 0.3s ease",
+                      },
+                      "&:hover": {
+                        transform: "translateY(-10px)",
+                        boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
+                        "&::before": {
+                          transform: "scaleX(1)",
+                        },
+                      },
+                    }}
+                  >
+                    <MKBox
+                      sx={{
+                        fontSize: "4rem",
+                        mb: 2,
+                        display: "inline-block",
+                        transition: "transform 0.3s ease",
+                        "a:hover &": {
+                          transform: "scale(1.1) rotate(5deg)",
+                        },
+                      }}
+                    >
+                      {service.icon}
+                    </MKBox>
+                    <MKTypography variant="h5" fontWeight="bold" mb={2} color="dark">
+                      {service.title}
+                    </MKTypography>
+                    <MKTypography variant="body2" color="text" mb={3}>
+                      {service.description}
+                    </MKTypography>
+                    <MKTypography
+                      variant="button"
+                      fontWeight="bold"
+                      sx={{
+                        color: service.color,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
+                    >
+                      Lihat Detail →
+                    </MKTypography>
+                  </MKBox>
+                </MKBox>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </MKBox>
 
       <Card
@@ -518,7 +652,7 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Counters />
+        {/* <Counters /> */}
         <div ref={benefitRef}>
           <Information />
         </div>
@@ -538,10 +672,169 @@ function Presentation() {
           </Suspense>
         </div>
 
+        {/* Proses Kerja Section */}
+        <Container ref={prosesRef} sx={{ mt: 8, mb: 8 }}>
+          <Grid container spacing={3} mb={6}>
+            <Grid item xs={12} textAlign="center">
+              <MKTypography variant="h2" mb={2} fontWeight="bold">
+                Proses Kerja Kami
+              </MKTypography>
+              <MKTypography variant="body1" color="text" mb={4}>
+                Kami memastikan setiap project dikerjakan dengan profesional dan tepat waktu
+              </MKTypography>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={4}>
+            {[
+              {
+                step: "01",
+                title: "Konsultasi & Survey",
+                description: "Tim kami akan datang untuk survey lokasi dan konsultasi kebutuhan Anda secara GRATIS",
+                icon: <CallIcon />,
+                color: "#2196F3"
+              },
+              {
+                step: "02",
+                title: "Desain & Estimasi",
+                description: "Kami memberikan desain dan estimasi biaya yang transparan sesuai budget Anda",
+                icon: <DesignServicesIcon />,
+                color: "#4CAF50"
+              },
+              {
+                step: "03",
+                title: "Pengerjaan",
+                description: "Pengerjaan dilakukan oleh tukang las berpengalaman dengan material berkualitas",
+                icon: <EngineeringIcon />,
+                color: "#FF9800"
+              },
+              {
+                step: "04",
+                title: "Quality Check",
+                description: "Pengecekan kualitas dan finishing untuk memastikan hasil maksimal",
+                icon: <CheckIcon />,
+                color: "#9C27B0"
+              },
+              {
+                step: "05",
+                title: "Serah Terima",
+                description: "Project selesai dengan garansi dan layanan after-sales yang memuaskan",
+                icon: <HandshakeIcon />,
+                color: "#F44336"
+              }
+            ].map((process, index) => (
+              <Grid item xs={12} md={6} lg={2.4} key={index}>
+                <MKBox
+                  borderRadius="xl"
+                  p={3}
+                  textAlign="center"
+                  sx={{
+                    height: "100%",
+                    background: "white",
+                    border: "2px solid #f0f0f0",
+                    transition: "all 0.3s ease",
+                    position: "relative",
+                    "&:hover": {
+                      transform: "translateY(-5px)",
+                      borderColor: process.color,
+                      boxShadow: `0 8px 30px ${process.color}40`,
+                    },
+                  }}
+                >
+                  {/* Step Number */}
+                  <MKBox
+                    sx={{
+                      position: "absolute",
+                      top: -15,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      background: `linear-gradient(135deg, ${process.color}, ${process.color}dd)`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "white",
+                      fontWeight: "bold",
+                      fontSize: "1.2rem",
+                      boxShadow: `0 4px 15px ${process.color}60`,
+                    }}
+                  >
+                    {process.step}
+                  </MKBox>
+
+                  <MKBox
+                    sx={{
+                      fontSize: "3rem",
+                      mt: 3,
+                      mb: 2,
+                    }}
+                  >
+                    {process.icon}
+                  </MKBox>
+
+                  <MKTypography variant="h6" fontWeight="bold" mb={1.5} color="dark">
+                    {process.title}
+                  </MKTypography>
+
+                  <MKTypography variant="body2" color="text">
+                    {process.description}
+                  </MKTypography>
+                </MKBox>
+              </Grid>
+            ))}
+          </Grid>
+
+          {/* CTA After Process */}
+          <MKBox textAlign="center" mt={6}>
+            <MKTypography variant="h5" mb={3} fontWeight="medium">
+              Siap Memulai Project Anda?
+            </MKTypography>
+            <MKBox
+              component="a"
+              href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                px: 5,
+                py: 2.5,
+                borderRadius: "xl",
+                background: "linear-gradient(135deg, #2196F3 0%, #1976D2 100%)",
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: "1.1rem",
+                textDecoration: "none",
+                transition: "all 0.3s",
+                boxShadow: "0 4px 15px rgba(33, 150, 243, 0.4)",
+                "&:hover": {
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 6px 25px rgba(33, 150, 243, 0.6)",
+                },
+              }}
+            >
+              <MKBox component="span" mr={1}>
+                💬
+              </MKBox>
+              Konsultasi Gratis Sekarang
+            </MKBox>
+          </MKBox>
+        </Container>
+
         <div ref={testiRef}>
         <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
           <Testimonials />
         </Suspense>
+        </div>
+
+
+        <div ref={kontakRef}>
+          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+            <Download />
+          </Suspense>
         </div>
 
         {/* Area Layanan Section */}
@@ -613,12 +906,12 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container>
-
+{/* 
         <div ref={kontakRef}>
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
             <Download />
           </Suspense>
-        </div>
+        </div> */}
       </Card>
 
       <MKBox pt={6} px={1} mt={6}>

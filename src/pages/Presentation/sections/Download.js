@@ -48,22 +48,35 @@ function Download() {
           opacity={0.2}
         />
        <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
-  <Grid container item xs={12} md={7} direction="column" alignItems="center" mx="auto" textAlign="center">
-    <MKTypography variant="h3" color="white">
-      Tunggu Apalagi
+  <Grid container item xs={12} md={10} justifyContent="center" mx="auto" textAlign="center">
+    <MKTypography variant="h3" color="white" mb={2} sx={{ lineHeight: 1.5 }}>
+     Segera Hubungi Kami dan Dapatkan Konsultasi Gratis
     </MKTypography>
-    <MKTypography variant="h3" color="white" mb={1}>
-      Segera Hubungi Kami
-    </MKTypography>
+    {/* <MKTypography variant="h3" color="white" mb={3} sx={{ lineHeight: 1.5 }}>
+      di <MKBox component="span" sx={{ fontWeight: "bold" }}>INDIAN JAYA LAS</MKBox>
+    </MKTypography> */}
     <MKButton
       variant="gradient"
       color="info"
       size="large"
       component="a"
-      href=" https://wa.me/081212154019"
-      sx={{ mb: 2, mt: 4 }}
+      href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        mb: 2,
+        mt: 2,
+        px: 5,
+        py: 1.5,
+        fontSize: "1.1rem",
+        fontWeight: "bold",
+        boxShadow: "0 4px 20px rgba(244, 67, 54, 0.4)",
+        "&:hover": {
+          boxShadow: "0 6px 30px rgba(244, 67, 54, 0.6)",
+        },
+      }}
     >
-      Hubungi Kami
+      Konsultasi Sekarang ⊕
     </MKButton>
   </Grid>
 </Container>
