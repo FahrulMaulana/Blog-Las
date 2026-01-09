@@ -121,8 +121,36 @@ function LasPagar() {
                 <li><MKTypography variant="body1" mb={1}><strong>Pagar Besi Hollow</strong> - Kuat, tahan lama, dan ekonomis</MKTypography></li>
                 <li><MKTypography variant="body1" mb={1}><strong>Pagar Minimalis Modern</strong> - Desain simpel dan elegan</MKTypography></li>
                 <li><MKTypography variant="body1" mb={1}><strong>Pagar Kombinasi Besi & Kayu</strong> - Estetika alami</MKTypography></li>
-                <li><MKTypography variant="body1" mb={1}><strong>Pagar Pagar Besi Tempa</strong> - Artistik dan eksklusif</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}><strong>Pagar Besi Tempa</strong> - Artistik dan eksklusif</MKTypography></li>
               </MKBox>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Keunggulan Layanan Kami</MKTypography>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
+                    <MKTypography variant="h6" color="white" mb={1}>✓ Free Survey</MKTypography>
+                    <MKTypography variant="body2" color="white">Gratis pengukuran dan konsultasi ke lokasi</MKTypography>
+                  </MKBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MKBox bgColor="info" color="white" borderRadius="md" p={2} mb={2}>
+                    <MKTypography variant="h6" color="white" mb={1}>✓ Free Pemasangan</MKTypography>
+                    <MKTypography variant="body2" color="white">Gratis jasa instalasi profesional</MKTypography>
+                  </MKBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MKBox bgColor="warning" color="white" borderRadius="md" p={2} mb={2}>
+                    <MKTypography variant="h6" color="white" mb={1}>✓ Desain Custom</MKTypography>
+                    <MKTypography variant="body2" color="white">Sesuaikan desain dengan keinginan Anda</MKTypography>
+                  </MKBox>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <MKBox bgColor="error" color="white" borderRadius="md" p={2} mb={2}>
+                    <MKTypography variant="h6" color="white" mb={1}>✓ Garansi Kualitas</MKTypography>
+                    <MKTypography variant="body2" color="white">Material berkualitas dengan garansi</MKTypography>
+                  </MKBox>
+                </Grid>
+              </Grid>
 
               <MKTypography variant="h3" mt={4} mb={2}>Estimasi Harga Las Pagar Per Meter (2026)</MKTypography>
               <MKBox component="table" width="100%" sx={{ border: "1px solid #ddd", borderCollapse: "collapse", "& td, & th": { border: "1px solid #ddd", padding: "12px" }, "& th": { backgroundColor: "#f8f9fa", fontWeight: "bold" } }}>
@@ -148,6 +176,20 @@ function LasPagar() {
                 </tbody>
               </MKBox>
 
+              <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
+                *Harga dapat berubah sewaktu-waktu tergantung ketersediaan material. Hubungi kami untuk penawaran terbaik.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Cara Pesan Pagar Custom</MKTypography>
+              <MKBox component="ol" sx={{ pl: 3 }}>
+                <li><MKTypography variant="body1" mb={1}>Hubungi kami via WhatsApp di <strong>081212154019</strong></MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Konsultasikan desain dan budget yang Anda inginkan</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Tim kami akan survey ke lokasi (GRATIS)</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Estimasi harga dan waktu pengerjaan akan diberikan</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Pengerjaan dimulai sesuai kesepakatan</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Pemasangan selesai, bayar sesuai kesepakatan</MKTypography></li>
+              </MKBox>
+
               <MKTypography variant="h3" mt={4} mb={2}>Area Layanan</MKTypography>
               <Grid container spacing={2}>
                 {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere"].map(area => (
@@ -163,13 +205,37 @@ function LasPagar() {
             <Grid item xs={12} lg={4}>
               <MKBox bgColor="info" borderRadius="lg" p={3} mb={3} sx={{ position: "sticky", top: 100 }}>
                 <MKTypography variant="h5" color="white" mb={2} textAlign="center">Konsultasi Gratis</MKTypography>
+                <MKTypography variant="body2" color="white" mb={2} textAlign="center">
+                  Hubungi kami sekarang untuk survey dan penawaran terbaik
+                </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>Chat WhatsApp</MKButton>
                 <MKBox textAlign="center" mt={2}>
                   <MKTypography variant="h6" color="white">081212154019</MKTypography>
                 </MKBox>
               </MKBox>
+
+              <MKBox bgColor="white" borderRadius="lg" p={3} sx={{ border: "2px solid #e0e0e0" }}>
+                <MKTypography variant="h6" mb={2}>Jam Operasional</MKTypography>
+                <MKTypography variant="body2" color="text">
+                  Senin - Sabtu: 08.00 - 17.00 WIB<br />
+                  Minggu: 08.00 - 14.00 WIB
+                </MKTypography>
+              </MKBox>
             </Grid>
           </Grid>
+
+          {/* CTA Section */}
+          <MKBox bgColor="primary" borderRadius="lg" p={4} mt={6} textAlign="center">
+            <MKTypography variant="h4" color="white" mb={2}>
+              Siap Pasang Pagar di Rumah Anda?
+            </MKTypography>
+            <MKTypography variant="body1" color="white" mb={3}>
+              Dapatkan penawaran terbaik dan gratis survey. Konsultasi sekarang!
+            </MKTypography>
+            <MKButton color="success" size="large" onClick={handleWhatsApp}>
+              Hubungi Kami Sekarang
+            </MKButton>
+          </MKBox>
         </Container>
       </Card>
 

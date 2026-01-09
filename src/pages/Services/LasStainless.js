@@ -10,7 +10,7 @@ import MKButton from "components/MKButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
-import bgImage from "assets/images/las.jpg";
+import bgImage from "assets/images/kusen/kusen3.jpg";
 
 function LasStainless() {
   const handleWhatsApp = () => {
@@ -55,7 +55,7 @@ function LasStainless() {
         sticky
       />
 
-      <MKBox minHeight="50vh" width="100%" sx={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage})`, backgroundSize: "cover", backgroundPosition: "center", display: "grid", placeItems: "center" }}>
+      <MKBox minHeight="50vh" width="100%" sx={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage})`, backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Container>
           <Grid container item xs={12} lg={8} justifyContent="center" mx="auto">
             <MKTypography variant="h1" color="white" textAlign="center" sx={({ breakpoints, typography: { size } }) => ({ [breakpoints.down("md")]: { fontSize: size["3xl"] } })}>
@@ -64,7 +64,9 @@ function LasStainless() {
             <MKTypography variant="h6" color="white" textAlign="center" px={{ xs: 6, lg: 12 }} mt={2}>
               Material Premium Anti Karat untuk Hasil Maksimal
             </MKTypography>
-            <MKButton color="success" size="large" sx={{ mt: 4 }} onClick={handleWhatsApp}>Konsultasi Gratis</MKButton>
+            <MKBox width="100%" display="flex" justifyContent="center" mt={4}>
+              <MKButton color="success" size="large" onClick={handleWhatsApp}>Konsultasi Gratis</MKButton>
+            </MKBox>
           </Grid>
         </Container>
       </MKBox>
@@ -115,8 +117,8 @@ function LasStainless() {
                 </Grid>
               </Grid>
 
-              <MKTypography variant="h3" mt={4} mb={2}>Harga Stainless Steel Per Meter (2026)</MKTypography>
-              <MKBox component="table" width="100%" sx={{ border: "1px solid #ddd", borderCollapse: "collapse", "& td, & th": { border: "1px solid #ddd", padding: "12px" } }}>
+              <MKTypography variant="h3" mt={4} mb={2}>Estimasi Harga Stainless Steel Per Meter (2026)</MKTypography>
+              <MKBox component="table" width="100%" sx={{ border: "1px solid #ddd", borderCollapse: "collapse", "& td, & th": { border: "1px solid #ddd", padding: "12px" }, "& th": { backgroundColor: "#f8f9fa", fontWeight: "bold" } }}>
                 <thead>
                   <tr>
                     <th><MKTypography variant="body2" fontWeight="bold">Produk Stainless</MKTypography></th>
@@ -136,20 +138,73 @@ function LasStainless() {
                     <td><MKTypography variant="body2">Balkon Stainless</MKTypography></td>
                     <td><MKTypography variant="body2">Rp 600.000 - Rp 900.000</MKTypography></td>
                   </tr>
+                  <tr>
+                    <td><MKTypography variant="body2">Kanopi Rangka Stainless</MKTypography></td>
+                    <td><MKTypography variant="body2">Rp 550.000 - Rp 850.000</MKTypography></td>
+                  </tr>
                 </tbody>
               </MKBox>
+
+              <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
+                *Harga material premium stainless steel dapat berubah sesuai grade dan finishing yang dipilih.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Cara Pesan Produk Stainless Custom</MKTypography>
+              <MKBox component="ol" sx={{ pl: 3 }}>
+                <li><MKTypography variant="body1" mb={1}>Hubungi kami via WhatsApp di <strong>081212154019</strong></MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Konsultasikan kebutuhan dan pilihan desain</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Tim kami akan survey ke lokasi (GRATIS)</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Pilih grade stainless dan finishing yang sesuai</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Pengerjaan oleh ahli las stainless bersertifikat</MKTypography></li>
+                <li><MKTypography variant="body1" mb={1}>Pemasangan rapi dan garansi kualitas</MKTypography></li>
+              </MKBox>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Area Layanan Las Stainless</MKTypography>
+              <Grid container spacing={2}>
+                {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere", "Lenteng Agung", "Jagakarsa"].map(area => (
+                  <Grid item xs={6} md={3} key={area}>
+                    <MKBox bgColor="grey-100" borderRadius="md" p={1.5} textAlign="center">
+                      <MKTypography variant="body2" fontWeight="bold">{area}</MKTypography>
+                    </MKBox>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
 
             <Grid item xs={12} lg={4}>
-              <MKBox bgColor="info" borderRadius="lg" p={3} sx={{ position: "sticky", top: 100 }}>
-                <MKTypography variant="h5" color="white" mb={2} textAlign="center">Hubungi Kami</MKTypography>
-                <MKButton color="success" fullWidth onClick={handleWhatsApp}>Chat WhatsApp</MKButton>
+              <MKBox bgColor="info" borderRadius="lg" p={3} mb={3} sx={{ position: "sticky", top: 100 }}>
+                <MKTypography variant="h5" color="white" mb={2} textAlign="center">Konsultasi Gratis</MKTypography>
+                <MKTypography variant="body2" color="white" mb={2} textAlign="center">
+                  Hubungi kami untuk survey dan penawaran terbaik
+                </MKTypography>
+                <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>Chat WhatsApp</MKButton>
                 <MKBox textAlign="center" mt={2}>
                   <MKTypography variant="h6" color="white">081212154019</MKTypography>
                 </MKBox>
               </MKBox>
+
+              <MKBox bgColor="white" borderRadius="lg" p={3} sx={{ border: "2px solid #e0e0e0" }}>
+                <MKTypography variant="h6" mb={2}>Jam Operasional</MKTypography>
+                <MKTypography variant="body2" color="text">
+                  Senin - Sabtu: 08.00 - 17.00 WIB<br />
+                  Minggu: 08.00 - 14.00 WIB
+                </MKTypography>
+              </MKBox>
             </Grid>
           </Grid>
+
+          {/* CTA Section */}
+          <MKBox bgColor="primary" borderRadius="lg" p={4} mt={6} textAlign="center">
+            <MKTypography variant="h4" color="white" mb={2}>
+              Upgrade Rumah dengan Stainless Steel Premium
+            </MKTypography>
+            <MKTypography variant="body1" color="white" mb={3}>
+              Investasi jangka panjang untuk rumah Anda. Konsultasi gratis sekarang!
+            </MKTypography>
+            <MKButton color="success" size="large" onClick={handleWhatsApp}>
+              Hubungi Kami Sekarang
+            </MKButton>
+          </MKBox>
         </Container>
       </Card>
 

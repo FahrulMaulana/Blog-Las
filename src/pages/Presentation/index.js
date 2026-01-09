@@ -56,6 +56,10 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/las.jpg";
+import kanopiIcon from "assets/images/kanopi11.jpg";
+import pagarIcon from "assets/images/pagar/pagar1.jpg";
+import teralisIcon from "assets/images/teralis/teralis.jpg";
+import tanggaIcon from "assets/images/tangga/tangga1.jpg";
 
 function Presentation() {
   const homeRef = useRef(null);
@@ -196,11 +200,13 @@ function Presentation() {
           backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: { xs: "scroll", md: "fixed" },
           display: "flex",
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
+          pt: { xs: 12, md: 0 },
+          pb: { xs: 6, md: 0 },
           "&::before": {
             content: '""',
             position: "absolute",
@@ -213,7 +219,7 @@ function Presentation() {
         }}
       >
         <Container sx={{ position: "relative", zIndex: 2 }}>
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={{ xs: 3, md: 4 }} alignItems="center">
             <Grid item xs={12} lg={7}>
               {/* Badge */}
               <MKBox
@@ -221,9 +227,9 @@ function Presentation() {
                 bgColor="#2196F3"
                 color="white"
                 borderRadius="xl"
-                px={3}
+                px={{ xs: 2, md: 3 }}
                 py={1}
-                mb={3}
+                mb={{ xs: 2, md: 3 }}
                 sx={{
                   animation: "fadeInDown 1s ease-out",
                   "@keyframes fadeInDown": {
@@ -232,7 +238,7 @@ function Presentation() {
                   },
                 }}
               >
-                <MKTypography variant="button" color="white" fontWeight="bold">
+                <MKTypography variant="button" color="white" fontWeight="bold" sx={{ fontSize: { xs: "0.75rem", md: "0.875rem" } }}>
                   Terpercaya Sejak 2015 | 1000+ Project Selesai
                 </MKTypography>
               </MKBox>
@@ -242,20 +248,17 @@ function Presentation() {
                 variant="h1"
                 color="white"
                 mb={2}
-                sx={({ breakpoints, typography: { size } }) => ({
-                  fontSize: "3.5rem",
+                sx={{
+                  fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" },
                   fontWeight: 800,
                   lineHeight: 1.2,
                   textShadow: "2px 4px 8px rgba(0,0,0,0.3)",
                   animation: "fadeInLeft 1s ease-out 0.2s backwards",
-                  [breakpoints.down("md")]: {
-                    fontSize: size["3xl"],
-                  },
                   "@keyframes fadeInLeft": {
                     "0%": { opacity: 0, transform: "translateX(-30px)" },
                     "100%": { opacity: 1, transform: "translateX(0)" },
                   },
-                })}
+                }}
               >
                 Bengkel Las Profesional <br />
                 <MKBox component="span" sx={{ color: "#2196F3" }}>
@@ -268,10 +271,11 @@ function Presentation() {
                 variant="h5"
                 color="white"
                 fontWeight="regular"
-                mb={3}
+                mb={{ xs: 2, md: 3 }}
                 sx={{
                   opacity: 0.95,
                   lineHeight: 1.6,
+                  fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
                   animation: "fadeInLeft 1s ease-out 0.4s backwards",
                 }}
               >
@@ -279,7 +283,7 @@ function Presentation() {
               </MKTypography>
 
               {/* Features List */}
-              <Grid container spacing={2} mb={4}>
+              <Grid container spacing={2} mb={{ xs: 3, md: 4 }}>
                 {[
                   "✓ Free Survey & Konsultasi",
                   "✓ Free Pemasangan",
@@ -292,6 +296,7 @@ function Presentation() {
                       color="white"
                       fontWeight="medium"
                       sx={{
+                        fontSize: { xs: "0.875rem", md: "1rem" },
                         animation: `fadeIn 1s ease-out ${0.6 + index * 0.1}s backwards`,
                         "@keyframes fadeIn": {
                           "0%": { opacity: 0 },
@@ -327,13 +332,13 @@ function Presentation() {
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    px: 4,
-                    py: 2,
+                    px: { xs: 3, md: 4 },
+                    py: { xs: 1.5, md: 2 },
                     borderRadius: "xl",
                     background: "linear-gradient(135deg, #2196F3 0%, #1976D2 100%)",
                     color: "#ffffff",
                     fontWeight: "bold",
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "0.95rem", md: "1.1rem" },
                     textDecoration: "none",
                     transition: "all 0.3s",
                     boxShadow: "0 4px 15px rgba(33, 150, 243, 0.4)",
@@ -357,15 +362,15 @@ function Presentation() {
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    px: 4,
-                    py: 2,
+                    px: { xs: 3, md: 4 },
+                    py: { xs: 1.5, md: 2 },
                     borderRadius: "xl",
                     background: "rgba(255,255,255,0.1)",
                     backdropFilter: "blur(10px)",
                     border: "2px solid rgba(255,255,255,0.3)",
                     color: "#ffffff",
                     fontWeight: "bold",
-                    fontSize: "1.1rem",
+                    fontSize: { xs: "0.95rem", md: "1.1rem" },
                     textDecoration: "none",
                     transition: "all 0.3s",
                     textShadow: "0 1px 2px rgba(0,0,0,0.2)",
@@ -385,17 +390,17 @@ function Presentation() {
 
             {/* Right Side - Stats Cards */}
             <Grid item xs={12} lg={5}>
-              <Grid container spacing={2}>
+              <Grid container spacing={{ xs: 2, md: 2 }}>
                 {[
-                  { icon: <ConstructionIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
-                  { icon: <StarIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "4.9/5", label: "Rating Pelanggan", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
-                  { icon: <EngineeringIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "10+", label: "Tahun Pengalaman", gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)" },
-                  { icon: <LocalShippingIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "FREE", label: "Ongkir & Survey", gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)" },
+                  { icon: <ConstructionIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                  { icon: <StarIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "4.9/5", label: "Rating Pelanggan", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                  { icon: <EngineeringIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "10+", label: "Tahun Pengalaman", gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)" },
+                  { icon: <LocalShippingIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "FREE", label: "Ongkir & Survey", gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)" },
                 ].map((stat, index) => (
                   <Grid item xs={6} key={index}>
                     <MKBox
                       borderRadius="2xl"
-                      p={4}
+                      p={{ xs: 2.5, md: 4 }}
                       textAlign="center"
                       sx={{
                         position: "relative",
@@ -406,7 +411,7 @@ function Presentation() {
                         transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         animation: `fadeInRight 1s ease-out ${0.6 + index * 0.1}s backwards`,
                         overflow: "hidden",
-                        minHeight: "200px",
+                        minHeight: { xs: "160px", md: "200px" },
                         "&::before": {
                           content: '""',
                           position: "absolute",
@@ -438,13 +443,13 @@ function Presentation() {
                         {/* Icon with Glow Effect */}
                         <MKBox
                           sx={{
-                            mb: 2,
+                            mb: { xs: 1.5, md: 2 },
                             color: "rgba(255,255,255,0.95)",
-                            transform: "scale(2)",
+                            transform: { xs: "scale(1.5)", md: "scale(2)" },
                             filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
                             transition: "all 0.3s",
                             ".MuiBox-root:hover &": {
-                              transform: "scale(2.3) rotate(5deg)",
+                              transform: { xs: "scale(1.7) rotate(5deg)", md: "scale(2.3) rotate(5deg)" },
                               filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.3))",
                             },
                           }}
@@ -459,8 +464,9 @@ function Presentation() {
                           sx={{
                             color: "rgba(255,255,255,0.95)",
                             textShadow: "0 2px 10px rgba(0,0,0,0.3)",
-                            mb: 1,
+                            mb: { xs: 0.5, md: 1 },
                             letterSpacing: "-0.5px",
+                            fontSize: { xs: "1.75rem", md: "3rem" },
                           }}
                         >
                           {stat.number}
@@ -473,7 +479,7 @@ function Presentation() {
                             color: "rgba(255,255,255,0.95)",
                             textShadow: "0 1px 3px rgba(0,0,0,0.2)",
                             fontWeight: "medium",
-                            fontSize: "1rem",
+                            fontSize: { xs: "0.75rem", md: "1rem" },
                           }}
                         >
                           {stat.label}
@@ -534,29 +540,29 @@ function Presentation() {
               {
                 title: "Las Kanopi",
                 description: "Kanopi besi hollow, baja ringan, dan stainless dengan berbagai desain modern dan klasik",
-                link: "/services/las-kanopi",
-                icon: "🏠",
+                link: "/las-kanopi",
+                icon: kanopiIcon,
                 color: "#667eea"
               },
               {
                 title: "Las Pagar",
                 description: "Pagar minimalis, klasik, dan modern dengan material berkualitas dan desain custom",
-                link: "/services/las-pagar",
-                icon: "🚧",
+                link: "/las-pagar",
+                icon: pagarIcon,
                 color: "#4facfe"
               },
               {
                 title: "Las Tralis",
                 description: "Tralis jendela dan pintu dengan berbagai motif untuk keamanan rumah Anda",
-                link: "/services/las-tralis",
-                icon: "🔒",
+                link: "/las-tralis",
+                icon: teralisIcon,
                 color: "#1e3c72"
               },
               {
                 title: "Las Stainless",
                 description: "Tangga stainless, railing, dan ornamen dengan finishing premium dan tahan lama",
-                link: "/services/las-stainless",
-                icon: "✨",
+                link: "/las-stainless",
+                icon: tanggaIcon,
                 color: "#3a7bd5"
               }
             ].map((service, index) => (
@@ -603,16 +609,26 @@ function Presentation() {
                   >
                     <MKBox
                       sx={{
-                        fontSize: "4rem",
+                        width: "100%",
+                        height: "150px",
                         mb: 2,
-                        display: "inline-block",
+                        borderRadius: "lg",
+                        overflow: "hidden",
                         transition: "transform 0.3s ease",
                         "a:hover &": {
-                          transform: "scale(1.1) rotate(5deg)",
+                          transform: "scale(1.05)",
                         },
                       }}
                     >
-                      {service.icon}
+                      <img 
+                        src={service.icon} 
+                        alt={service.title}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
                     </MKBox>
                     <MKTypography variant="h5" fontWeight="bold" mb={2} color="dark">
                       {service.title}

@@ -12,7 +12,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 
 // Images
-import kanopiImage from "assets/images/kanopi 2.jpg";
+import kanopiImage from "assets/images/kanopi11.jpg";
 
 function LasKanopi() {
   const handleWhatsApp = () => {
