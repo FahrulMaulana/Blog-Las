@@ -22,9 +22,23 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
+// React Helmet Async
+import { HelmetProvider } from "react-helmet-async";
+
 // Material Kit 2 React themes
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
+
+// Service Pages
+import LasKanopi from "pages/Services/LasKanopi";
+import LasPagar from "pages/Services/LasPagar";
+import LasTralis from "pages/Services/LasTralis";
+import LasStainless from "pages/Services/LasStainless";
+import LasPanggilan from "pages/Services/LasPanggilan";
+
+// Blog Pages
+import BlogIndex from "pages/Blog/BlogIndex";
+import HargaJasaLasTerbaru2026 from "pages/Blog/HargaJasaLasTerbaru2026";
 
 // Material Kit 2 React routes
 import routes from "routes";
@@ -52,13 +66,22 @@ export default function App() {
     });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="/" element={<Presentation />} />
-        <Route path="*" element={<Navigate to="/presentation" />} />
-      </Routes>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Routes>
+          {getRoutes(routes)}
+          <Route path="/" element={<Presentation />} />
+          <Route path="/las-kanopi" element={<LasKanopi />} />
+          <Route path="/las-pagar" element={<LasPagar />} />
+          <Route path="/las-tralis" element={<LasTralis />} />
+          <Route path="/las-stainless" element={<LasStainless />} />
+          <Route path="/las-panggilan" element={<LasPanggilan />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/harga-jasa-las-terbaru-2026" element={<HargaJasaLasTerbaru2026 />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }

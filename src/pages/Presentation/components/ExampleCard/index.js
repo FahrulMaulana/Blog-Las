@@ -75,6 +75,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         width="100%"
         my="auto"
         opacity={pro ? 0.6 : 1}
+        loading="lazy"
       />
     </MKBox>
   );

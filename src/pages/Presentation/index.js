@@ -14,10 +14,19 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import React, { useRef, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
+
 // @mui material components
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+
+// @mui icons
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import StarIcon from "@mui/icons-material/Star";
+import EngineeringIcon from "@mui/icons-material/Engineering";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -27,20 +36,21 @@ import MKTypography from "components/MKTypography";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
-// Presentation page sections
+// Presentation page sections - Priority Load
 import Counters from "pages/Presentation/sections/Counters";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Download from "pages/Presentation/sections/Download";
 import Information from "pages/Presentation/sections/Information";
-import Testimonials from "pages/Presentation/sections/Testimonials";
+
+// Lazy Load untuk sections yang tidak critical
+const DesignBlocks = lazy(() => import("pages/Presentation/sections/DesignBlocks"));
+const Download = lazy(() => import("pages/Presentation/sections/Download"));
+const Testimonials = lazy(() => import("pages/Presentation/sections/Testimonials"));
+const BuiltByDevelopers = lazy(() => import("./components/BuiltByDevelopers"));
 
 // Routes
 import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/las.jpg";
-import BuiltByDevelopers from "./components/BuiltByDevelopers";
-import React, { useRef } from "react";
 
 function Presentation() {
   const homeRef = useRef(null);
@@ -61,10 +71,99 @@ function Presentation() {
 
   return (
     <>
+      <Helmet>
+        <title>Bengkel Las Indian Jaya - Jasa Las Kanopi, Pagar, Tralis Depok & Tangerang Selatan</title>
+        <meta name="description" content="Bengkel Las Indian Jaya melayani jasa las kanopi, pagar, tralis, stainless di Depok, Pamulang, BSD, Ciputat. Free survey & pemasangan. Hubungi 081212154019" />
+        <meta name="keywords" content="bengkel las depok, jasa las pamulang, las kanopi depok, las pagar tangerang selatan, tukang las terdekat, bengkel las panggilan, indian jaya las" />
+        <link rel="canonical" href="https://indiajaya.tech/" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://indiajaya.tech/" />
+        <meta property="og:title" content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan" />
+        <meta property="og:description" content="Jasa las profesional untuk kanopi, pagar, tralis, stainless. Free survey & pemasangan." />
+        <meta property="og:image" content="https://indiajaya.tech/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://indiajaya.tech/" />
+        <meta property="twitter:title" content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan" />
+        <meta property="twitter:description" content="Jasa las profesional untuk kanopi, pagar, tralis, stainless." />
+        <meta property="twitter:image" content="https://indiajaya.tech/og-image.jpg" />
+
+        {/* JSON-LD LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Indian Jaya Las",
+            "image": "https://indiajaya.tech/logo.jpg",
+            "description": "Bengkel las profesional melayani jasa pembuatan dan pemasangan kanopi, pagar, tralis, dan stainless steel di Depok dan Tangerang Selatan",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR",
+              "addressLocality": "Bojongsari",
+              "addressRegion": "Depok",
+              "postalCode": "16516",
+              "addressCountry": "ID"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "-6.3906",
+              "longitude": "106.7525"
+            },
+            "url": "https://indiajaya.tech",
+            "telephone": "081212154019",
+            "priceRange": "$$",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "08:00",
+                "closes": "14:00"
+              }
+            ],
+            "areaServed": [
+              {"@type": "City", "name": "Depok"},
+              {"@type": "City", "name": "Pamulang"},
+              {"@type": "City", "name": "BSD"},
+              {"@type": "City", "name": "Ciputat"},
+              {"@type": "City", "name": "Serpong"}
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Layanan Las",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Jasa Las Kanopi"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Jasa Las Pagar"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+      </Helmet>
+
       <DefaultNavbar
         routes={[
           { name: "Beranda", route: () => handleScroll(homeRef) },
-          { name: "Kenapa Kami ?", route: () => handleScroll(benefitRef) },
+          { name: "Kenapa Kami", route: () => handleScroll(benefitRef) },
           { name: "Tentang Kami", route: () => handleScroll(tentangKamiRef) },
           { name: "Produk", route: () => handleScroll(produkRef) },
           { name: "Testimoni", route: () => handleScroll(testiRef) },
@@ -80,47 +179,331 @@ function Presentation() {
         sticky
       />
 
+      {/* Hero Section - Modern Professional Design */}
       <MKBox
         ref={homeRef}
-        minHeight="75vh"
+        minHeight="100vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), url(${bgImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "top",
-          display: "grid",
-          placeItems: "center",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          display: "flex",
+          alignItems: "center",
+          position: "relative",
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%)",
+          },
         }}
       >
-        <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <MKTypography
-              variant="h1"
-              color="white"
-              mt={-6}
-              mb={1}
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
-                },
-              })}
-            >
-              <br />
-              Bengkel Las
-              <br />
-              Indian Jaya{" "}
-            </MKTypography>
-            <MKTypography
-              variant="body2"
-              color="white"
-              textAlign="center"
-              px={{ xs: 6, lg: 12 }}
-              mt={1}
-            >
-              JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI KOTA DEPOK.
-            </MKTypography>
+        <Container sx={{ position: "relative", zIndex: 2 }}>
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} lg={7}>
+              {/* Badge */}
+              <MKBox
+                display="inline-block"
+                bgColor="#2196F3"
+                color="white"
+                borderRadius="xl"
+                px={3}
+                py={1}
+                mb={3}
+                sx={{
+                  animation: "fadeInDown 1s ease-out",
+                  "@keyframes fadeInDown": {
+                    "0%": { opacity: 0, transform: "translateY(-20px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                  },
+                }}
+              >
+                <MKTypography variant="button" color="white" fontWeight="bold">
+                  ⭐ Terpercaya Sejak 2015 | 1000+ Project Selesai
+                </MKTypography>
+              </MKBox>
+
+              {/* Main Heading */}
+              <MKTypography
+                variant="h1"
+                color="white"
+                mb={2}
+                sx={({ breakpoints, typography: { size } }) => ({
+                  fontSize: "3.5rem",
+                  fontWeight: 800,
+                  lineHeight: 1.2,
+                  textShadow: "2px 4px 8px rgba(0,0,0,0.3)",
+                  animation: "fadeInLeft 1s ease-out 0.2s backwards",
+                  [breakpoints.down("md")]: {
+                    fontSize: size["3xl"],
+                  },
+                  "@keyframes fadeInLeft": {
+                    "0%": { opacity: 0, transform: "translateX(-30px)" },
+                    "100%": { opacity: 1, transform: "translateX(0)" },
+                  },
+                })}
+              >
+                Bengkel Las Profesional <br />
+                <MKBox component="span" sx={{ color: "#2196F3" }}>
+                  Indian Jaya
+                </MKBox>
+              </MKTypography>
+
+              {/* Subheading */}
+              <MKTypography
+                variant="h5"
+                color="white"
+                fontWeight="regular"
+                mb={3}
+                sx={{
+                  opacity: 0.95,
+                  lineHeight: 1.6,
+                  animation: "fadeInLeft 1s ease-out 0.4s backwards",
+                }}
+              >
+                Jasa Las Kanopi, Pagar, Tralis & Stainless di Depok, Pamulang, BSD & Sekitarnya
+              </MKTypography>
+
+              {/* Features List */}
+              <Grid container spacing={2} mb={4}>
+                {[
+                  "✓ Free Survey & Konsultasi",
+                  "✓ Free Pemasangan",
+                  "✓ Free Ongkir Jabodetabek",
+                  "✓ Garansi Kualitas",
+                ].map((feature, index) => (
+                  <Grid item xs={6} key={index}>
+                    <MKTypography
+                      variant="body1"
+                      color="white"
+                      fontWeight="medium"
+                      sx={{
+                        animation: `fadeIn 1s ease-out ${0.6 + index * 0.1}s backwards`,
+                        "@keyframes fadeIn": {
+                          "0%": { opacity: 0 },
+                          "100%": { opacity: 1 },
+                        },
+                      }}
+                    >
+                      {feature}
+                    </MKTypography>
+                  </Grid>
+                ))}
+              </Grid>
+
+              {/* CTA Buttons */}
+              <MKBox
+                display="flex"
+                flexDirection={{ xs: "column", sm: "row" }}
+                gap={2}
+                sx={{
+                  animation: "fadeInUp 1s ease-out 0.8s backwards",
+                  "@keyframes fadeInUp": {
+                    "0%": { opacity: 0, transform: "translateY(20px)" },
+                    "100%": { opacity: 1, transform: "translateY(0)" },
+                  },
+                }}
+              >
+                <MKBox
+                  component="a"
+                  href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    px: 4,
+                    py: 2,
+                    borderRadius: "xl",
+                    background: "linear-gradient(135deg, #2196F3 0%, #1976D2 100%)",
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: "1.1rem",
+                    textDecoration: "none",
+                    transition: "all 0.3s",
+                    boxShadow: "0 4px 15px rgba(33, 150, 243, 0.4)",
+                    textShadow: "0 1px 2px rgba(0,0,0,0.1)",
+                    "&:hover": {
+                      transform: "translateY(-3px)",
+                      boxShadow: "0 6px 20px rgba(33, 150, 243, 0.6)",
+                    },
+                  }}
+                >
+                  <MKBox component="span" mr={1}>
+                    💬
+                  </MKBox>
+                  Chat WhatsApp Sekarang
+                </MKBox>
+
+                <MKBox
+                  component="a"
+                  href="tel:081212154019"
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    px: 4,
+                    py: 2,
+                    borderRadius: "xl",
+                    background: "rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(10px)",
+                    border: "2px solid rgba(255,255,255,0.3)",
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: "1.1rem",
+                    textDecoration: "none",
+                    transition: "all 0.3s",
+                    textShadow: "0 1px 2px rgba(0,0,0,0.2)",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.2)",
+                      transform: "translateY(-3px)",
+                    },
+                  }}
+                >
+                  <MKBox component="span" mr={1}>
+                    📞
+                  </MKBox>
+                  Telepon Langsung
+                </MKBox>
+              </MKBox>
+            </Grid>
+
+            {/* Right Side - Stats Cards */}
+            <Grid item xs={12} lg={5}>
+              <Grid container spacing={2}>
+                {[
+                  { icon: <EmojiEventsIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                  { icon: <StarIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "4.9/5", label: "Rating Pelanggan", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                  { icon: <EngineeringIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "10+", label: "Tahun Pengalaman", gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)" },
+                  { icon: <LocalShippingIcon sx={{ fontSize: "4rem", color: "white" }} />, number: "FREE", label: "Ongkir & Survey", gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)" },
+                ].map((stat, index) => (
+                  <Grid item xs={6} key={index}>
+                    <MKBox
+                      borderRadius="2xl"
+                      p={3}
+                      textAlign="center"
+                      sx={{
+                        position: "relative",
+                        backdropFilter: "blur(20px) saturate(180%)",
+                        background: "rgba(255, 255, 255, 0.15)",
+                        border: "1px solid rgba(255, 255, 255, 0.3)",
+                        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
+                        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                        animation: `fadeInRight 1s ease-out ${0.6 + index * 0.1}s backwards`,
+                        overflow: "hidden",
+                        "&::before": {
+                          content: '""',
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: stat.gradient,
+                          opacity: 0,
+                          transition: "opacity 0.4s ease",
+                          zIndex: 0,
+                        },
+                        "&:hover": {
+                          transform: "translateY(-8px) scale(1.02)",
+                          boxShadow: "0 16px 48px rgba(0, 0, 0, 0.3)",
+                          background: "rgba(255, 255, 255, 0.25)",
+                          border: "1px solid rgba(255, 255, 255, 0.5)",
+                          "&::before": {
+                            opacity: 0.1,
+                          },
+                        },
+                        "@keyframes fadeInRight": {
+                          "0%": { opacity: 0, transform: "translateX(30px)" },
+                          "100%": { opacity: 1, transform: "translateX(0)" },
+                        },
+                      }}
+                    >
+                      <MKBox sx={{ position: "relative", zIndex: 1 }}>
+                        {/* Icon with Glow Effect */}
+                        <MKBox
+                          sx={{
+                            mb: 1.5,
+                            color: "rgba(255,255,255,0.95)",
+                            transform: "scale(1.7)",
+                            filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
+                            transition: "all 0.3s",
+                            ".MuiBox-root:hover &": {
+                              transform: "scale(2) rotate(5deg)",
+                              filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.3))",
+                            },
+                          }}
+                        >
+                          {stat.icon}
+                        </MKBox>
+
+                        {/* Number */}
+                        <MKTypography
+                          variant="h2"
+                          fontWeight="bold"
+                          sx={{
+                            color: "rgba(255,255,255,0.95)",
+                            textShadow: "0 2px 10px rgba(0,0,0,0.3)",
+                            mb: 0.5,
+                            letterSpacing: "-0.5px",
+                          }}
+                        >
+                          {stat.number}
+                        </MKTypography>
+
+                        {/* Label */}
+                        <MKTypography
+                          variant="button"
+                          sx={{
+                            color: "rgba(255,255,255,0.95)",
+                            textShadow: "0 1px 3px rgba(0,0,0,0.2)",
+                            fontWeight: "medium",
+                            fontSize: "0.875rem",
+                          }}
+                        >
+                          {stat.label}
+                        </MKTypography>
+                      </MKBox>
+
+                      {/* Decorative Corner Element */}
+                      <MKBox
+                        sx={{
+                          position: "absolute",
+                          top: -20,
+                          right: -20,
+                          width: "80px",
+                          height: "80px",
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,0.1)",
+                          filter: "blur(20px)",
+                          zIndex: 0,
+                        }}
+                      />
+                    </MKBox>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
           </Grid>
         </Container>
+
+        {/* Decorative Elements */}
+        <MKBox
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "100px",
+            background: "linear-gradient(180deg, transparent 0%, #f8f9fa 100%)",
+          }}
+        />
       </MKBox>
 
       <Card
@@ -142,21 +525,99 @@ function Presentation() {
 
         <div ref={tentangKamiRef}>
         <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
+          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+            <BuiltByDevelopers />
+          </Suspense>
         </Container>
         </div>
 
 
         <div ref={produkRef}>
-          <DesignBlocks />
+          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+            <DesignBlocks />
+          </Suspense>
         </div>
 
         <div ref={testiRef}>
-        <Testimonials />
+        <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+          <Testimonials />
+        </Suspense>
         </div>
 
+        {/* Area Layanan Section */}
+        <Container sx={{ mt: 8, mb: 6 }}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} textAlign="center" mb={4}>
+              <MKTypography variant="h2" mb={2}>
+                Area Layanan Kami
+              </MKTypography>
+              <MKTypography variant="body1" color="text">
+                Melayani seluruh wilayah Depok, Tangerang Selatan, dan Jakarta Selatan
+              </MKTypography>
+            </Grid>
+            
+            <Grid item xs={12} md={6}>
+              <MKBox>
+                <MKTypography variant="h5" mb={3}>
+                  Wilayah Layanan
+                </MKTypography>
+                <Grid container spacing={2}>
+                  {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere", "Lenteng Agung", "Jagakarsa", "Jakarta Selatan", "Tangerang Selatan"].map((area) => (
+                    <Grid item xs={6} md={4} key={area}>
+                      <MKBox
+                        bgColor="grey-100"
+                        borderRadius="md"
+                        p={1.5}
+                        textAlign="center"
+                        sx={{
+                          transition: "all 0.3s",
+                          "&:hover": {
+                            backgroundColor: "info.main",
+                            color: "white",
+                            transform: "translateY(-3px)",
+                            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+                          },
+                        }}
+                      >
+                        <MKTypography variant="body2" fontWeight="bold">
+                          {area}
+                        </MKTypography>
+                      </MKBox>
+                    </Grid>
+                  ))}
+                </Grid>
+              </MKBox>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <MKBox>
+                <MKTypography variant="h5" mb={3}>
+                  Lokasi Bengkel
+                </MKTypography>
+                <MKBox
+                  component="iframe"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3234567890!2d106.7525!3d-6.3906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjYuMiJTIDEwNsKwNDUnMDkuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
+                  width="100%"
+                  height="300"
+                  sx={{ border: 0, borderRadius: "lg" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <MKTypography variant="body2" color="text" mt={2}>
+                  <strong>Alamat:</strong> JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI KOTA DEPOK<br />
+                  <strong>Telepon:</strong> <a href="tel:081212154019" style={{ color: "inherit" }}>081212154019</a><br />
+                  <strong>Jam Buka:</strong> Senin - Sabtu: 08.00 - 17.00 WIB
+                </MKTypography>
+              </MKBox>
+            </Grid>
+          </Grid>
+        </Container>
+
         <div ref={kontakRef}>
-          <Download />
+          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+            <Download />
+          </Suspense>
         </div>
       </Card>
 
@@ -180,6 +641,7 @@ function Presentation() {
           src="/wa.png"
           alt="WhatsApp Logo"
           style={{ width: "60px", height: "60px" }}
+          loading="lazy"
         />
       </MKBox>
     </>

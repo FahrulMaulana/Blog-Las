@@ -65,14 +65,14 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
+                  // icon="content_copy"
                   title="Free Pemasangan"
                   description="Gratis jasa pemasangan produk yang telah dipesan oleh konsumen."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
+                  // icon="flip_to_front"
                   title="Free Survey"
                   description="Gratis untuk survei menuju lokasi konsumen dalam mengukur produk yang dipesan
 ."
@@ -82,14 +82,14 @@ function Information() {
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
+                  // icon="price_change"
                   title="Free Ongkir"
                   description="Gratis untuk jasa pengiriman area Jabodetabek."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="devices"
+                  // icon="devices"
                   title="Free Gambar Kerja"
                   description="Gratis untuk biaya gambar kerja sebagai gambaran produk untuk Konsumen."
                 />
