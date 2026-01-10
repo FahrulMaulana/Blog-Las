@@ -7,7 +7,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import MKTypography from "components/MKTypography";
 
 // Images
-import logo from "assets/images/logo.png";
+import logo from "assets/images/logo-optimized.webp";
 
 const date = new Date().getFullYear();
 
