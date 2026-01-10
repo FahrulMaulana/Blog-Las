@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -25,32 +25,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function Information() {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      {
-        threshold: 0.05,
-        rootMargin: "0px 0px 200px 0px",
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
   const testimonials = [
     {
       name: "Ujang Suryana",
@@ -101,8 +77,6 @@ function Information() {
       py={10}
       sx={{
         background: "linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%)",
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
       }}
     >
       <Container>
@@ -117,9 +91,6 @@ function Information() {
             mx: "auto",
             textAlign: "center",
             mb: 8,
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(-20px)",
-            transition: "all 0.5s ease-out",
           }}
         >
           {/* <MKBox
@@ -137,16 +108,7 @@ function Information() {
             </MKTypography>
           </MKBox> */}
 
-          <MKTypography
-            variant="h2"
-            fontWeight="bold"
-            mb={1}
-            sx={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "scale(1)" : "scale(0.95)",
-              transition: "all 0.3s ease-out 0.1s",
-            }}
-          >
+          <MKTypography variant="h2" fontWeight="bold" mb={1}>
             Apa Kata Mereka?
           </MKTypography>
 
@@ -166,29 +128,14 @@ function Information() {
             </MKTypography>
           </MKTypography> */}
 
-          <MKTypography
-            variant="body1"
-            color="text"
-            sx={{
-              opacity: isVisible ? 1 : 0,
-              transition: "opacity 0.3s ease-out 0.15s",
-            }}
-          >
+          <MKTypography variant="body1" color="text">
             Selama pengalaman 15 tahun ini kami telah mengerjakan berbagai macam project dan
             melayani lebih dari 2000+ customer dengan hasil yang memuaskan.
           </MKTypography>
         </Grid>
 
         {/* Testimonials Grid */}
-        <Grid
-          container
-          spacing={3}
-          sx={{
-            opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(20px)",
-            transition: "all 0.4s ease-out 0.2s",
-          }}
-        >
+        <Grid container spacing={3}>
           {testimonials.map((testimonial, index) => (
             <Grid item xs={12} md={6} key={index}>
               <MKBox
@@ -215,11 +162,6 @@ function Information() {
                     transform: "translateY(-8px)",
                     boxShadow: "0 12px 50px rgba(0,0,0,0.12)",
                   },
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateX(0)" : "translateX(-15px)",
-                  transition: `all 0.4s ease-out ${
-                    0.25 + index * 0.08
-                  }s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)`,
                 }}
               >
                 {/* Quote Icon */}

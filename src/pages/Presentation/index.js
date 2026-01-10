@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import React, { useRef, lazy, Suspense, useState, useEffect } from "react";
+import React, { useRef, lazy, Suspense, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 // @mui material components
@@ -72,79 +72,9 @@ function Presentation() {
   const kontakRef = useRef(null);
   const areaRef = useRef(null);
 
-  // Visibility states for scroll animations
-  const [layananVisible, setLayananVisible] = useState(false);
-  const [prosesVisible, setProsesVisible] = useState(false);
-  const [benefitVisible, setBenefitVisible] = useState(false);
-  const [tentangVisible, setTentangVisible] = useState(false);
-  const [produkVisible, setProdukVisible] = useState(false);
-  const [testiVisible, setTestiVisible] = useState(false);
-  const [kontakVisible, setKontakVisible] = useState(false);
-  const [areaVisible, setAreaVisible] = useState(false);
-
   // Intersection Observer for scroll animations
   useEffect(() => {
-    // Detect mobile devices
-    const isMobile = window.innerWidth < 768;
-    
-    // Jika mobile, langsung set semua visible untuk menghindari konten tersembunyi
-    if (isMobile) {
-      // Gunakan timeout kecil untuk tetap ada transisi
-      const mobileTimeout = setTimeout(() => {
-        setLayananVisible(true);
-        setProsesVisible(true);
-        setBenefitVisible(true);
-        setTentangVisible(true);
-        setProdukVisible(true);
-        setTestiVisible(true);
-        setKontakVisible(true);
-        setAreaVisible(true);
-      }, 100); // 100ms delay untuk memastikan komponen sudah ter-render
-      
-      return () => clearTimeout(mobileTimeout);
-    }
-    
-    // Untuk desktop, gunakan Intersection Observer dengan threshold lebih rendah
-    const observerOptions = {
-      threshold: 0.05, // Lebih sensitif, trigger lebih cepat
-      rootMargin: "0px 0px 200px 0px" // Trigger 200px sebelum element masuk viewport
-    };
-
-    const observers = [
-      { ref: layananRef, setState: setLayananVisible },
-      { ref: prosesRef, setState: setProsesVisible },
-      { ref: benefitRef, setState: setBenefitVisible },
-      { ref: tentangKamiRef, setState: setTentangVisible },
-      { ref: produkRef, setState: setProdukVisible },
-      { ref: testiRef, setState: setTestiVisible },
-      { ref: kontakRef, setState: setKontakVisible },
-      { ref: areaRef, setState: setAreaVisible },
-    ];
-
-    const observerInstances = observers.map(({ ref, setState }) => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setState(true);
-          }
-        });
-      }, observerOptions);
-
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-
-      return { observer, ref };
-    });
-
-    // Cleanup
-    return () => {
-      observerInstances.forEach(({ observer, ref }) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
+    // Tidak perlu visibility state karena semua langsung visible
   }, []);
 
   const handleScroll = (ref) => {
@@ -605,12 +535,6 @@ function Presentation() {
         pb={15} 
         sx={{ 
           backgroundColor: "#f8f9fa",
-          opacity: layananVisible ? 1 : 0,
-          transform: {
-            xs: layananVisible ? "translateY(0)" : "translateY(15px)",
-            md: layananVisible ? "translateY(0)" : "translateY(20px)",
-          },
-          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
         }}
       >
         <Container>
@@ -620,14 +544,6 @@ function Presentation() {
                 variant="h2" 
                 mb={2} 
                 fontWeight="bold"
-                sx={{
-                  opacity: layananVisible ? 1 : 0,
-                  transform: {
-                    xs: layananVisible ? "translateY(0)" : "translateY(10px)",
-                    md: layananVisible ? "translateY(0)" : "translateY(15px)",
-                  },
-                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
-                }}
               >
                 Layanan Las Kami
               </MKTypography>
@@ -635,14 +551,6 @@ function Presentation() {
                 variant="body1" 
                 color="text" 
                 mb={4}
-                sx={{
-                  opacity: layananVisible ? 1 : 0,
-                  transform: {
-                    xs: layananVisible ? "translateY(0)" : "translateY(10px)",
-                    md: layananVisible ? "translateY(0)" : "translateY(15px)",
-                  },
-                  transition: "opacity 0.3s ease-out 0.15s, transform 0.3s ease-out 0.15s",
-                }}
               >
                 Kami menyediakan berbagai jasa las berkualitas tinggi untuk kebutuhan rumah dan komersial Anda
               </MKTypography>
@@ -688,15 +596,6 @@ function Presentation() {
                     display: "block",
                     textDecoration: "none",
                     height: "100%",
-                    opacity: layananVisible ? 1 : 0,
-                    transform: {
-                      xs: layananVisible ? "translateY(0)" : "translateY(15px)",
-                      md: layananVisible ? "translateY(0)" : "translateY(20px)",
-                    },
-                    transition: {
-                      xs: `opacity 0.3s ease-out ${0.2 + index * 0.05}s, transform 0.3s ease-out ${0.2 + index * 0.05}s`,
-                      md: `opacity 0.4s ease-out ${0.25 + index * 0.06}s, transform 0.4s ease-out ${0.25 + index * 0.06}s`,
-                    },
                   }}
                 >
                   <MKBox
@@ -779,37 +678,24 @@ function Presentation() {
         </Container>
       </MKBox>
 
+      {/* Information Section - Full Width */}
+      <MKBox ref={benefitRef}>
+        <Information />
+      </MKBox>
+
       <Card
-        ref={benefitRef}
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: -8,
+          mt: 4,
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
-          opacity: benefitVisible ? 1 : 0,
-          transform: {
-            xs: benefitVisible ? "translateY(0)" : "translateY(15px)",
-            md: benefitVisible ? "translateY(0)" : "translateY(20px)",
-          },
-          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
         }}
       >
-        {/* <Counters /> */}
-        <div>
-          <Information />
-        </div>
 
-        <div 
-          ref={tentangKamiRef}
-          style={{
-            opacity: tentangVisible ? 1 : 0,
-            transform: tentangVisible ? "translateY(0)" : "translateY(15px)",
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-          }}
-        >
+        <div ref={tentangKamiRef}>
         <Container sx={{ mt: 6 }}>
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
             <BuiltByDevelopers />
@@ -818,14 +704,7 @@ function Presentation() {
         </div>
 
 
-        <div 
-          ref={produkRef}
-          style={{
-            opacity: produkVisible ? 1 : 0,
-            transform: produkVisible ? "translateY(0)" : "translateY(15px)",
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-          }}
-        >
+        <div ref={produkRef}>
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
             <DesignBlocks />
           </Suspense>
@@ -837,12 +716,6 @@ function Presentation() {
           sx={{ 
             mt: 8, 
             mb: 8,
-            opacity: prosesVisible ? 1 : 0,
-            transform: {
-              xs: prosesVisible ? "translateY(0)" : "translateY(15px)",
-              md: prosesVisible ? "translateY(0)" : "translateY(20px)",
-            },
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Grid container spacing={3} mb={6}>
@@ -851,11 +724,6 @@ function Presentation() {
                 variant="h2" 
                 mb={2} 
                 fontWeight="bold"
-                sx={{
-                  opacity: prosesVisible ? 1 : 0,
-                  transform: prosesVisible ? "scale(1)" : "scale(0.95)",
-                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
-                }}
               >
                 Proses Kerja Kami
               </MKTypography>
@@ -863,10 +731,6 @@ function Presentation() {
                 variant="body1" 
                 color="text" 
                 mb={4}
-                sx={{
-                  opacity: prosesVisible ? 1 : 0,
-                  transition: "opacity 0.3s ease-out 0.15s",
-                }}
               >
                 Kami memastikan setiap project dikerjakan dengan profesional dan tepat waktu
               </MKTypography>
@@ -921,15 +785,6 @@ function Presentation() {
                     background: "white",
                     border: "2px solid #f0f0f0",
                     position: "relative",
-                    opacity: prosesVisible ? 1 : 0,
-                    transform: {
-                      xs: prosesVisible ? "scale(1) translateY(0)" : "scale(0.95) translateY(10px)",
-                      md: prosesVisible ? "scale(1) translateY(0)" : "scale(0.95) translateY(15px)",
-                    },
-                    transition: {
-                      xs: `all 0.3s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + index * 0.05}s`,
-                      md: `all 0.35s cubic-bezier(0.4, 0, 0.2, 1) ${0.25 + index * 0.06}s`,
-                    },
                     "&:hover": {
                       transform: "translateY(-5px) scale(1.02)",
                       borderColor: process.color,
@@ -986,17 +841,6 @@ function Presentation() {
           <MKBox 
             textAlign="center" 
             mt={6}
-            sx={{
-              opacity: prosesVisible ? 1 : 0,
-              transform: {
-                xs: prosesVisible ? "translateY(0)" : "translateY(10px)",
-                md: prosesVisible ? "translateY(0)" : "translateY(15px)",
-              },
-              transition: {
-                xs: "opacity 0.3s ease-out 0.5s, transform 0.3s ease-out 0.5s",
-                md: "opacity 0.4s ease-out 0.6s, transform 0.4s ease-out 0.6s",
-              },
-            }}
           >
             <MKTypography variant="h5" mb={3} fontWeight="medium">
               Siap Memulai Project Anda?
@@ -1034,28 +878,14 @@ function Presentation() {
           </MKBox>
         </Container>
 
-        <div 
-          ref={testiRef}
-          style={{
-            opacity: testiVisible ? 1 : 0,
-            transform: testiVisible ? "translateY(0)" : "translateY(15px)",
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-          }}
-        >
+        <div ref={testiRef}>
         <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
           <Testimonials />
         </Suspense>
         </div>
 
 
-        <div 
-          ref={kontakRef}
-          style={{
-            opacity: kontakVisible ? 1 : 0,
-            transform: kontakVisible ? "translateY(0)" : "translateY(15px)",
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-          }}
-        >
+        <div ref={kontakRef}>
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
             <Download />
           </Suspense>
@@ -1067,12 +897,6 @@ function Presentation() {
           sx={{ 
             mt: 8, 
             mb: 6,
-            opacity: areaVisible ? 1 : 0,
-            transform: {
-              xs: areaVisible ? "translateY(0)" : "translateY(15px)",
-              md: areaVisible ? "translateY(0)" : "translateY(20px)",
-            },
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Grid container spacing={3}>
@@ -1080,42 +904,24 @@ function Presentation() {
               <MKTypography 
                 variant="h2" 
                 mb={2}
-                sx={{
-                  opacity: areaVisible ? 1 : 0,
-                  transform: areaVisible ? "scale(1)" : "scale(0.95)",
-                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
-                }}
               >
                 Area Layanan Kami
               </MKTypography>
               <MKTypography 
                 variant="body1" 
                 color="text"
-                sx={{
-                  opacity: areaVisible ? 1 : 0,
-                  transition: "opacity 0.3s ease-out 0.15s",
-                }}
               >
                 Melayani seluruh wilayah Depok, Tangerang Selatan, dan Jakarta Selatan
               </MKTypography>
             </Grid>
             
             <Grid item xs={12} md={6}>
-              <MKBox
-                sx={{
-                  opacity: areaVisible ? 1 : 0,
-                  transform: {
-                    xs: areaVisible ? "translateX(0)" : "translateX(-15px)",
-                    md: areaVisible ? "translateX(0)" : "translateX(-20px)",
-                  },
-                  transition: "opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s",
-                }}
-              >
+              <MKBox>
                 <MKTypography variant="h5" mb={3}>
                   Wilayah Layanan
                 </MKTypography>
                 <Grid container spacing={2}>
-                  {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere", "Lenteng Agung", "Jagakarsa", "Jakarta Selatan", "Tangerang Selatan"].map((area, index) => (
+                  {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere", "Lenteng Agung", "Jagakarsa", "Jakarta Selatan", "Tangerang Selatan"].map((area) => (
                     <Grid item xs={6} md={4} key={area}>
                       <MKBox
                         bgColor="grey-100"
@@ -1123,12 +929,6 @@ function Presentation() {
                         p={1.5}
                         textAlign="center"
                         sx={{
-                          opacity: areaVisible ? 1 : 0,
-                          transform: areaVisible ? "scale(1)" : "scale(0.95)",
-                          transition: {
-                            xs: `all 0.25s ease ${0.25 + index * 0.03}s`,
-                            md: `all 0.3s ease ${0.3 + index * 0.04}s`,
-                          },
                           "&:hover": {
                             backgroundColor: "info.main",
                             color: "white",
@@ -1148,16 +948,7 @@ function Presentation() {
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <MKBox
-                sx={{
-                  opacity: areaVisible ? 1 : 0,
-                  transform: {
-                    xs: areaVisible ? "translateX(0)" : "translateX(15px)",
-                    md: areaVisible ? "translateX(0)" : "translateX(20px)",
-                  },
-                  transition: "opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s",
-                }}
-              >
+              <MKBox>
                 <MKTypography variant="h5" mb={3}>
                   Lokasi Bengkel
                 </MKTypography>
