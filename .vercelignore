@@ -1,0 +1,43 @@
+# Development files
+node_modules
+.git
+.vscode
+.idea
+
+# Build artifacts
+build
+dist
+.cache
+
+# Documentation
+*.md
+!README.md
+
+# Scripts (not needed for build)
+scripts/convert-images-to-webp.js
+
+# Large files
+*.psd
+*.ai
+*.sketch
+
+# Original images (keep only WebP for production)
+# src/assets/images/*.jpg
+# src/assets/images/*.jpeg
+# src/assets/images/*.png
+
+# Test files
+*.test.js
+*.spec.js
+__tests__
+
+# Environment files
+.env.local
+.env.development
+.env.test
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
