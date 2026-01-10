@@ -1,10 +1,15 @@
 {
-  "short_name": "Material Kit",
-  "name": "Material Kit 2 React",
+  "short_name": "Indian Jaya Las",
+  "name": "Indian Jaya Las - Bengkel Las Profesional",
   "icons": [
     {
+      "src": "pngwing.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
       "src": "pngwing.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
