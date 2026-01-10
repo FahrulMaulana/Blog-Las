@@ -70,9 +70,9 @@ function Download() {
         py: 1.5,
         fontSize: "1.1rem",
         fontWeight: "bold",
-        boxShadow: "0 4px 20px rgba(244, 67, 54, 0.4)",
+        boxShadow: "0 4px 20px rgba(20, 98, 199, 0.4)",
         "&:hover": {
-          boxShadow: "0 6px 30px rgba(244, 67, 54, 0.6)",
+          boxShadow: "0 6px 30px rgba(90, 136, 236, 0.6)",
         },
       }}
     >

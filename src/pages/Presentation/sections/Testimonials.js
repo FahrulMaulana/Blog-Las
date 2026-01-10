@@ -36,8 +36,8 @@ function Information() {
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px 200px 0px",
       }
     );
 
@@ -102,7 +102,7 @@ function Information() {
       sx={{
         background: "linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%)",
         opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.8s ease-in-out",
+        transition: "opacity 0.5s ease-in-out",
       }}
     >
       <Container>
@@ -118,8 +118,8 @@ function Information() {
             textAlign: "center",
             mb: 8,
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(-30px)",
-            transition: "all 0.8s ease-out",
+            transform: isVisible ? "translateY(0)" : "translateY(-20px)",
+            transition: "all 0.5s ease-out",
           }}
         >
           {/* <MKBox
@@ -143,8 +143,8 @@ function Information() {
             mb={1}
             sx={{
               opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "scale(1)" : "scale(0.9)",
-              transition: "all 0.6s ease-out 0.2s",
+              transform: isVisible ? "scale(1)" : "scale(0.95)",
+              transition: "all 0.3s ease-out 0.1s",
             }}
           >
             Apa Kata Mereka?
@@ -171,7 +171,7 @@ function Information() {
             color="text"
             sx={{
               opacity: isVisible ? 1 : 0,
-              transition: "opacity 0.6s ease-out 0.4s",
+              transition: "opacity 0.3s ease-out 0.15s",
             }}
           >
             Selama pengalaman 15 tahun ini kami telah mengerjakan berbagai macam project dan
@@ -185,8 +185,8 @@ function Information() {
           spacing={3}
           sx={{
             opacity: isVisible ? 1 : 0,
-            transform: isVisible ? "translateY(0)" : "translateY(30px)",
-            transition: "all 0.8s ease-out 0.5s",
+            transform: isVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "all 0.4s ease-out 0.2s",
           }}
         >
           {testimonials.map((testimonial, index) => (
@@ -216,9 +216,9 @@ function Information() {
                     boxShadow: "0 12px 50px rgba(0,0,0,0.12)",
                   },
                   opacity: isVisible ? 1 : 0,
-                  transform: isVisible ? "translateX(0)" : "translateX(-20px)",
-                  transition: `all 0.6s ease-out ${
-                    0.1 + index * 0.15
+                  transform: isVisible ? "translateX(0)" : "translateX(-15px)",
+                  transition: `all 0.4s ease-out ${
+                    0.25 + index * 0.08
                   }s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)`,
                 }}
               >

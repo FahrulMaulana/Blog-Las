@@ -104,10 +104,10 @@ function Presentation() {
       return () => clearTimeout(mobileTimeout);
     }
     
-    // Untuk desktop, gunakan Intersection Observer
+    // Untuk desktop, gunakan Intersection Observer dengan threshold lebih rendah
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
+      threshold: 0.05, // Lebih sensitif, trigger lebih cepat
+      rootMargin: "0px 0px 200px 0px" // Trigger 200px sebelum element masuk viewport
     };
 
     const observers = [
@@ -607,10 +607,10 @@ function Presentation() {
           backgroundColor: "#f8f9fa",
           opacity: layananVisible ? 1 : 0,
           transform: {
-            xs: layananVisible ? "translateY(0)" : "translateY(20px)",
-            md: layananVisible ? "translateY(0)" : "translateY(30px)",
+            xs: layananVisible ? "translateY(0)" : "translateY(15px)",
+            md: layananVisible ? "translateY(0)" : "translateY(20px)",
           },
-          transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
         }}
       >
         <Container>
@@ -623,10 +623,10 @@ function Presentation() {
                 sx={{
                   opacity: layananVisible ? 1 : 0,
                   transform: {
-                    xs: layananVisible ? "translateY(0)" : "translateY(15px)",
-                    md: layananVisible ? "translateY(0)" : "translateY(20px)",
+                    xs: layananVisible ? "translateY(0)" : "translateY(10px)",
+                    md: layananVisible ? "translateY(0)" : "translateY(15px)",
                   },
-                  transition: "opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s",
+                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
                 }}
               >
                 Layanan Las Kami
@@ -638,10 +638,10 @@ function Presentation() {
                 sx={{
                   opacity: layananVisible ? 1 : 0,
                   transform: {
-                    xs: layananVisible ? "translateY(0)" : "translateY(15px)",
-                    md: layananVisible ? "translateY(0)" : "translateY(20px)",
+                    xs: layananVisible ? "translateY(0)" : "translateY(10px)",
+                    md: layananVisible ? "translateY(0)" : "translateY(15px)",
                   },
-                  transition: "opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s",
+                  transition: "opacity 0.3s ease-out 0.15s, transform 0.3s ease-out 0.15s",
                 }}
               >
                 Kami menyediakan berbagai jasa las berkualitas tinggi untuk kebutuhan rumah dan komersial Anda
@@ -690,12 +690,12 @@ function Presentation() {
                     height: "100%",
                     opacity: layananVisible ? 1 : 0,
                     transform: {
-                      xs: layananVisible ? "translateY(0)" : "translateY(20px)",
-                      md: layananVisible ? "translateY(0)" : "translateY(30px)",
+                      xs: layananVisible ? "translateY(0)" : "translateY(15px)",
+                      md: layananVisible ? "translateY(0)" : "translateY(20px)",
                     },
                     transition: {
-                      xs: `opacity 0.5s ease-out ${0.3 + index * 0.08}s, transform 0.5s ease-out ${0.3 + index * 0.08}s`,
-                      md: `opacity 0.6s ease-out ${0.4 + index * 0.1}s, transform 0.6s ease-out ${0.4 + index * 0.1}s`,
+                      xs: `opacity 0.3s ease-out ${0.2 + index * 0.05}s, transform 0.3s ease-out ${0.2 + index * 0.05}s`,
+                      md: `opacity 0.4s ease-out ${0.25 + index * 0.06}s, transform 0.4s ease-out ${0.25 + index * 0.06}s`,
                     },
                   }}
                 >
@@ -791,10 +791,10 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
           opacity: benefitVisible ? 1 : 0,
           transform: {
-            xs: benefitVisible ? "translateY(0)" : "translateY(20px)",
-            md: benefitVisible ? "translateY(0)" : "translateY(30px)",
+            xs: benefitVisible ? "translateY(0)" : "translateY(15px)",
+            md: benefitVisible ? "translateY(0)" : "translateY(20px)",
           },
-          transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
         }}
       >
         {/* <Counters /> */}
@@ -806,8 +806,8 @@ function Presentation() {
           ref={tentangKamiRef}
           style={{
             opacity: tentangVisible ? 1 : 0,
-            transform: tentangVisible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transform: tentangVisible ? "translateY(0)" : "translateY(15px)",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
         <Container sx={{ mt: 6 }}>
@@ -822,8 +822,8 @@ function Presentation() {
           ref={produkRef}
           style={{
             opacity: produkVisible ? 1 : 0,
-            transform: produkVisible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transform: produkVisible ? "translateY(0)" : "translateY(15px)",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
@@ -839,10 +839,10 @@ function Presentation() {
             mb: 8,
             opacity: prosesVisible ? 1 : 0,
             transform: {
-              xs: prosesVisible ? "translateY(0)" : "translateY(20px)",
-              md: prosesVisible ? "translateY(0)" : "translateY(30px)",
+              xs: prosesVisible ? "translateY(0)" : "translateY(15px)",
+              md: prosesVisible ? "translateY(0)" : "translateY(20px)",
             },
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Grid container spacing={3} mb={6}>
@@ -854,7 +854,7 @@ function Presentation() {
                 sx={{
                   opacity: prosesVisible ? 1 : 0,
                   transform: prosesVisible ? "scale(1)" : "scale(0.95)",
-                  transition: "opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s",
+                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
                 }}
               >
                 Proses Kerja Kami
@@ -865,7 +865,7 @@ function Presentation() {
                 mb={4}
                 sx={{
                   opacity: prosesVisible ? 1 : 0,
-                  transition: "opacity 0.5s ease-out 0.3s",
+                  transition: "opacity 0.3s ease-out 0.15s",
                 }}
               >
                 Kami memastikan setiap project dikerjakan dengan profesional dan tepat waktu
@@ -923,12 +923,12 @@ function Presentation() {
                     position: "relative",
                     opacity: prosesVisible ? 1 : 0,
                     transform: {
-                      xs: prosesVisible ? "scale(1) translateY(0)" : "scale(0.95) translateY(15px)",
-                      md: prosesVisible ? "scale(1) translateY(0)" : "scale(0.9) translateY(20px)",
+                      xs: prosesVisible ? "scale(1) translateY(0)" : "scale(0.95) translateY(10px)",
+                      md: prosesVisible ? "scale(1) translateY(0)" : "scale(0.95) translateY(15px)",
                     },
                     transition: {
-                      xs: `all 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${0.3 + index * 0.08}s`,
-                      md: `all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${0.4 + index * 0.1}s`,
+                      xs: `all 0.3s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + index * 0.05}s`,
+                      md: `all 0.35s cubic-bezier(0.4, 0, 0.2, 1) ${0.25 + index * 0.06}s`,
                     },
                     "&:hover": {
                       transform: "translateY(-5px) scale(1.02)",
@@ -989,12 +989,12 @@ function Presentation() {
             sx={{
               opacity: prosesVisible ? 1 : 0,
               transform: {
-                xs: prosesVisible ? "translateY(0)" : "translateY(15px)",
-                md: prosesVisible ? "translateY(0)" : "translateY(20px)",
+                xs: prosesVisible ? "translateY(0)" : "translateY(10px)",
+                md: prosesVisible ? "translateY(0)" : "translateY(15px)",
               },
               transition: {
-                xs: "opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s",
-                md: "opacity 0.8s ease-out 1s, transform 0.8s ease-out 1s",
+                xs: "opacity 0.3s ease-out 0.5s, transform 0.3s ease-out 0.5s",
+                md: "opacity 0.4s ease-out 0.6s, transform 0.4s ease-out 0.6s",
               },
             }}
           >
@@ -1038,8 +1038,8 @@ function Presentation() {
           ref={testiRef}
           style={{
             opacity: testiVisible ? 1 : 0,
-            transform: testiVisible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transform: testiVisible ? "translateY(0)" : "translateY(15px)",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
         <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
@@ -1052,8 +1052,8 @@ function Presentation() {
           ref={kontakRef}
           style={{
             opacity: kontakVisible ? 1 : 0,
-            transform: kontakVisible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transform: kontakVisible ? "translateY(0)" : "translateY(15px)",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
@@ -1069,10 +1069,10 @@ function Presentation() {
             mb: 6,
             opacity: areaVisible ? 1 : 0,
             transform: {
-              xs: areaVisible ? "translateY(0)" : "translateY(20px)",
-              md: areaVisible ? "translateY(0)" : "translateY(30px)",
+              xs: areaVisible ? "translateY(0)" : "translateY(15px)",
+              md: areaVisible ? "translateY(0)" : "translateY(20px)",
             },
-            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
           }}
         >
           <Grid container spacing={3}>
@@ -1083,7 +1083,7 @@ function Presentation() {
                 sx={{
                   opacity: areaVisible ? 1 : 0,
                   transform: areaVisible ? "scale(1)" : "scale(0.95)",
-                  transition: "opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s",
+                  transition: "opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s",
                 }}
               >
                 Area Layanan Kami
@@ -1093,7 +1093,7 @@ function Presentation() {
                 color="text"
                 sx={{
                   opacity: areaVisible ? 1 : 0,
-                  transition: "opacity 0.5s ease-out 0.3s",
+                  transition: "opacity 0.3s ease-out 0.15s",
                 }}
               >
                 Melayani seluruh wilayah Depok, Tangerang Selatan, dan Jakarta Selatan
@@ -1105,10 +1105,10 @@ function Presentation() {
                 sx={{
                   opacity: areaVisible ? 1 : 0,
                   transform: {
-                    xs: areaVisible ? "translateX(0)" : "translateX(-20px)",
-                    md: areaVisible ? "translateX(0)" : "translateX(-30px)",
+                    xs: areaVisible ? "translateX(0)" : "translateX(-15px)",
+                    md: areaVisible ? "translateX(0)" : "translateX(-20px)",
                   },
-                  transition: "opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s",
+                  transition: "opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s",
                 }}
               >
                 <MKTypography variant="h5" mb={3}>
@@ -1124,10 +1124,10 @@ function Presentation() {
                         textAlign="center"
                         sx={{
                           opacity: areaVisible ? 1 : 0,
-                          transform: areaVisible ? "scale(1)" : "scale(0.9)",
+                          transform: areaVisible ? "scale(1)" : "scale(0.95)",
                           transition: {
-                            xs: `all 0.3s ease ${0.4 + index * 0.04}s`,
-                            md: `all 0.3s ease ${0.5 + index * 0.05}s`,
+                            xs: `all 0.25s ease ${0.25 + index * 0.03}s`,
+                            md: `all 0.3s ease ${0.3 + index * 0.04}s`,
                           },
                           "&:hover": {
                             backgroundColor: "info.main",
@@ -1152,10 +1152,10 @@ function Presentation() {
                 sx={{
                   opacity: areaVisible ? 1 : 0,
                   transform: {
-                    xs: areaVisible ? "translateX(0)" : "translateX(20px)",
-                    md: areaVisible ? "translateX(0)" : "translateX(30px)",
+                    xs: areaVisible ? "translateX(0)" : "translateX(15px)",
+                    md: areaVisible ? "translateX(0)" : "translateX(20px)",
                   },
-                  transition: "opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s",
+                  transition: "opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s",
                 }}
               >
                 <MKTypography variant="h5" mb={3}>
