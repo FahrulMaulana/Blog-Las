@@ -57,9 +57,9 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/las.webp";
 import kanopiIcon from "assets/images/kanopi11.webp";
-import pagarIcon from "assets/images/pagar/pagar1.jpg";
-import teralisIcon from "assets/images/teralis/teralis.jpg";
-import tanggaIcon from "assets/images/tangga/tangga1.jpg";
+import pagarIcon from "assets/images/pagar/pagar1.webp";
+import teralisIcon from "assets/images/teralis/teralis.webp";
+import tanggaIcon from "assets/images/tangga/tangga1.webp";
 
 function Presentation() {
   const homeRef = useRef(null);
@@ -1085,7 +1085,7 @@ function Presentation() {
         onClick={() => window.open("https://wa.me/081212154019", "_blank")}
       >
         <img
-          src="/wa.png"
+          src="/wa.webp"
           alt="WhatsApp Logo"
           style={{ width: "60px", height: "60px" }}
           loading="lazy"

@@ -12,7 +12,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 
 // Images
-import pagarImage from "assets/images/pagar/pagar1.jpg";
+import pagarImage from "assets/images/pagar/pagar1.webp";
 
 function LasPagar() {
   const handleWhatsApp = () => {
