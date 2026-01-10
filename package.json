@@ -12,6 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.6",
