@@ -511,6 +511,7 @@ function Presentation() {
                             color: "rgba(255,255,255,0.95)",
                             transform: { xs: "scale(1.5)", md: "scale(2)" },
                             filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
+                            willChange: "transform, filter",
                             transition: "all 0.3s",
                             ".MuiBox-root:hover &": {
                               transform: {

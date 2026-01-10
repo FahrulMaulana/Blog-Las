@@ -73,9 +73,14 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         src={image}
         alt={name}
         width="100%"
+        height="auto"
         my="auto"
         opacity={pro ? 0.6 : 1}
         loading="lazy"
+        sx={{
+          aspectRatio: "1 / 1",
+          objectFit: "cover",
+        }}
       />
     </MKBox>
   );

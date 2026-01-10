@@ -27,8 +27,8 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 
 // Images
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+import bgBack from "assets/images/rotating-card-bg-back.webp";
+import bgFront from "assets/images/rotating-card-bg-front.webp";
 
 function Information() {
   return (
