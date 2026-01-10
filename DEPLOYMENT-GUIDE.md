@@ -3,6 +3,7 @@
 ## 📋 Prerequisites
 
 Pastikan Anda sudah menginstall:
+
 - Node.js (v14 atau lebih baru)
 - npm atau yarn
 - Git (optional)
@@ -38,6 +39,7 @@ npm run build
 ```
 
 ### Build Output:
+
 ```
 build/
 ├── index.html (prerendered)
@@ -72,11 +74,13 @@ genezio deploy
 ### Option 2: Manual Upload ke Hosting
 
 1. Build project:
+
    ```bash
    npm run build
    ```
 
 2. Upload folder `build/` ke server Anda via:
+
    - FTP/SFTP
    - cPanel File Manager
    - SSH
@@ -109,6 +113,7 @@ vercel --prod
 ## ✅ Post-Deployment Checklist
 
 ### 1. Verifikasi Website Live
+
 - [ ] Buka https://indiajaya.tech
 - [ ] Test semua halaman:
   - [ ] Homepage (/)
@@ -119,16 +124,19 @@ vercel --prod
   - [ ] /las-panggilan
 
 ### 2. Test SEO
+
 - [ ] View Page Source - pastikan HTML terlihat lengkap
 - [ ] Check https://indiajaya.tech/sitemap.xml
 - [ ] Check https://indiajaya.tech/robots.txt
 
 ### 3. Test Performance
+
 - [ ] Google PageSpeed Insights: https://pagespeed.web.dev/
   - Target: Mobile 75+, Desktop 90+
 - [ ] Mobile-Friendly Test: https://search.google.com/test/mobile-friendly
 
 ### 4. Google Search Console
+
 ```
 1. Buka: https://search.google.com/search-console
 2. Add Property: https://indiajaya.tech
@@ -138,6 +146,7 @@ vercel --prod
 ```
 
 ### 5. Google Analytics (Optional)
+
 ```
 1. Create GA4 property
 2. Get Measurement ID
@@ -146,6 +155,7 @@ vercel --prod
 ```
 
 ### 6. Google My Business
+
 ```
 1. Claim listing di: https://business.google.com
 2. Verify business
@@ -157,6 +167,7 @@ vercel --prod
 ## 🔧 Troubleshooting
 
 ### Build Error: "Module not found"
+
 ```bash
 # Clear cache dan rebuild
 rm -rf node_modules
@@ -165,6 +176,7 @@ npm run build
 ```
 
 ### Prerendering Gagal
+
 ```bash
 # Disable react-snap temporarily
 # Edit package.json:
@@ -174,12 +186,14 @@ npm run build
 ```
 
 ### Website Tidak Muncul di Google
+
 1. Cek robots.txt tidak memblok
 2. Submit sitemap di Search Console
 3. Request indexing manual
 4. Tunggu 1-2 minggu
 
 ### Images Tidak Muncul
+
 - Pastikan path image benar
 - Check console browser untuk errors
 - Gunakan relative path, bukan absolute
@@ -187,12 +201,14 @@ npm run build
 ## 📊 Monitor Performance
 
 ### Tools:
+
 - **Google Search Console** - Indexing & ranking
 - **Google Analytics** - Traffic & behavior
 - **PageSpeed Insights** - Performance
 - **GTmetrix** - Detailed performance
 
 ### Metrics to Track:
+
 - Organic traffic
 - Keyword rankings
 - Page load time
@@ -217,6 +233,7 @@ genezio deploy
 ## 📞 Support
 
 Jika ada masalah:
+
 1. Check dokumentasi lengkap: `SEO-OPTIMIZATION-DOCS.md`
 2. Check deployment summary: `DEPLOYMENT-SUMMARY.md`
 3. Review error logs
@@ -224,28 +241,31 @@ Jika ada masalah:
 
 ## 🎯 Expected Timeline
 
-| Week | Action | Expected Result |
-|------|--------|----------------|
-| 1 | Deploy + Submit to GSC | Website indexed |
-| 2 | Monitor indexing | All pages indexed |
-| 3-4 | Start appearing in searches | First organic traffic |
-| 4-8 | Rankings improve | Traffic increases 2-3x |
-| 8-12 | Stable rankings | Consistent leads |
+| Week | Action                      | Expected Result        |
+| ---- | --------------------------- | ---------------------- |
+| 1    | Deploy + Submit to GSC      | Website indexed        |
+| 2    | Monitor indexing            | All pages indexed      |
+| 3-4  | Start appearing in searches | First organic traffic  |
+| 4-8  | Rankings improve            | Traffic increases 2-3x |
+| 8-12 | Stable rankings             | Consistent leads       |
 
 ## ✨ Maintenance
 
 ### Weekly:
+
 - [ ] Monitor Search Console errors
 - [ ] Check website uptime
 - [ ] Respond to WhatsApp inquiries
 
 ### Monthly:
+
 - [ ] Review Analytics data
 - [ ] Check keyword rankings
 - [ ] Update pricing if needed
 - [ ] Add new photos
 
 ### Quarterly:
+
 - [ ] Review & update content
 - [ ] Check competitor websites
 - [ ] Improve based on data

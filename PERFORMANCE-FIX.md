@@ -13,6 +13,7 @@
 ## ⚡ SOLUSI CEPAT:
 
 ### 1. **Coba Production Build** (Jauh Lebih Cepat)
+
 ```bash
 # Build untuk production
 npm run build
@@ -47,6 +48,7 @@ done
 ```
 
 Atau gunakan online tools:
+
 - https://tinypng.com/
 - https://squoosh.app/
 
@@ -83,7 +85,7 @@ const DesignBlocks = lazy(() => import("./sections/DesignBlocks"));
 // Di JSX:
 <Suspense fallback={<div>Loading...</div>}>
   <Testimonials />
-</Suspense>
+</Suspense>;
 ```
 
 ---
@@ -120,10 +122,10 @@ npm start
 
 ## 📊 BENCHMARK:
 
-| Mode | Load Time | Bundle Size |
-|------|-----------|-------------|
-| Development | 3-5 detik | ~5MB |
-| Production | 0.5-1 detik | ~500KB (gzipped) |
+| Mode        | Load Time   | Bundle Size      |
+| ----------- | ----------- | ---------------- |
+| Development | 3-5 detik   | ~5MB             |
+| Production  | 0.5-1 detik | ~500KB (gzipped) |
 
 **Production build is MUCH faster!**
 
@@ -132,18 +134,21 @@ npm start
 ## 🚀 RECOMMENDED ACTION:
 
 **Option 1: Test Production Build (Fastest)**
+
 ```bash
 npm run build
 npx serve -s build
 ```
 
 **Option 2: Optimize Development**
+
 1. Compress images (use TinyPNG)
 2. Add lazy loading
 3. Clear cache
 4. Use Chrome DevTools to find bottlenecks
 
 **Option 3: Ignore Development Speed**
+
 - Development mode ALWAYS slower
 - Focus on production performance
 - Users will see production build (fast)

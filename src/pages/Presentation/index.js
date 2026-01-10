@@ -23,11 +23,11 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 // @mui icons
-import CallIcon from '@mui/icons-material/Call';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import CheckIcon from '@mui/icons-material/Check';
-import HandshakeIcon from '@mui/icons-material/Handshake';
+import CallIcon from "@mui/icons-material/Call";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import CheckIcon from "@mui/icons-material/Check";
+import HandshakeIcon from "@mui/icons-material/Handshake";
 // import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import StarIcon from "@mui/icons-material/Star";
 import EngineeringIcon from "@mui/icons-material/Engineering";
@@ -55,8 +55,8 @@ const BuiltByDevelopers = lazy(() => import("./components/BuiltByDevelopers"));
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/las.jpg";
-import kanopiIcon from "assets/images/kanopi11.jpg";
+import bgImage from "assets/images/las.webp";
+import kanopiIcon from "assets/images/kanopi11.webp";
 import pagarIcon from "assets/images/pagar/pagar1.jpg";
 import teralisIcon from "assets/images/teralis/teralis.jpg";
 import tanggaIcon from "assets/images/tangga/tangga1.jpg";
@@ -89,90 +89,115 @@ function Presentation() {
   return (
     <>
       <Helmet>
-        <title>Bengkel Las Indian Jaya - Jasa Las Kanopi, Pagar, Tralis Depok & Tangerang Selatan</title>
-        <meta name="description" content="Bengkel Las Indian Jaya melayani jasa las kanopi, pagar, tralis, stainless di Depok, Pamulang, BSD, Ciputat. Free survey & pemasangan. Hubungi 081212154019" />
-        <meta name="keywords" content="bengkel las depok, jasa las pamulang, las kanopi depok, las pagar tangerang selatan, tukang las terdekat, bengkel las panggilan, indian jaya las" />
+        <title>
+          Bengkel Las Indian Jaya - Jasa Las Kanopi, Pagar, Tralis Depok & Tangerang Selatan
+        </title>
+        <meta
+          name="description"
+          content="Bengkel Las Indian Jaya melayani jasa las kanopi, pagar, tralis, stainless di Depok, Pamulang, BSD, Ciputat. Free survey & pemasangan. Hubungi 081212154019"
+        />
+        <meta
+          name="keywords"
+          content="bengkel las depok, jasa las pamulang, las kanopi depok, las pagar tangerang selatan, tukang las terdekat, bengkel las panggilan, indian jaya las"
+        />
         <link rel="canonical" href="https://indiajaya.tech/" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://indiajaya.tech/" />
         <meta property="og:title" content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan" />
-        <meta property="og:description" content="Jasa las profesional untuk kanopi, pagar, tralis, stainless. Free survey & pemasangan." />
+        <meta
+          property="og:description"
+          content="Jasa las profesional untuk kanopi, pagar, tralis, stainless. Free survey & pemasangan."
+        />
         <meta property="og:image" content="https://indiajaya.tech/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://indiajaya.tech/" />
-        <meta property="twitter:title" content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan" />
-        <meta property="twitter:description" content="Jasa las profesional untuk kanopi, pagar, tralis, stainless." />
+        <meta
+          property="twitter:title"
+          content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan"
+        />
+        <meta
+          property="twitter:description"
+          content="Jasa las profesional untuk kanopi, pagar, tralis, stainless."
+        />
         <meta property="twitter:image" content="https://indiajaya.tech/og-image.jpg" />
 
-        {/* JSON-LD LocalBusiness Schema */}
+        {/* JSON-LD LocalBusiness Schema with Aggregate Rating */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Indian Jaya Las",
-            "image": "https://indiajaya.tech/logo.jpg",
-            "description": "Bengkel las profesional melayani jasa pembuatan dan pemasangan kanopi, pagar, tralis, dan stainless steel di Depok dan Tangerang Selatan",
-            "address": {
+            name: "Indian Jaya Las",
+            image: "https://indiajaya.tech/logo.jpg",
+            description:
+              "Bengkel las profesional melayani jasa pembuatan dan pemasangan kanopi, pagar, tralis, dan stainless steel di Depok dan Tangerang Selatan",
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR",
-              "addressLocality": "Bojongsari",
-              "addressRegion": "Depok",
-              "postalCode": "16516",
-              "addressCountry": "ID"
+              streetAddress: "JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR",
+              addressLocality: "Bojongsari",
+              addressRegion: "Depok",
+              postalCode: "16516",
+              addressCountry: "ID",
             },
-            "geo": {
+            geo: {
               "@type": "GeoCoordinates",
-              "latitude": "-6.3906",
-              "longitude": "106.7525"
+              latitude: "-6.3906",
+              longitude: "106.7525",
             },
-            "url": "https://indiajaya.tech",
-            "telephone": "081212154019",
-            "priceRange": "$$",
-            "openingHoursSpecification": [
+            url: "https://indiajaya.tech",
+            telephone: "081212154019",
+            priceRange: "$$",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: "2000",
+              bestRating: "5",
+              worstRating: "1",
+            },
+            openingHoursSpecification: [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "08:00",
-                "closes": "17:00"
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                opens: "08:00",
+                closes: "17:00",
               },
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Sunday",
-                "opens": "08:00",
-                "closes": "14:00"
-              }
+                dayOfWeek: "Sunday",
+                opens: "08:00",
+                closes: "14:00",
+              },
             ],
-            "areaServed": [
-              {"@type": "City", "name": "Depok"},
-              {"@type": "City", "name": "Pamulang"},
-              {"@type": "City", "name": "BSD"},
-              {"@type": "City", "name": "Ciputat"},
-              {"@type": "City", "name": "Serpong"}
+            areaServed: [
+              { "@type": "City", name: "Depok" },
+              { "@type": "City", name: "Pamulang" },
+              { "@type": "City", name: "BSD" },
+              { "@type": "City", name: "Ciputat" },
+              { "@type": "City", name: "Serpong" },
             ],
-            "hasOfferCatalog": {
+            hasOfferCatalog: {
               "@type": "OfferCatalog",
-              "name": "Layanan Las",
-              "itemListElement": [
+              name: "Layanan Las",
+              itemListElement: [
                 {
                   "@type": "Offer",
-                  "itemOffered": {
+                  itemOffered: {
                     "@type": "Service",
-                    "name": "Jasa Las Kanopi"
-                  }
+                    name: "Jasa Las Kanopi",
+                  },
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
+                  itemOffered: {
                     "@type": "Service",
-                    "name": "Jasa Las Pagar"
-                  }
-                }
-              ]
-            }
+                    name: "Jasa Las Pagar",
+                  },
+                },
+              ],
+            },
           })}
         </script>
       </Helmet>
@@ -187,7 +212,6 @@ function Presentation() {
           { name: "Testimoni", route: () => handleScroll(testiRef) },
           { name: "Kontak", route: () => handleScroll(kontakRef) },
         ]}
-
         action={{
           type: "external",
           route: "https://wa.me/081212154019",
@@ -398,10 +422,44 @@ function Presentation() {
             <Grid item xs={12} lg={5}>
               <Grid container spacing={{ xs: 2, md: 2 }}>
                 {[
-                  { icon: <ConstructionIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "1000+", label: "Project Selesai", gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
-                  { icon: <StarIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "4.9/5", label: "Rating Pelanggan", gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
-                  { icon: <EngineeringIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "10+", label: "Tahun Pengalaman", gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)" },
-                  { icon: <LocalShippingIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />, number: "FREE", label: "Ongkir & Survey", gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)" },
+                  {
+                    icon: (
+                      <ConstructionIcon
+                        sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }}
+                      />
+                    ),
+                    number: "1000+",
+                    label: "Project Selesai",
+                    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                  },
+                  {
+                    icon: (
+                      <StarIcon sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }} />
+                    ),
+                    number: "4.9/5",
+                    label: "Rating Pelanggan",
+                    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+                  },
+                  {
+                    icon: (
+                      <EngineeringIcon
+                        sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }}
+                      />
+                    ),
+                    number: "10+",
+                    label: "Tahun Pengalaman",
+                    gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+                  },
+                  {
+                    icon: (
+                      <LocalShippingIcon
+                        sx={{ fontSize: { xs: "3rem", md: "4rem" }, color: "white" }}
+                      />
+                    ),
+                    number: "FREE",
+                    label: "Ongkir & Survey",
+                    gradient: "linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%)",
+                  },
                 ].map((stat, index) => (
                   <Grid item xs={6} key={index}>
                     <MKBox
@@ -455,7 +513,10 @@ function Presentation() {
                             filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
                             transition: "all 0.3s",
                             ".MuiBox-root:hover &": {
-                              transform: { xs: "scale(1.7) rotate(5deg)", md: "scale(2.3) rotate(5deg)" },
+                              transform: {
+                                xs: "scale(1.7) rotate(5deg)",
+                                md: "scale(2.3) rotate(5deg)",
+                              },
                               filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.3))",
                             },
                           }}
@@ -528,31 +589,24 @@ function Presentation() {
       </MKBox>
 
       {/* Layanan Kami Section */}
-      <MKBox 
-        ref={layananRef} 
-        component="section" 
-        py={8} 
-        pb={15} 
-        sx={{ 
+      <MKBox
+        ref={layananRef}
+        component="section"
+        py={8}
+        pb={15}
+        sx={{
           backgroundColor: "#f8f9fa",
         }}
       >
         <Container>
           <Grid container spacing={3} mb={6}>
             <Grid item xs={12} textAlign="center">
-              <MKTypography 
-                variant="h2" 
-                mb={2} 
-                fontWeight="bold"
-              >
+              <MKTypography variant="h2" mb={2} fontWeight="bold">
                 Layanan Las Kami
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="text" 
-                mb={4}
-              >
-                Kami menyediakan berbagai jasa las berkualitas tinggi untuk kebutuhan rumah dan komersial Anda
+              <MKTypography variant="body1" color="text" mb={4}>
+                Kami menyediakan berbagai jasa las berkualitas tinggi untuk kebutuhan rumah dan
+                komersial Anda
               </MKTypography>
             </Grid>
           </Grid>
@@ -561,32 +615,36 @@ function Presentation() {
             {[
               {
                 title: "Las Kanopi",
-                description: "Kanopi besi hollow, baja ringan, dan stainless dengan berbagai desain modern dan klasik",
+                description:
+                  "Kanopi besi hollow, baja ringan, dan stainless dengan berbagai desain modern dan klasik",
                 link: "/las-kanopi",
                 icon: kanopiIcon,
-                color: "#667eea"
+                color: "#667eea",
               },
               {
                 title: "Las Pagar",
-                description: "Pagar minimalis, klasik, dan modern dengan material berkualitas dan desain custom",
+                description:
+                  "Pagar minimalis, klasik, dan modern dengan material berkualitas dan desain custom",
                 link: "/las-pagar",
                 icon: pagarIcon,
-                color: "#4facfe"
+                color: "#4facfe",
               },
               {
                 title: "Las Tralis",
-                description: "Tralis jendela dan pintu dengan berbagai motif untuk keamanan rumah Anda",
+                description:
+                  "Tralis jendela dan pintu dengan berbagai motif untuk keamanan rumah Anda",
                 link: "/las-tralis",
                 icon: teralisIcon,
-                color: "#1e3c72"
+                color: "#1e3c72",
               },
               {
                 title: "Las Stainless",
-                description: "Tangga stainless, railing, dan ornamen dengan finishing premium dan tahan lama",
+                description:
+                  "Tangga stainless, railing, dan ornamen dengan finishing premium dan tahan lama",
                 link: "/las-stainless",
                 icon: tanggaIcon,
-                color: "#3a7bd5"
-              }
+                color: "#3a7bd5",
+              },
             ].map((service, index) => (
               <Grid item xs={12} md={6} lg={3} key={index}>
                 <MKBox
@@ -642,9 +700,12 @@ function Presentation() {
                         },
                       }}
                     >
-                      <img 
-                        src={service.icon} 
+                      <img
+                        src={service.icon}
                         alt={service.title}
+                        width="400"
+                        height="300"
+                        loading="lazy"
                         style={{
                           width: "100%",
                           height: "100%",
@@ -694,44 +755,46 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-
         <div ref={tentangKamiRef}>
-        <Container sx={{ mt: 6 }}>
-          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
-            <BuiltByDevelopers />
-          </Suspense>
-        </Container>
+          <Container sx={{ mt: 6 }}>
+            <Suspense
+              fallback={
+                <MKBox py={6} textAlign="center">
+                  <MKTypography variant="body2">Loading...</MKTypography>
+                </MKBox>
+              }
+            >
+              <BuiltByDevelopers />
+            </Suspense>
+          </Container>
         </div>
 
-
         <div ref={produkRef}>
-          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+          <Suspense
+            fallback={
+              <MKBox py={6} textAlign="center">
+                <MKTypography variant="body2">Loading...</MKTypography>
+              </MKBox>
+            }
+          >
             <DesignBlocks />
           </Suspense>
         </div>
 
         {/* Proses Kerja Section */}
-        <Container 
-          ref={prosesRef} 
-          sx={{ 
-            mt: 8, 
+        <Container
+          ref={prosesRef}
+          sx={{
+            mt: 8,
             mb: 8,
           }}
         >
           <Grid container spacing={3} mb={6}>
             <Grid item xs={12} textAlign="center">
-              <MKTypography 
-                variant="h2" 
-                mb={2} 
-                fontWeight="bold"
-              >
+              <MKTypography variant="h2" mb={2} fontWeight="bold">
                 Proses Kerja Kami
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="text" 
-                mb={4}
-              >
+              <MKTypography variant="body1" color="text" mb={4}>
                 Kami memastikan setiap project dikerjakan dengan profesional dan tepat waktu
               </MKTypography>
             </Grid>
@@ -742,38 +805,42 @@ function Presentation() {
               {
                 step: "01",
                 title: "Konsultasi & Survey",
-                description: "Tim kami akan datang untuk survey lokasi dan konsultasi kebutuhan Anda secara GRATIS",
+                description:
+                  "Tim kami akan datang untuk survey lokasi dan konsultasi kebutuhan Anda secara GRATIS",
                 icon: <CallIcon />,
-                color: "#2196F3"
+                color: "#2196F3",
               },
               {
                 step: "02",
                 title: "Desain & Estimasi",
-                description: "Kami memberikan desain dan estimasi biaya yang transparan sesuai budget Anda",
+                description:
+                  "Kami memberikan desain dan estimasi biaya yang transparan sesuai budget Anda",
                 icon: <DesignServicesIcon />,
-                color: "#4CAF50"
+                color: "#4CAF50",
               },
               {
                 step: "03",
                 title: "Pengerjaan",
-                description: "Pengerjaan dilakukan oleh tukang las berpengalaman dengan material berkualitas",
+                description:
+                  "Pengerjaan dilakukan oleh tukang las berpengalaman dengan material berkualitas",
                 icon: <EngineeringIcon />,
-                color: "#FF9800"
+                color: "#FF9800",
               },
               {
                 step: "04",
                 title: "Quality Check",
                 description: "Pengecekan kualitas dan finishing untuk memastikan hasil maksimal",
                 icon: <CheckIcon />,
-                color: "#9C27B0"
+                color: "#9C27B0",
               },
               {
                 step: "05",
                 title: "Serah Terima",
-                description: "Project selesai dengan garansi dan layanan after-sales yang memuaskan",
+                description:
+                  "Project selesai dengan garansi dan layanan after-sales yang memuaskan",
                 icon: <HandshakeIcon />,
-                color: "#F44336"
-              }
+                color: "#F44336",
+              },
             ].map((process, index) => (
               <Grid item xs={12} md={6} lg={2.4} key={index}>
                 <MKBox
@@ -838,10 +905,7 @@ function Presentation() {
           </Grid>
 
           {/* CTA After Process */}
-          <MKBox 
-            textAlign="center" 
-            mt={6}
-          >
+          <MKBox textAlign="center" mt={6}>
             <MKTypography variant="h5" mb={3} fontWeight="medium">
               Siap Memulai Project Anda?
             </MKTypography>
@@ -879,49 +943,67 @@ function Presentation() {
         </Container>
 
         <div ref={testiRef}>
-        <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
-          <Testimonials />
-        </Suspense>
+          <Suspense
+            fallback={
+              <MKBox py={6} textAlign="center">
+                <MKTypography variant="body2">Loading...</MKTypography>
+              </MKBox>
+            }
+          >
+            <Testimonials />
+          </Suspense>
         </div>
 
-
         <div ref={kontakRef}>
-          <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
+          <Suspense
+            fallback={
+              <MKBox py={6} textAlign="center">
+                <MKTypography variant="body2">Loading...</MKTypography>
+              </MKBox>
+            }
+          >
             <Download />
           </Suspense>
         </div>
 
         {/* Area Layanan Section */}
-        <Container 
+        <Container
           ref={areaRef}
-          sx={{ 
-            mt: 8, 
+          sx={{
+            mt: 8,
             mb: 6,
           }}
         >
           <Grid container spacing={3}>
             <Grid item xs={12} textAlign="center" mb={4}>
-              <MKTypography 
-                variant="h2" 
-                mb={2}
-              >
+              <MKTypography variant="h2" mb={2}>
                 Area Layanan Kami
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="text"
-              >
+              <MKTypography variant="body1" color="text">
                 Melayani seluruh wilayah Depok, Tangerang Selatan, dan Jakarta Selatan
               </MKTypography>
             </Grid>
-            
+
             <Grid item xs={12} md={6}>
               <MKBox>
                 <MKTypography variant="h5" mb={3}>
                   Wilayah Layanan
                 </MKTypography>
                 <Grid container spacing={2}>
-                  {["Depok", "Pamulang", "BSD", "Ciputat", "Serpong", "Bojongsari", "Sawangan", "Cinere", "Lenteng Agung", "Jagakarsa", "Jakarta Selatan", "Tangerang Selatan"].map((area) => (
+                  {[
+                    "Depok",
+                    "Pamulang",
+                    "BSD",
+                    "Ciputat",
+                    "Serpong",
+                    "Bojongsari",
+                    "Sawangan",
+                    "Cinere",
+                    "Lenteng Agung",
+                    "Jagakarsa",
+                    "Jakarta Selatan",
+                    "Tangerang Selatan",
+                  ].map((area) => (
                     <Grid item xs={6} md={4} key={area}>
                       <MKBox
                         bgColor="grey-100"
@@ -963,15 +1045,21 @@ function Presentation() {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
                 <MKTypography variant="body2" color="text" mt={2}>
-                  <strong>Alamat:</strong> JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI KOTA DEPOK<br />
-                  <strong>Telepon:</strong> <a href="tel:081212154019" style={{ color: "inherit" }}>081212154019</a><br />
+                  <strong>Alamat:</strong> JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI
+                  KOTA DEPOK
+                  <br />
+                  <strong>Telepon:</strong>{" "}
+                  <a href="tel:081212154019" style={{ color: "inherit" }}>
+                    081212154019
+                  </a>
+                  <br />
                   <strong>Jam Buka:</strong> Senin - Sabtu: 08.00 - 17.00 WIB
                 </MKTypography>
               </MKBox>
             </Grid>
           </Grid>
         </Container>
-{/* 
+        {/* 
         <div ref={kontakRef}>
           <Suspense fallback={<MKBox py={6} textAlign="center"><MKTypography variant="body2">Loading...</MKTypography></MKBox>}>
             <Download />

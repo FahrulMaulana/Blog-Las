@@ -16,6 +16,7 @@ Coded by www.creative-tim.com
 import App from "App";
 import * as ReactDOMClient from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const container = document.getElementById("root");
 
@@ -27,3 +28,7 @@ root.render(
     <App />
   </BrowserRouter>
 );
+
+// Register service worker for PWA capabilities
+// Note: Uncomment after setting up workbox in CRA or migrating to Next.js
+// serviceWorkerRegistration.register();

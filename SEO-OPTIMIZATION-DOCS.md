@@ -9,18 +9,22 @@ Website Indian Jaya Las telah dioptimasi secara menyeluruh untuk SEO, performa, 
 ## ✅ 1. ARCHITECTURE FIX - SSR/PRERENDERING
 
 ### Yang Dilakukan:
+
 - ✓ Menginstal **react-snap** untuk prerendering
 - ✓ Menginstal **react-helmet-async** untuk meta tags management
 - ✓ Konfigurasi react-snap di `package.json`
 - ✓ HTML statis akan di-generate untuk semua halaman penting
 
 ### File yang Dimodifikasi:
+
 - `package.json` - Menambahkan react-snap dan konfigurasi prerendering
 - `src/App.js` - Menambahkan HelmetProvider wrapper
 - `src/pages/Presentation/index.js` - Menambahkan Helmet dengan meta tags lengkap
 
 ### Cara Kerja:
+
 Saat build (`npm run build`), react-snap akan:
+
 1. Membuka setiap halaman dengan headless browser
 2. Mengambil HTML yang sudah di-render
 3. Menyimpan sebagai file HTML statis
@@ -31,7 +35,9 @@ Saat build (`npm run build`), react-snap akan:
 ## ✅ 2. TECHNICAL SEO FIX
 
 ### robots.txt
+
 **Lokasi:** `public/robots.txt`
+
 ```
 User-agent: *
 Allow: /
@@ -39,12 +45,16 @@ Sitemap: https://indiajaya.tech/sitemap.xml
 ```
 
 ### sitemap.xml
+
 **Lokasi:** `public/sitemap.xml`
+
 - Berisi semua halaman website (homepage + 5 service pages)
 - Update otomatis saat build dengan script `scripts/generate-sitemap.js`
 
 ### Meta Tags (Setiap Halaman)
+
 Semua halaman memiliki:
+
 - ✓ Title tag dinamis & SEO-friendly
 - ✓ Meta description unik per halaman
 - ✓ Meta keywords
@@ -54,6 +64,7 @@ Semua halaman memiliki:
 - ✓ JSON-LD structured data (LocalBusiness & Service schema)
 
 ### Performance Optimizations
+
 - ✓ Preconnect ke Google Fonts
 - ✓ DNS prefetch
 - ✓ Font display=swap untuk faster rendering
@@ -67,8 +78,10 @@ Semua halaman memiliki:
 ### Halaman Service yang Dibuat:
 
 #### 1. `/las-kanopi`
+
 **File:** `src/pages/Services/LasKanopi.js`
 **Konten:**
+
 - H1: "Jasa Las Kanopi Profesional di Depok & Tangerang Selatan"
 - Deskripsi lengkap 700+ kata
 - Jenis material kanopi (Baja Ringan, Hollow, Alderon, Polycarbonate, Galvalum)
@@ -78,31 +91,39 @@ Semua halaman memiliki:
 - CTA WhatsApp
 
 #### 2. `/las-pagar`
+
 **File:** `src/pages/Services/LasPagar.js`
 **Konten:**
+
 - H1: "Jasa Las Pagar Besi Hollow Minimalis Depok"
 - Jenis pagar (Hollow, Minimalis, Kombinasi, Tempa)
 - Harga per meter
 - Area layanan
 
 #### 3. `/las-tralis`
+
 **File:** `src/pages/Services/LasTralis.js`
 **Konten:**
+
 - H1: "Jasa Las Tralis Jendela & Pintu Depok"
 - Jenis tralis (Minimalis, Motif, Jendela, Pintu)
 - Harga per meter
 
 #### 4. `/las-stainless`
+
 **File:** `src/pages/Services/LasStainless.js`
 **Konten:**
+
 - H1: "Jasa Las Stainless Steel Depok & Tangerang Selatan"
 - Produk stainless (Pagar, Railing, Kanopi, Pintu, Balkon)
 - Keunggulan stainless (Anti karat, Awet, Premium, Minim perawatan)
 - Harga per meter
 
 #### 5. `/las-panggilan`
+
 **File:** `src/pages/Services/LasPanggilan.js`
 **Konten:**
+
 - H1: "Jasa Las Panggilan Depok 24 Jam - Tukang Las Terdekat"
 - Layanan darurat & perbaikan
 - Keunggulan (Cepat datang, Peralatan lengkap, Berpengalaman, Harga transparan)
@@ -111,7 +132,9 @@ Semua halaman memiliki:
 - 10 area layanan
 
 ### Routing
+
 **File:** `src/App.js`
+
 ```jsx
 <Route path="/las-kanopi" element={<LasKanopi />} />
 <Route path="/las-pagar" element={<LasPagar />} />
@@ -127,6 +150,7 @@ Semua halaman memiliki:
 ### File: `src/pages/Presentation/index.js`
 
 **SEO Meta Tags Ditambahkan:**
+
 - Title: "Bengkel Las Indian Jaya - Jasa Las Kanopi, Pagar, Tralis Depok & Tangerang Selatan"
 - Meta description 160 karakter
 - Keywords targeted
@@ -140,6 +164,7 @@ Semua halaman memiliki:
   - Aggregate rating
 
 **Struktur Konten:**
+
 - Hero section dengan H1 keyword-rich
 - Benefit section (4 keunggulan)
 - Tentang Kami
@@ -153,6 +178,7 @@ Semua halaman memiliki:
 ## ✅ 5. KEYWORD INTEGRATION
 
 ### Primary Keywords (Diintegrasikan di semua halaman):
+
 - bengkel las depok
 - jasa las pamulang
 - bengkel las panggilan
@@ -161,6 +187,7 @@ Semua halaman memiliki:
 - tukang las terdekat
 
 ### Secondary Keywords:
+
 - harga las kanopi per meter
 - kanopi minimalis
 - pagar besi hollow
@@ -169,6 +196,7 @@ Semua halaman memiliki:
 - las darurat
 
 ### Penempatan:
+
 - ✓ Title tags
 - ✓ Meta descriptions
 - ✓ H1 headings
@@ -183,7 +211,9 @@ Semua halaman memiliki:
 ## ✅ 6. SCHEMA MARKUP (JSON-LD)
 
 ### LocalBusiness Schema
+
 **Lokasi:** Homepage
+
 ```json
 {
   "@type": "LocalBusiness",
@@ -198,7 +228,9 @@ Semua halaman memiliki:
 ```
 
 ### Service Schema
+
 **Lokasi:** Setiap halaman service
+
 ```json
 {
   "@type": "Service",
@@ -214,26 +246,24 @@ Semua halaman memiliki:
 ## ✅ 7. PERFORMANCE OPTIMIZATION
 
 ### Teknik yang Digunakan:
+
 1. **Font Optimization**
    - Preconnect ke Google Fonts
    - font-display: swap
-   
 2. **Script Loading**
    - Async loading untuk non-critical scripts
-   
 3. **Image Optimization**
    - Native lazy loading (loading="lazy")
    - WebP format untuk modern browsers
-   
 4. **Code Splitting**
    - React.lazy() untuk dynamic imports
    - Route-based code splitting
-   
 5. **Caching**
    - Service Worker via react-snap
    - Static asset caching
 
 ### Target PageSpeed:
+
 - Mobile: 75+
 - Desktop: 90+
 
@@ -242,6 +272,7 @@ Semua halaman memiliki:
 ## ✅ 8. MOBILE OPTIMIZATION
 
 ### Responsive Design:
+
 - ✓ Mobile-first approach
 - ✓ Breakpoints: xs, sm, md, lg, xl
 - ✓ Touch-friendly buttons (min 44x44px)
@@ -249,6 +280,7 @@ Semua halaman memiliki:
 - ✓ Proper spacing untuk finger tapping
 
 ### Mobile UX:
+
 - Floating WhatsApp button (sticky)
 - Click-to-call phone numbers
 - Simplified navigation
@@ -259,6 +291,7 @@ Semua halaman memiliki:
 ## ✅ 9. INTERNAL LINKING
 
 ### Navigation Structure:
+
 ```
 Homepage
 ├── Las Kanopi
@@ -269,6 +302,7 @@ Homepage
 ```
 
 ### Link Types:
+
 - Navbar links (semua halaman)
 - Service cards (homepage → service pages)
 - CTA buttons (cross-page linking)
@@ -279,11 +313,13 @@ Homepage
 ## ✅ 10. LOCAL SEO
 
 ### NAP Consistency:
+
 **Name:** Indian Jaya Las
 **Address:** JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI KOTA DEPOK
 **Phone:** 081212154019
 
 Konsisten di:
+
 - ✓ Homepage
 - ✓ Semua service pages
 - ✓ Footer
@@ -291,7 +327,9 @@ Konsisten di:
 - ✓ Meta tags
 
 ### Area Served:
+
 Disebutkan di setiap halaman:
+
 - Depok
 - Pamulang
 - BSD
@@ -304,6 +342,7 @@ Disebutkan di setiap halaman:
 - Jagakarsa
 
 ### Google Maps:
+
 - Koordinat: -6.3906, 106.7525
 - Embedded di homepage (bisa ditambahkan)
 
@@ -312,6 +351,7 @@ Disebutkan di setiap halaman:
 ## 📦 FILES YANG DIBUAT/DIMODIFIKASI
 
 ### Files Baru:
+
 ```
 src/pages/Services/LasKanopi.js
 src/pages/Services/LasPagar.js
@@ -323,6 +363,7 @@ public/sitemap.xml (updated)
 ```
 
 ### Files Dimodifikasi:
+
 ```
 src/App.js
 src/pages/Presentation/index.js
@@ -336,16 +377,19 @@ package.json
 ## 🚀 CARA DEPLOY
 
 ### 1. Install Dependencies (sudah dilakukan):
+
 ```bash
 npm install
 ```
 
 ### 2. Build untuk Production:
+
 ```bash
 npm run build
 ```
 
 Proses ini akan:
+
 - Build React app
 - Jalankan react-snap untuk prerendering
 - Generate sitemap.xml otomatis
@@ -353,7 +397,9 @@ Proses ini akan:
 - Output ke folder `build/`
 
 ### 3. Deploy ke Server:
+
 Upload folder `build/` ke hosting Anda atau gunakan:
+
 ```bash
 # Via genezio (sudah ada genezio.yaml)
 genezio deploy
@@ -362,6 +408,7 @@ genezio deploy
 ```
 
 ### 4. Verifikasi:
+
 - Cek https://indiajaya.tech
 - Test di Google Search Console
 - Submit sitemap
@@ -372,25 +419,31 @@ genezio deploy
 ## 📊 MONITORING & TRACKING
 
 ### Google Search Console:
+
 1. Tambahkan property
 2. Verifikasi ownership
 3. Submit sitemap.xml
 4. Monitor impressions & clicks
 
 ### Google Analytics:
+
 Tambahkan tracking code di `public/index.html`:
+
 ```html
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "GA_MEASUREMENT_ID");
 </script>
 ```
 
 ### Tools untuk Monitor:
+
 - Google Search Console (ranking, impressions)
 - Google Analytics (traffic, behavior)
 - PageSpeed Insights (performance)
@@ -402,6 +455,7 @@ Tambahkan tracking code di `public/index.html`:
 ## 🎯 EXPECTED RESULTS
 
 ### Timeline:
+
 - **Week 1-2:** Google mulai index halaman baru
 - **Week 2-4:** Muncul di hasil pencarian lokal
 - **Week 4-8:** Ranking mulai naik untuk keywords targeted
@@ -409,6 +463,7 @@ Tambahkan tracking code di `public/index.html`:
 - **Month 3-6:** Stabil di halaman 1 untuk keywords lokal
 
 ### Target Keywords Ranking:
+
 - "bengkel las depok" → Target: Top 3
 - "jasa las kanopi pamulang" → Target: Top 5
 - "tukang las terdekat depok" → Target: Top 3
@@ -420,7 +475,9 @@ Tambahkan tracking code di `public/index.html`:
 ## 🔧 NEXT STEPS (OPTIONAL IMPROVEMENTS)
 
 ### 1. Blog System:
+
 Buat folder `/blog` dengan artikel:
+
 - "Harga Jasa Las Terbaru 2026"
 - "Harga Kanopi Per Meter di Tangerang Selatan"
 - "Model Kanopi Minimalis Terbaru"
@@ -428,23 +485,27 @@ Buat folder `/blog` dengan artikel:
 - "Perbandingan Pagar Besi vs Hollow"
 
 ### 2. Google My Business:
+
 - Klaim listing
 - Upload foto produk
 - Minta review pelanggan
 - Post updates rutin
 
 ### 3. Backlinks:
+
 - Listing di direktori lokal
 - Kolaborasi dengan arsitek/kontraktor
 - Guest posting di blog terkait
 
 ### 4. Content Expansion:
+
 - Video tutorial
 - Galeri foto lebih banyak
 - Case studies
 - FAQ section
 
 ### 5. Advanced Analytics:
+
 - Heatmap (Hotjar)
 - A/B testing
 - Conversion tracking

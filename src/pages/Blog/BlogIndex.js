@@ -18,35 +18,40 @@ function BlogIndex() {
     {
       slug: "harga-jasa-las-terbaru-2026",
       title: "Harga Jasa Las Terbaru 2026 - Update Lengkap Semua Layanan",
-      excerpt: "Daftar lengkap harga jasa las terbaru tahun 2026 untuk kanopi, pagar, tralis, dan stainless steel. Update harga material dan jasa pemasangan.",
+      excerpt:
+        "Daftar lengkap harga jasa las terbaru tahun 2026 untuk kanopi, pagar, tralis, dan stainless steel. Update harga material dan jasa pemasangan.",
       date: "9 Januari 2026",
       image: bgImage,
     },
     {
       slug: "harga-kanopi-per-meter-tangerang-selatan",
       title: "Harga Kanopi Per Meter di Tangerang Selatan & Depok 2026",
-      excerpt: "Panduan lengkap harga kanopi per meter untuk wilayah Tangerang Selatan, Depok, dan sekitarnya. Perbandingan material dan tips hemat budget.",
+      excerpt:
+        "Panduan lengkap harga kanopi per meter untuk wilayah Tangerang Selatan, Depok, dan sekitarnya. Perbandingan material dan tips hemat budget.",
       date: "9 Januari 2026",
       image: bgImage,
     },
     {
       slug: "model-kanopi-minimalis-terbaru",
       title: "10 Model Kanopi Minimalis Terbaru 2026 yang Paling Diminati",
-      excerpt: "Inspirasi desain kanopi minimalis modern untuk rumah Anda. Dari baja ringan hingga polycarbonate, temukan model yang cocok.",
+      excerpt:
+        "Inspirasi desain kanopi minimalis modern untuk rumah Anda. Dari baja ringan hingga polycarbonate, temukan model yang cocok.",
       date: "9 Januari 2026",
       image: bgImage,
     },
     {
       slug: "tips-memilih-tukang-las-profesional",
       title: "7 Tips Memilih Tukang Las Profesional dan Terpercaya",
-      excerpt: "Panduan lengkap memilih jasa las yang berkualitas. Cek pengalaman, portofolio, harga, hingga garansi yang ditawarkan.",
+      excerpt:
+        "Panduan lengkap memilih jasa las yang berkualitas. Cek pengalaman, portofolio, harga, hingga garansi yang ditawarkan.",
       date: "9 Januari 2026",
       image: bgImage,
     },
     {
       slug: "perbandingan-pagar-besi-vs-hollow",
       title: "Perbandingan Pagar Besi vs Hollow: Mana yang Lebih Baik?",
-      excerpt: "Analisis lengkap kelebihan dan kekurangan pagar besi solid vs hollow. Dari segi harga, kekuatan, hingga perawatan.",
+      excerpt:
+        "Analisis lengkap kelebihan dan kekurangan pagar besi solid vs hollow. Dari segi harga, kekuatan, hingga perawatan.",
       date: "9 Januari 2026",
       image: bgImage,
     },
@@ -56,8 +61,14 @@ function BlogIndex() {
     <>
       <Helmet>
         <title>Blog & Artikel Las - Tips, Harga, dan Panduan Lengkap | Indian Jaya Las</title>
-        <meta name="description" content="Blog dan artikel seputar jasa las, harga kanopi, pagar, tralis, tips memilih tukang las, dan panduan lengkap untuk proyek las Anda." />
-        <meta name="keywords" content="blog las, artikel kanopi, harga las 2026, tips memilih tukang las, panduan las" />
+        <meta
+          name="description"
+          content="Blog dan artikel seputar jasa las, harga kanopi, pagar, tralis, tips memilih tukang las, dan panduan lengkap untuk proyek las Anda."
+        />
+        <meta
+          name="keywords"
+          content="blog las, artikel kanopi, harga las 2026, tips memilih tukang las, panduan las"
+        />
         <link rel="canonical" href="https://indiajaya.tech/blog" />
       </Helmet>
 
@@ -97,7 +108,13 @@ function BlogIndex() {
             <MKTypography variant="h1" color="white" textAlign="center">
               Blog & Artikel Seputar Jasa Las
             </MKTypography>
-            <MKTypography variant="h6" color="white" textAlign="center" px={{ xs: 6, lg: 12 }} mt={2}>
+            <MKTypography
+              variant="h6"
+              color="white"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={2}
+            >
               Tips, Panduan, dan Update Harga Terbaru
             </MKTypography>
           </Grid>
