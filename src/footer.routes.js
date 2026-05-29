@@ -70,7 +70,7 @@ export default {
       All rights reserved. Copyright &copy; {date}{" "}
       <MKTypography
         component="a"
-        // href="https://www.creative-tim.com"
+        href="https://indianjayalas.com"
         target="_blank"
         rel="noreferrer"
         variant="button"
