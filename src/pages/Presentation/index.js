@@ -204,13 +204,13 @@ function Presentation() {
 
       <DefaultNavbar
         routes={[
-          { name: "Beranda", route: () => handleScroll(homeRef) },
-          { name: "Layanan", route: () => handleScroll(layananRef) },
-          { name: "Tentang Kami", route: () => handleScroll(tentangKamiRef) },
-          { name: "Portfolio", route: () => handleScroll(produkRef) },
-          { name: "Proses Kerja", route: () => handleScroll(prosesRef) },
-          { name: "Testimoni", route: () => handleScroll(testiRef) },
-          { name: "Kontak", route: () => handleScroll(kontakRef) },
+          { name: "Beranda", href: "#home", route: () => handleScroll(homeRef) },
+          { name: "Layanan", href: "#layanan", route: () => handleScroll(layananRef) },
+          { name: "Tentang Kami", href: "#tentang-kami", route: () => handleScroll(tentangKamiRef) },
+          { name: "Portfolio", href: "#portfolio", route: () => handleScroll(produkRef) },
+          { name: "Proses Kerja", href: "#proses-kerja", route: () => handleScroll(prosesRef) },
+          { name: "Testimoni", href: "#testimoni", route: () => handleScroll(testiRef) },
+          { name: "Kontak", href: "#kontak", route: () => handleScroll(kontakRef) },
         ]}
         action={{
           type: "external",
@@ -221,9 +221,12 @@ function Presentation() {
         sticky
       />
 
+      <MKBox component="main" id="main-content">
+
       {/* Hero Section - Modern Professional Design */}
       <MKBox
         ref={homeRef}
+        id="home"
         minHeight="100vh"
         width="100%"
         sx={{
@@ -592,6 +595,7 @@ function Presentation() {
       {/* Layanan Kami Section */}
       <MKBox
         ref={layananRef}
+        id="layanan"
         component="section"
         py={8}
         pb={15}
@@ -707,6 +711,7 @@ function Presentation() {
                         width="400"
                         height="300"
                         loading="lazy"
+                        decoding="async"
                         style={{
                           width: "100%",
                           height: "100%",
@@ -741,7 +746,7 @@ function Presentation() {
       </MKBox>
 
       {/* Information Section - Full Width */}
-      <MKBox ref={benefitRef}>
+      <MKBox ref={benefitRef} id="benefit">
         <Information />
       </MKBox>
 
@@ -756,7 +761,7 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <div ref={tentangKamiRef}>
+        <div ref={tentangKamiRef} id="tentang-kami">
           <Container sx={{ mt: 6 }}>
             <Suspense
               fallback={
@@ -770,7 +775,7 @@ function Presentation() {
           </Container>
         </div>
 
-        <div ref={produkRef}>
+        <div ref={produkRef} id="portfolio">
           <Suspense
             fallback={
               <MKBox py={6} textAlign="center">
@@ -785,6 +790,7 @@ function Presentation() {
         {/* Proses Kerja Section */}
         <Container
           ref={prosesRef}
+          id="proses-kerja"
           sx={{
             mt: 8,
             mb: 8,
@@ -943,7 +949,7 @@ function Presentation() {
           </MKBox>
         </Container>
 
-        <div ref={testiRef}>
+        <div ref={testiRef} id="testimoni">
           <Suspense
             fallback={
               <MKBox py={6} textAlign="center">
@@ -955,7 +961,7 @@ function Presentation() {
           </Suspense>
         </div>
 
-        <div ref={kontakRef}>
+        <div ref={kontakRef} id="kontak">
           <Suspense
             fallback={
               <MKBox py={6} textAlign="center">
@@ -970,6 +976,7 @@ function Presentation() {
         {/* Area Layanan Section */}
         <Container
           ref={areaRef}
+          id="area-layanan"
           sx={{
             mt: 8,
             mb: 6,
@@ -1037,6 +1044,7 @@ function Presentation() {
                 </MKTypography>
                 <MKBox
                   component="iframe"
+                  title="Lokasi Bengkel Indian Jaya Las"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3234567890!2d106.7525!3d-6.3906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjYuMiJTIDEwNsKwNDUnMDkuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
                   width="100%"
                   height="300"
@@ -1087,9 +1095,13 @@ function Presentation() {
         <img
           src="/wa.webp"
           alt="WhatsApp Logo"
+          width="60"
+          height="60"
           style={{ width: "60px", height: "60px" }}
           loading="lazy"
+          decoding="async"
         />
+      </MKBox>
       </MKBox>
     </>
   );

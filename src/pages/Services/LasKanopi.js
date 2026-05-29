@@ -133,6 +133,8 @@ function LasKanopi() {
         sticky
       />
 
+      <MKBox component="main" id="main-content">
+
       <MKBox
         minHeight="50vh"
         width="100%"
@@ -504,8 +506,13 @@ function LasKanopi() {
         <img
           src="/wa.png"
           alt="WhatsApp Indian Jaya Las"
+          width="60"
+          height="60"
+          loading="lazy"
+          decoding="async"
           style={{ width: "60px", height: "60px" }}
         />
+      </MKBox>
       </MKBox>
     </>
   );

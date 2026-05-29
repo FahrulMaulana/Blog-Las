@@ -89,6 +89,8 @@ function LasPanggilan() {
         sticky
       />
 
+      <MKBox component="main" id="main-content">
+
       <MKBox
         minHeight="50vh"
         width="100%"
@@ -405,7 +407,16 @@ function LasPanggilan() {
         sx={{ cursor: "pointer", borderRadius: "50%" }}
         onClick={handleWhatsApp}
       >
-        <img src="/wa.png" alt="WhatsApp" style={{ width: "60px", height: "60px" }} />
+        <img
+          src="/wa.png"
+          alt="WhatsApp"
+          width="60"
+          height="60"
+          loading="lazy"
+          decoding="async"
+          style={{ width: "60px", height: "60px" }}
+        />
+      </MKBox>
       </MKBox>
     </>
   );

@@ -43,9 +43,13 @@ function Download() {
           position="absolute"
           top={0}
           left={0}
-          width="100%"
+          width="1200"
+          height="600"
+          loading="lazy"
+          decoding="async"
           zIndex={1}
           opacity={0.2}
+          sx={{ width: "100%", height: "auto" }}
         />
         <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
           <Grid container item xs={12} md={10} justifyContent="center" mx="auto" textAlign="center">

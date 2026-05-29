@@ -81,28 +81,33 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
-  const renderNavbarItems = routes.map(({ name, icon, route, collapse }) => (
-    <DefaultNavbarDropdown
-      key={name}
-      name={name}
-      icon={icon}
-      href={typeof route === "string" ? route : ""}
-      route={typeof route === "string" ? route : ""}
-      collapse={Boolean(collapse)}
-      onClick={() => {
-        if (typeof route === "function") route();
-      }}
-      onMouseEnter={({ currentTarget }) => {
-        if (collapse) {
-          setDropdown(currentTarget);
-          setDropdownEl(currentTarget);
-          setDropdownName(name);
-        }
-      }}
-      onMouseLeave={() => collapse && setDropdown(null)}
-      light={light}
-    />
-  ));
+  const renderNavbarItems = routes.map(({ name, icon, route, href, collapse }) => {
+    const resolvedHref = href || "";
+    const resolvedRoute = typeof route === "string" ? route : "";
+
+    return (
+      <DefaultNavbarDropdown
+        key={name}
+        name={name}
+        icon={icon}
+        href={resolvedHref}
+        route={resolvedRoute}
+        collapse={Boolean(collapse)}
+        onClick={() => {
+          if (typeof route === "function") route();
+        }}
+        onMouseEnter={({ currentTarget }) => {
+          if (collapse) {
+            setDropdown(currentTarget);
+            setDropdownEl(currentTarget);
+            setDropdownName(name);
+          }
+        }}
+        onMouseLeave={() => collapse && setDropdown(null)}
+        light={light}
+      />
+    );
+  });
 
   // Render the routes on the dropdown menu
   const renderRoutes = routes.map(({ name, collapse, columns, rowsPerColumn }) => {

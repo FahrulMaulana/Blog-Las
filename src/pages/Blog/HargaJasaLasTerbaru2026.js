@@ -82,6 +82,8 @@ function HargaJasaLasTerbaru2026() {
         sticky
       />
 
+      <MKBox component="main" id="main-content">
+
       <MKBox
         minHeight="40vh"
         width="100%"
@@ -383,6 +385,7 @@ function HargaJasaLasTerbaru2026() {
 
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
+      </MKBox>
       </MKBox>
     </>
   );

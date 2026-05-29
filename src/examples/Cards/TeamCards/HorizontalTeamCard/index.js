@@ -34,9 +34,13 @@ function HorizontalTeamCard({ image, name, position, description }) {
               component="img"
               src={image}
               alt={name}
-              width="100%"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
               borderRadius="md"
               shadow="lg"
+              sx={{ width: "100%", height: "auto", objectFit: "cover" }}
             />
           </MKBox>
         </Grid>

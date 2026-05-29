@@ -37,22 +37,82 @@ function Featuring() {
       <Container>
         <Grid container spacing={3} sx={{ mb: 12 }}>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={coinbase} alt="coinbase" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={coinbase}
+              alt="coinbase"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={nasa} alt="nasa" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={nasa}
+              alt="nasa"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={netflix} alt="netflix" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={netflix}
+              alt="netflix"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={pinterest} alt="pinterest" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={pinterest}
+              alt="pinterest"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={spotify} alt="spotify" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={spotify}
+              alt="spotify"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={vodafone} alt="vodafone" width="100%" opacity={0.7} />
+            <MKBox
+              component="img"
+              src={vodafone}
+              alt="vodafone"
+              width="240"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              opacity={0.7}
+              sx={{ width: "100%", height: "auto" }}
+            />
           </Grid>
         </Grid>
         <Grid container justifyContent="center" sx={{ textAlign: "center" }}>

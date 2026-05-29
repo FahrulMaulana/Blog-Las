@@ -29,6 +29,7 @@ import MKTypography from "components/MKTypography";
 
 function DefaultFooter({ content }) {
   const { brand, socials, menus, copyright } = content;
+  const validSocials = (socials || []).filter((social) => Boolean(social.link));
 
   return (
     <MKBox component="footer">
@@ -44,15 +45,17 @@ function DefaultFooter({ content }) {
                   maxWidth="2rem"
                   width="32"
                   height="32"
+                  loading="lazy"
+                  decoding="async"
                   mb={2}
                 />
               </Link>
               <MKTypography variant="h6">{brand.name}</MKTypography>
             </MKBox>
             <MKBox display="flex" alignItems="center" mt={3}>
-              {socials.map(({ icon, link }, key) => (
+              {validSocials.map(({ icon, link, label }, key) => (
                 <MKTypography
-                  key={link}
+                  key={link || key}
                   component="a"
                   href={link}
                   target="_blank"
@@ -60,7 +63,9 @@ function DefaultFooter({ content }) {
                   variant="h5"
                   color="dark"
                   opacity={0.8}
-                  mr={key === socials.length - 1 ? 0 : 2.5}
+                  aria-label={label || "Social link"}
+                  title={label || "Social link"}
+                  mr={key === validSocials.length - 1 ? 0 : 2.5}
                 >
                   {icon}
                 </MKTypography>
@@ -93,10 +98,19 @@ function DefaultFooter({ content }) {
                       >
                         {name}
                       </MKTypography>
-                    ) : (
+                    ) : route ? (
                       <MKTypography
                         component={Link}
                         to={route}
+                        variant="button"
+                        fontWeight="regular"
+                        textTransform="capitalize"
+                      >
+                        {name}
+                      </MKTypography>
+                    ) : (
+                      <MKTypography
+                        component="span"
                         variant="button"
                         fontWeight="regular"
                         textTransform="capitalize"

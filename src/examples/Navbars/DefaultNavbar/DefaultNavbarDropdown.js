@@ -38,11 +38,11 @@ function DefaultNavbarDropdown({
   collapse,
   ...rest
 }) {
+  const isExternal = Boolean(href) && /^https?:\/\//i.test(href);
   const linkComponent = {
     component: "a",
     href,
-    target: "_blank",
-    rel: "noreferrer",
+    ...(isExternal ? { target: "_blank", rel: "noreferrer" } : {}),
   };
 
   const routeComponent = {

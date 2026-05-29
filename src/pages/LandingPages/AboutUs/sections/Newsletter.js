@@ -51,7 +51,16 @@ function Newsletter() {
           </Grid>
           <Grid item xs={12} md={5} sx={{ ml: "auto" }}>
             <MKBox position="relative">
-              <MKBox component="img" src={macbook} alt="macbook" width="100%" />
+              <MKBox
+                component="img"
+                src={macbook}
+                alt="macbook"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                sx={{ width: "100%", height: "auto" }}
+              />
             </MKBox>
           </Grid>
         </Grid>

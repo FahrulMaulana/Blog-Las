@@ -92,6 +92,8 @@ function BlogIndex() {
         sticky
       />
 
+      <MKBox component="main" id="main-content">
+
       <MKBox
         minHeight="40vh"
         width="100%"
@@ -131,9 +133,11 @@ function BlogIndex() {
                     component="img"
                     src={article.image}
                     alt={article.title}
-                    width="100%"
-                    height="200px"
-                    sx={{ objectFit: "cover" }}
+                    width="1200"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                    sx={{ width: "100%", height: 200, objectFit: "cover" }}
                   />
                   <MKBox p={3} flexGrow={1} display="flex" flexDirection="column">
                     <MKTypography variant="caption" color="text" mb={1}>
@@ -164,6 +168,7 @@ function BlogIndex() {
 
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
+      </MKBox>
       </MKBox>
     </>
   );

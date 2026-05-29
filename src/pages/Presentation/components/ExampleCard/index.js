@@ -72,12 +72,15 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         component="img"
         src={image}
         alt={name}
-        width="100%"
-        height="auto"
+        width="800"
+        height="800"
         my="auto"
         opacity={pro ? 0.6 : 1}
         loading="lazy"
+        decoding="async"
         sx={{
+          width: "100%",
+          height: "auto",
           aspectRatio: "1 / 1",
           objectFit: "cover",
         }}

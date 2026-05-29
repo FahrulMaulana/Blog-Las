@@ -24,6 +24,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // React Helmet Async
 import { HelmetProvider } from "react-helmet-async";
+import ErrorBoundary from "components/ErrorBoundary";
 
 // Material Kit 2 React themes
 import theme from "assets/theme";
@@ -69,18 +70,20 @@ export default function App() {
     <HelmetProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Routes>
-          {getRoutes(routes)}
-          <Route path="/" element={<Presentation />} />
-          <Route path="/las-kanopi" element={<LasKanopi />} />
-          <Route path="/las-pagar" element={<LasPagar />} />
-          <Route path="/las-tralis" element={<LasTralis />} />
-          <Route path="/las-stainless" element={<LasStainless />} />
-          <Route path="/las-panggilan" element={<LasPanggilan />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog/harga-jasa-las-terbaru-2026" element={<HargaJasaLasTerbaru2026 />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            {getRoutes(routes)}
+            <Route path="/" element={<Presentation />} />
+            <Route path="/las-kanopi" element={<LasKanopi />} />
+            <Route path="/las-pagar" element={<LasPagar />} />
+            <Route path="/las-tralis" element={<LasTralis />} />
+            <Route path="/las-stainless" element={<LasStainless />} />
+            <Route path="/las-panggilan" element={<LasPanggilan />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/harga-jasa-las-terbaru-2026" element={<HargaJasaLasTerbaru2026 />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </ErrorBoundary>
       </ThemeProvider>
     </HelmetProvider>
   );

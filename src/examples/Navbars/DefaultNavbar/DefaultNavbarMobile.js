@@ -47,10 +47,13 @@ function DefaultNavbarMobile({ routes, open }) {
         collapseStatus={name === collapse}
         onClick={() => {
           if (typeof route === "function") {
-            route(); // Eksekusi scroll handler
-            setCollapse(""); // Tutup dropdown jika sedang terbuka
-          } else {
-            handleSetCollapse(name); // Expand jika ada sub menu
+            route();
+            setCollapse("");
+            return;
+          }
+
+          if (navCollapse) {
+            handleSetCollapse(name);
           }
         }}
         href={href}

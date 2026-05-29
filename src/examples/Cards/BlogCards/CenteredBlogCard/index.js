@@ -37,9 +37,13 @@ function CenteredBlogCard({ image, title, description, action }) {
           src={image}
           alt={title}
           borderRadius="lg"
-          width="100%"
+          width="1200"
+          height="800"
+          loading="lazy"
+          decoding="async"
           position="relative"
           zIndex={1}
+          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
         />
         <MKBox
           borderRadius="lg"
