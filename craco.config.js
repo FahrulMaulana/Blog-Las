@@ -1,14 +1,38 @@
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
+  babel: {
+    plugins: [
+      [
+        'babel-plugin-import',
+        {
+          libraryName: '@mui/material',
+          libraryDirectory: '',
+          camel2DashComponentName: false,
+        },
+        'core',
+      ],
+      [
+        'babel-plugin-import',
+        {
+          libraryName: '@mui/icons-material',
+          libraryDirectory: '',
+          camel2DashComponentName: false,
+        },
+        'icons',
+      ],
+    ],
+  },
   webpack: {
     configure: (webpackConfig) => {
-      // Optimize chunks
       webpackConfig.optimization = {
         ...webpackConfig.optimization,
         splitChunks: {
           chunks: 'all',
+          maxInitialRequests: 25,
+          minSize: 20000,
           cacheGroups: {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
@@ -28,6 +52,12 @@ module.exports = {
               name: 'vendor.react',
               priority: 20,
             },
+            styles: {
+              name: 'styles',
+              type: 'css/mini-extract',
+              chunks: 'all',
+              enforce: true,
+            },
           },
         },
         runtimeChunk: false,
@@ -39,13 +69,25 @@ module.exports = {
                 drop_console: true,
                 drop_debugger: true,
                 pure_funcs: ['console.log', 'console.info'],
+                passes: 2,
               },
+              mangle: true,
+            },
+          }),
+          new CssMinimizerPlugin({
+            minimizerOptions: {
+              preset: [
+                'default',
+                {
+                  discardComments: { removeAll: true },
+                  normalizeWhitespace: true,
+                },
+              ],
             },
           }),
         ],
       };
 
-      // Add compression
       if (process.env.NODE_ENV === 'production') {
         webpackConfig.plugins.push(
           new CompressionPlugin({
