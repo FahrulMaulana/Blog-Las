@@ -708,8 +708,8 @@ function Presentation() {
                       <img
                         src={service.icon}
                         alt={service.title}
-                        width="400"
-                        height="300"
+                        width="300"
+                        height="225"
                         loading="lazy"
                         decoding="async"
                         style={{

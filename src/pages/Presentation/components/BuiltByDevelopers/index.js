@@ -22,9 +22,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
-
+  // Use a solid gradient instead of external image for better performance
   return (
     <MKBox
       display="flex"
@@ -33,11 +31,8 @@ function BuiltByDevelopers() {
       my={2}
       py={6}
       sx={{
-        backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-          `${linearGradient(
-            rgba(gradients.dark.main, 0.8),
-            rgba(gradients.dark.state, 0.8)
-          )}, url(${bgImage})`,
+        background: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+          linearGradient(rgba(gradients.dark.main, 0.9), rgba(gradients.dark.state, 0.9)),
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
