@@ -187,7 +187,7 @@
 - [x] addressLocality: Bojongsari
 - [x] addressRegion: Depok
 - [x] addressCountry: ID
-- [x] URL: https://indiajaya.tech
+- [x] URL: https://indianjayalas.com
 - [x] Telephone: 081212154019
 - [x] priceRange: $$
 - [x] geo coordinates: -6.3906, 106.7525

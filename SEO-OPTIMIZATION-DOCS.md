@@ -41,7 +41,7 @@ Saat build (`npm run build`), react-snap akan:
 ```
 User-agent: *
 Allow: /
-Sitemap: https://indiajaya.tech/sitemap.xml
+Sitemap: https://indianjayalas.com/sitemap.xml
 ```
 
 ### sitemap.xml
@@ -409,7 +409,7 @@ genezio deploy
 
 ### 4. Verifikasi:
 
-- Cek https://indiajaya.tech
+- Cek https://indianjayalas.com
 - Test di Google Search Console
 - Submit sitemap
 - Test di PageSpeed Insights

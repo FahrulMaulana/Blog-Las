@@ -283,7 +283,7 @@ import bgFront from "assets/images/rotating-card-bg-front.webp";  // ✅ CORRECT
 ### 2. **Test PageSpeed**:
 ```
 Visit: https://pagespeed.web.dev/
-Enter: https://indiajaya.tech/
+Enter: https://indianjayalas.com/
 Check:
 - Mobile score should be 75+
 - Desktop score should be 85+
@@ -338,13 +338,13 @@ Check:
 
 **Vercel Deployment**: 🔄 **IN PROGRESS**
 
-**Expected URL**: https://indiajaya.tech/
+**Expected URL**: https://indianjayalas.com/
 
 **Test After Deploy**:
 1. Wait for Vercel deployment to complete (check https://vercel.com/dashboard)
 2. Clear browser cache (Cmd+Shift+R)
-3. Visit https://indiajaya.tech/
-4. Test PageSpeed: https://pagespeed.web.dev/?url=https://indiajaya.tech/
+3. Visit https://indianjayalas.com/
+4. Test PageSpeed: https://pagespeed.web.dev/?url=https://indianjayalas.com/
 5. **Expected Result**: Mobile 75+, Desktop 85+
 
 ---

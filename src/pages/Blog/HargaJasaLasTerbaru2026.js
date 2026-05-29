@@ -35,14 +35,14 @@ function HargaJasaLasTerbaru2026() {
           name="keywords"
           content="harga jasa las 2026, harga kanopi per meter, harga pagar besi, harga tralis, biaya las stainless"
         />
-        <link rel="canonical" href="https://indiajaya.tech/blog/harga-jasa-las-terbaru-2026" />
+        <link rel="canonical" href="https://indianjayalas.com/blog/harga-jasa-las-terbaru-2026" />
 
         <meta property="og:title" content="Harga Jasa Las Terbaru 2026 - Update Lengkap" />
         <meta
           property="og:description"
           content="Daftar lengkap harga jasa las terbaru tahun 2026"
         />
-        <meta property="og:url" content="https://indiajaya.tech/blog/harga-jasa-las-terbaru-2026" />
+        <meta property="og:url" content="https://indianjayalas.com/blog/harga-jasa-las-terbaru-2026" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -60,7 +60,7 @@ function HargaJasaLasTerbaru2026() {
               name: "Indian Jaya Las",
               logo: {
                 "@type": "ImageObject",
-                url: "https://indiajaya.tech/logo.jpg",
+                url: "https://indianjayalas.com/logo.jpg",
               },
             },
           })}

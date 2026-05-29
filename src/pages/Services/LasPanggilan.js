@@ -32,14 +32,14 @@ function LasPanggilan() {
           name="keywords"
           content="jasa las panggilan depok, tukang las terdekat, las panggilan 24 jam, bengkel las panggilan, las keliling depok"
         />
-        <link rel="canonical" href="https://indiajaya.tech/las-panggilan" />
+        <link rel="canonical" href="https://indianjayalas.com/las-panggilan" />
 
         <meta property="og:title" content="Jasa Las Panggilan Depok 24 Jam - Tukang Las Terdekat" />
         <meta
           property="og:description"
           content="Tukang las profesional siap datang ke lokasi Anda. Cepat & terpercaya."
         />
-        <meta property="og:url" content="https://indiajaya.tech/las-panggilan" />
+        <meta property="og:url" content="https://indianjayalas.com/las-panggilan" />
 
         <script type="application/ld+json">
           {JSON.stringify({

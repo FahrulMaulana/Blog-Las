@@ -124,7 +124,7 @@ After deployment completes, test immediately:
 1. **PageSpeed Insights** (MOST IMPORTANT):
    ```
    https://pagespeed.web.dev/
-   URL: https://indiajaya.tech/
+   URL: https://indianjayalas.com/
    Expected: Mobile 75+, Desktop 85+
    ```
 
@@ -185,7 +185,7 @@ Size should be: ~90KB (was ~117KB)
 
 ### 2. Check Cache Headers
 ```bash
-curl -I https://indiajaya.tech/static/media/las.8534e9da9ed294531927.webp | grep Cache-Control
+curl -I https://indianjayalas.com/static/media/las.8534e9da9ed294531927.webp | grep Cache-Control
 
 # Expected output:
 # Cache-Control: public, max-age=31536000, immutable

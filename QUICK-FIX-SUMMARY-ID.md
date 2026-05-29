@@ -67,7 +67,7 @@ Dampak: +3 poin, CLS 0.15 → 0.05
 
 🔄 **Vercel sedang deploy...**
 
-📍 **URL**: https://indiajaya.tech/
+📍 **URL**: https://indianjayalas.com/
 
 ---
 
@@ -76,7 +76,7 @@ Dampak: +3 poin, CLS 0.15 → 0.05
 ### 1. Test PageSpeed:
 ```
 1. Buka: https://pagespeed.web.dev/
-2. Masukkan: https://indiajaya.tech/
+2. Masukkan: https://indianjayalas.com/
 3. Klik: Analyze
 4. Lihat skor mobile: HARUS 75+ ✅
 5. Lihat skor desktop: HARUS 85+ ✅
@@ -84,7 +84,7 @@ Dampak: +3 poin, CLS 0.15 → 0.05
 
 ### 2. Verify Gambar WebP:
 ```
-1. Buka website: https://indiajaya.tech/
+1. Buka website: https://indianjayalas.com/
 2. Klik kanan → Inspect (F12)
 3. Tab Network → Reload page
 4. Filter: "rotating-card"

@@ -2,5 +2,11 @@
 User-agent: *
 Allow: /
 
+# Sensitive paths
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /api/
+
 # Sitemap location
-Sitemap: https://indiajaya.tech/sitemap.xml
+Sitemap: https://indianjayalas.com/sitemap.xml

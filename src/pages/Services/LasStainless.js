@@ -32,14 +32,14 @@ function LasStainless() {
           name="keywords"
           content="jasa las stainless depok, pagar stainless, railing tangga stainless, harga stainless per meter"
         />
-        <link rel="canonical" href="https://indiajaya.tech/las-stainless" />
+        <link rel="canonical" href="https://indianjayalas.com/las-stainless" />
 
         <meta property="og:title" content="Jasa Las Stainless Steel Depok" />
         <meta
           property="og:description"
           content="Jasa las stainless profesional. Anti karat, tahan lama."
         />
-        <meta property="og:url" content="https://indiajaya.tech/las-stainless" />
+        <meta property="og:url" content="https://indianjayalas.com/las-stainless" />
 
         <script type="application/ld+json">
           {JSON.stringify({

@@ -100,21 +100,21 @@ function Presentation() {
           name="keywords"
           content="bengkel las depok, jasa las pamulang, las kanopi depok, las pagar tangerang selatan, tukang las terdekat, bengkel las panggilan, indian jaya las"
         />
-        <link rel="canonical" href="https://indiajaya.tech/" />
+        <link rel="canonical" href="https://indianjayalas.com/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://indiajaya.tech/" />
+        <meta property="og:url" content="https://indianjayalas.com/" />
         <meta property="og:title" content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan" />
         <meta
           property="og:description"
           content="Jasa las profesional untuk kanopi, pagar, tralis, stainless. Free survey & pemasangan."
         />
-        <meta property="og:image" content="https://indiajaya.tech/og-image.jpg" />
+        <meta property="og:image" content="https://indianjayalas.com/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://indiajaya.tech/" />
+        <meta property="twitter:url" content="https://indianjayalas.com/" />
         <meta
           property="twitter:title"
           content="Bengkel Las Indian Jaya - Depok & Tangerang Selatan"
@@ -123,7 +123,7 @@ function Presentation() {
           property="twitter:description"
           content="Jasa las profesional untuk kanopi, pagar, tralis, stainless."
         />
-        <meta property="twitter:image" content="https://indiajaya.tech/og-image.jpg" />
+        <meta property="twitter:image" content="https://indianjayalas.com/og-image.jpg" />
 
         {/* JSON-LD LocalBusiness Schema with Aggregate Rating */}
         <script type="application/ld+json">
@@ -131,7 +131,7 @@ function Presentation() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Indian Jaya Las",
-            image: "https://indiajaya.tech/logo.jpg",
+            image: "https://indianjayalas.com/logo.jpg",
             description:
               "Bengkel las profesional melayani jasa pembuatan dan pemasangan kanopi, pagar, tralis, dan stainless steel di Depok dan Tangerang Selatan",
             address: {
@@ -147,7 +147,7 @@ function Presentation() {
               latitude: "-6.3906",
               longitude: "106.7525",
             },
-            url: "https://indiajaya.tech",
+            url: "https://indianjayalas.com",
             telephone: "081212154019",
             priceRange: "$$",
             aggregateRating: {

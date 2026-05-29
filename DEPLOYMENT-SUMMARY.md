@@ -136,7 +136,7 @@ genezio deploy
 # OR upload build/ folder to your hosting
 
 # 4. Test
-# Visit: https://indiajaya.tech
+# Visit: https://indianjayalas.com
 # Check all service pages load correctly
 # Test on mobile
 ```
@@ -168,9 +168,9 @@ genezio deploy
 
 ### 1. Google Search Console (PRIORITY)
 
-- [ ] Add property: https://indiajaya.tech
+- [ ] Add property: https://indianjayalas.com
 - [ ] Verify ownership
-- [ ] Submit sitemap: https://indiajaya.tech/sitemap.xml
+- [ ] Submit sitemap: https://indianjayalas.com/sitemap.xml
 - [ ] Request indexing for all pages
 
 ### 2. Google My Business
@@ -236,17 +236,17 @@ After deployment, your website will:
 
 ## 📞 IMPORTANT LINKS
 
-- **Website:** https://indiajaya.tech
-- **Sitemap:** https://indiajaya.tech/sitemap.xml
-- **Robots:** https://indiajaya.tech/robots.txt
+- **Website:** https://indianjayalas.com
+- **Sitemap:** https://indianjayalas.com/sitemap.xml
+- **Robots:** https://indianjayalas.com/robots.txt
 
 ### Service Pages:
 
-- https://indiajaya.tech/las-kanopi
-- https://indiajaya.tech/las-pagar
-- https://indiajaya.tech/las-tralis
-- https://indiajaya.tech/las-stainless
-- https://indiajaya.tech/las-panggilan
+- https://indianjayalas.com/las-kanopi
+- https://indianjayalas.com/las-pagar
+- https://indianjayalas.com/las-tralis
+- https://indianjayalas.com/las-stainless
+- https://indianjayalas.com/las-panggilan
 
 ---
 

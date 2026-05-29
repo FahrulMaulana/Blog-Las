@@ -69,7 +69,7 @@ function BlogIndex() {
           name="keywords"
           content="blog las, artikel kanopi, harga las 2026, tips memilih tukang las, panduan las"
         />
-        <link rel="canonical" href="https://indiajaya.tech/blog" />
+        <link rel="canonical" href="https://indianjayalas.com/blog" />
       </Helmet>
 
       <DefaultNavbar

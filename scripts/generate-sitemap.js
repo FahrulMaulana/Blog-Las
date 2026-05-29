@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const baseUrl = "https://indiajaya.tech";
+const baseUrl = "https://indianjayalas.com";
 const today = new Date().toISOString().split("T")[0];
 
 const pages = [

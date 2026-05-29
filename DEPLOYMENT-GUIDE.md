@@ -68,7 +68,7 @@ genezio login
 # Deploy
 genezio deploy
 
-# Website akan live di: https://indiajaya.tech
+# Website akan live di: https://indianjayalas.com
 ```
 
 ### Option 2: Manual Upload ke Hosting
@@ -114,7 +114,7 @@ vercel --prod
 
 ### 1. Verifikasi Website Live
 
-- [ ] Buka https://indiajaya.tech
+- [ ] Buka https://indianjayalas.com
 - [ ] Test semua halaman:
   - [ ] Homepage (/)
   - [ ] /las-kanopi
@@ -126,8 +126,8 @@ vercel --prod
 ### 2. Test SEO
 
 - [ ] View Page Source - pastikan HTML terlihat lengkap
-- [ ] Check https://indiajaya.tech/sitemap.xml
-- [ ] Check https://indiajaya.tech/robots.txt
+- [ ] Check https://indianjayalas.com/sitemap.xml
+- [ ] Check https://indianjayalas.com/robots.txt
 
 ### 3. Test Performance
 
@@ -139,9 +139,9 @@ vercel --prod
 
 ```
 1. Buka: https://search.google.com/search-console
-2. Add Property: https://indiajaya.tech
+2. Add Property: https://indianjayalas.com
 3. Verify ownership (via DNS/HTML file/Meta tag)
-4. Submit Sitemap: https://indiajaya.tech/sitemap.xml
+4. Submit Sitemap: https://indianjayalas.com/sitemap.xml
 5. Request indexing untuk semua halaman
 ```
 

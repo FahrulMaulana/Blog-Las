@@ -34,16 +34,16 @@ function LasPagar() {
           name="keywords"
           content="jasa las pagar depok, pagar besi minimalis, pagar hollow, harga pagar per meter, tukang pagar terdekat, pagar rumah minimalis"
         />
-        <link rel="canonical" href="https://indiajaya.tech/las-pagar" />
+        <link rel="canonical" href="https://indianjayalas.com/las-pagar" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://indiajaya.tech/las-pagar" />
+        <meta property="og:url" content="https://indianjayalas.com/las-pagar" />
         <meta property="og:title" content="Jasa Las Pagar Besi Hollow & Minimalis Depok" />
         <meta
           property="og:description"
           content="Jasa las pagar profesional. Free survey & pemasangan. Area Depok, Pamulang, BSD."
         />
-        <meta property="og:image" content="https://indiajaya.tech/pagar-preview.jpg" />
+        <meta property="og:image" content="https://indianjayalas.com/pagar-preview.jpg" />
 
         <script type="application/ld+json">
           {JSON.stringify({

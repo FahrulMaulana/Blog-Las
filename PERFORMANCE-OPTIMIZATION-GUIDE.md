@@ -267,7 +267,7 @@ ls -lh build/static/js/*.js
 
 1. **PageSpeed Insights**: https://pagespeed.web.dev/
 
-   - Test URL: https://indiajaya.tech/
+   - Test URL: https://indianjayalas.com/
    - Target: Mobile >75, Desktop >85
 
 2. **GTmetrix**: https://gtmetrix.com/

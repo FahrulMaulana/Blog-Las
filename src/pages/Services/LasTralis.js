@@ -32,14 +32,14 @@ function LasTralis() {
           name="keywords"
           content="jasa las tralis depok, tralis jendela, tralis pintu, tralis minimalis, harga tralis per meter"
         />
-        <link rel="canonical" href="https://indiajaya.tech/las-tralis" />
+        <link rel="canonical" href="https://indianjayalas.com/las-tralis" />
 
         <meta property="og:title" content="Jasa Las Tralis Jendela & Pintu Depok" />
         <meta
           property="og:description"
           content="Jasa las tralis profesional untuk keamanan rumah Anda"
         />
-        <meta property="og:url" content="https://indiajaya.tech/las-tralis" />
+        <meta property="og:url" content="https://indianjayalas.com/las-tralis" />
 
         <script type="application/ld+json">
           {JSON.stringify({

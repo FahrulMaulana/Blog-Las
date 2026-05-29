@@ -36,11 +36,11 @@ function LasKanopi() {
           name="keywords"
           content="jasa las kanopi depok, las kanopi pamulang, kanopi baja ringan, harga kanopi per meter, kanopi minimalis, tukang kanopi terdekat"
         />
-        <link rel="canonical" href="https://indiajaya.tech/las-kanopi" />
+        <link rel="canonical" href="https://indianjayalas.com/las-kanopi" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://indiajaya.tech/las-kanopi" />
+        <meta property="og:url" content="https://indianjayalas.com/las-kanopi" />
         <meta
           property="og:title"
           content="Jasa Las Kanopi Depok & Tangerang Selatan - Indian Jaya Las"
@@ -49,17 +49,17 @@ function LasKanopi() {
           property="og:description"
           content="Jasa las kanopi profesional. Free survey & pemasangan. Area Depok, Pamulang, BSD, Ciputat."
         />
-        <meta property="og:image" content="https://indiajaya.tech/kanopi-preview.jpg" />
+        <meta property="og:image" content="https://indianjayalas.com/kanopi-preview.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://indiajaya.tech/las-kanopi" />
+        <meta property="twitter:url" content="https://indianjayalas.com/las-kanopi" />
         <meta property="twitter:title" content="Jasa Las Kanopi Depok & Tangerang Selatan" />
         <meta
           property="twitter:description"
           content="Jasa las kanopi profesional. Free survey & pemasangan."
         />
-        <meta property="twitter:image" content="https://indiajaya.tech/kanopi-preview.jpg" />
+        <meta property="twitter:image" content="https://indianjayalas.com/kanopi-preview.jpg" />
 
         {/* JSON-LD Schema */}
         <script type="application/ld+json">
@@ -79,7 +79,7 @@ function LasKanopi() {
                 addressCountry: "ID",
               },
               telephone: "081212154019",
-              url: "https://indiajaya.tech",
+              url: "https://indianjayalas.com",
               priceRange: "$$",
               geo: {
                 "@type": "GeoCoordinates",

@@ -53,7 +53,7 @@ git push origin master
 Setelah deploy, test di:
 
 1. **PageSpeed Insights**: https://pagespeed.web.dev/
-   - Test URL: https://indiajaya.tech/
+   - Test URL: https://indianjayalas.com/
    - Expected improvement: Mobile +10 points (45→55)
 
 2. **Google Rich Results Test**: https://search.google.com/test/rich-results
@@ -125,12 +125,12 @@ git push origin master
 
 ### 1. Check Cache Headers (After Deploy)
 ```bash
-curl -I https://indiajaya.tech/static/js/main.*.js | grep Cache-Control
+curl -I https://indianjayalas.com/static/js/main.*.js | grep Cache-Control
 # Should see: Cache-Control: public, max-age=31536000, immutable
 ```
 
 ### 2. Check Preload
-View source https://indiajaya.tech/, look for:
+View source https://indianjayalas.com/, look for:
 ```html
 <link rel="preload" href="/static/media/las..." as="image">
 <link rel="dns-prefetch" href="https://wa.me">
@@ -138,7 +138,7 @@ View source https://indiajaya.tech/, look for:
 
 ### 3. Check Schema
 Google Rich Results Test: https://search.google.com/test/rich-results
-- Paste: https://indiajaya.tech/
+- Paste: https://indianjayalas.com/
 - Look for "AggregateRating" with 4.9 stars
 
 ### 4. Check Bundle Size
@@ -192,7 +192,7 @@ npm run analyze
 ### Tip 1: Always Test After Deploy
 ```bash
 # Quick test script
-curl -I https://indiajaya.tech/static/js/main.*.js | grep -i cache
+curl -I https://indianjayalas.com/static/js/main.*.js | grep -i cache
 ```
 
 ### Tip 2: Monitor Core Web Vitals
