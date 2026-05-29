@@ -51,6 +51,7 @@
     "lint": "eslint ./src",
     "prettify": "prettier --write .",
     "optimize:images": "node scripts/convert-images-to-webp.js",
+    "resize:images": "node scripts/resize-images.js",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {

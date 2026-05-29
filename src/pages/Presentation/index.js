@@ -56,10 +56,10 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/las.webp";
-import kanopiIcon from "assets/images/optimized/kanopi11-325w.webp";
-import pagarIcon from "assets/images/optimized/pagar1-325w.webp";
-import teralisIcon from "assets/images/optimized/teralis-325w.webp";
-import tanggaIcon from "assets/images/optimized/tangga1-325w.webp";
+import kanopiIcon from "assets/images/kanopi11.webp";
+import pagarIcon from "assets/images/pagar/pagar1.webp";
+import teralisIcon from "assets/images/teralis/teralis.webp";
+import tanggaIcon from "assets/images/tangga/tangga1.webp";
 
 function Presentation() {
   const homeRef = useRef(null);
