@@ -71,9 +71,9 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       <MKBox
         component="img"
         src={image}
-        alt={name}
-        width="300"
-        height="300"
+        alt={name || ""}
+        width="255"
+        height="255"
         my="auto"
         opacity={pro ? 0.6 : 1}
         loading="lazy"
