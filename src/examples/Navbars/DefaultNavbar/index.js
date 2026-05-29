@@ -483,6 +483,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             lineHeight={1}
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+            aria-label="Kembali ke beranda"
           >
             <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
               {brand}

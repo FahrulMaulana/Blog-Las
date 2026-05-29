@@ -75,7 +75,13 @@ function DesignBlocks() {
             color="info"
             badgeContent="Portofolio"
             container
-            sx={{ mb: 2 }}
+            sx={{
+              mb: 2,
+              "& .MuiBadge-badge": {
+                backgroundColor: "#0d47a1",
+                color: "#ffffff",
+              },
+            }}
           />
           <MKTypography variant="h2" fontWeight="bold">
             Produk Kami

@@ -192,7 +192,7 @@ function LasKanopi() {
           <Grid container spacing={3} sx={{ mt: 6 }}>
             {/* Main Content */}
             <Grid item xs={12} lg={8}>
-              <MKTypography variant="h2" component="h2" mb={3}>
+              <MKTypography variant="h2" mb={3}>
                 Kenapa Memilih Jasa Las Kanopi Indian Jaya?
               </MKTypography>
 
@@ -208,7 +208,7 @@ function LasKanopi() {
                 Anda.
               </MKTypography>
 
-              <MKTypography variant="h3" component="h3" mt={4} mb={2}>
+              <MKTypography variant="h3" mt={4} mb={2}>
                 Jenis Material Kanopi yang Kami Sediakan
               </MKTypography>
 
@@ -243,14 +243,14 @@ function LasKanopi() {
                 </li>
               </MKBox>
 
-              <MKTypography variant="h3" component="h3" mt={4} mb={2}>
+              <MKTypography variant="h3" mt={4} mb={2}>
                 Keunggulan Layanan Kami
               </MKTypography>
 
               <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
-                    <MKTypography variant="h6" component="h4" color="white" mb={1}>
+                    <MKTypography variant="h6" color="white" mb={1}>
                       ✓ Free Survey
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
@@ -260,7 +260,7 @@ function LasKanopi() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="info" color="white" borderRadius="md" p={2} mb={2}>
-                    <MKTypography variant="h6" component="h4" color="white" mb={1}>
+                    <MKTypography variant="h6" color="white" mb={1}>
                       ✓ Free Pemasangan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
@@ -270,7 +270,7 @@ function LasKanopi() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="warning" color="white" borderRadius="md" p={2} mb={2}>
-                    <MKTypography variant="h6" component="h4" color="white" mb={1}>
+                    <MKTypography variant="h6" color="white" mb={1}>
                       ✓ Free Ongkir
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
@@ -280,7 +280,7 @@ function LasKanopi() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="error" color="white" borderRadius="md" p={2} mb={2}>
-                    <MKTypography variant="h6" component="h4" color="white" mb={1}>
+                    <MKTypography variant="h6" color="white" mb={1}>
                       ✓ Garansi Kualitas
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
@@ -290,7 +290,7 @@ function LasKanopi() {
                 </Grid>
               </Grid>
 
-              <MKTypography variant="h3" component="h3" mt={4} mb={2}>
+              <MKTypography variant="h3" mt={4} mb={2}>
                 Estimasi Harga Las Kanopi Per Meter (2026)
               </MKTypography>
 
@@ -365,7 +365,7 @@ function LasKanopi() {
                 untuk penawaran terbaik.
               </MKTypography>
 
-              <MKTypography variant="h3" component="h3" mt={4} mb={2}>
+              <MKTypography variant="h3" mt={4} mb={2}>
                 Area Layanan Las Kanopi
               </MKTypography>
 
@@ -442,7 +442,7 @@ function LasKanopi() {
                 mb={3}
                 sx={{ position: "sticky", top: 100 }}
               >
-                <MKTypography variant="h5" color="white" mb={2} textAlign="center">
+                <MKTypography variant="h5" component="h4" color="white" mb={2} textAlign="center">
                   Konsultasi Gratis
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
