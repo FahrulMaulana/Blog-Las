@@ -19,8 +19,6 @@ import { BrowserRouter } from "react-router-dom";
 // import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const container = document.getElementById("root");
-
-// Create a root.
 const root = ReactDOMClient.createRoot(container);
 
 root.render(

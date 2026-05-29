@@ -31,48 +31,62 @@ module.exports = {
         ...webpackConfig.optimization,
         splitChunks: {
           chunks: 'all',
-          maxInitialRequests: 25,
-          minSize: 20000,
+          maxInitialRequests: 30,
+          minSize: 10000,
+          maxSize: 244000,
           cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name(module) {
-                const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-                return `vendor.${packageName.replace('@', '')}`;
-              },
-              priority: 10,
-            },
+            defaultVendors: false,
+            default: false,
             mui: {
               test: /[\\/]node_modules[\\/]@mui[\\/]/,
-              name: 'vendor.mui',
-              priority: 20,
+              name: 'mui',
+              priority: 40,
+              reuseExistingChunk: true,
             },
             react: {
-              test: /[\\/]node_modules[\\/](react|react-dom|react-router-dom)[\\/]/,
-              name: 'vendor.react',
-              priority: 20,
+              test: /[\\/]node_modules[\\/](react|react-dom|react-router-dom|scheduler)[\\/]/,
+              name: 'react',
+              priority: 40,
+              reuseExistingChunk: true,
             },
-            styles: {
-              name: 'styles',
-              type: 'css/mini-extract',
-              chunks: 'all',
-              enforce: true,
+            emotion: {
+              test: /[\\/]node_modules[\\/]@emotion[\\/]/,
+              name: 'emotion',
+              priority: 30,
+              reuseExistingChunk: true,
+            },
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              priority: 20,
+              reuseExistingChunk: true,
             },
           },
         },
-        runtimeChunk: false,
+        runtimeChunk: 'single',
         minimize: true,
         minimizer: [
           new TerserPlugin({
             terserOptions: {
+              parse: { ecma: 8 },
               compress: {
+                ecma: 5,
+                warnings: false,
+                comparisons: false,
+                inline: 2,
                 drop_console: true,
                 drop_debugger: true,
                 pure_funcs: ['console.log', 'console.info'],
                 passes: 2,
               },
-              mangle: true,
+              mangle: { safari10: true },
+              output: {
+                ecma: 5,
+                comments: false,
+                ascii_only: true,
+              },
             },
+            parallel: true,
           }),
           new CssMinimizerPlugin({
             minimizerOptions: {
