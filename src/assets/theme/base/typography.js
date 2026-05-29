@@ -131,7 +131,7 @@ const typography = {
   body2: {
     fontFamily: baseProperties.fontFamily,
     fontSize: baseProperties.fontSizeMD,
-    fontWeight: baseProperties.fontWeightLight,
+    fontWeight: baseProperties.fontWeightRegular, // Changed from fontWeightLight for better readability
     lineHeight: 1.6,
   },
 

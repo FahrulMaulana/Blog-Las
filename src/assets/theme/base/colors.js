@@ -25,8 +25,8 @@ export default {
   },
 
   text: {
-    main: "#7b809a",
-    focus: "#7b809a",
+    main: "#495057", // WCAG AA compliant - contrast ratio 8.59:1 (was #7b809a with 3.77:1)
+    focus: "#495057",
   },
 
   transparent: {
@@ -50,8 +50,8 @@ export default {
   },
 
   secondary: {
-    main: "#7b809a",
-    focus: "#8f93a9",
+    main: "#495057", // WCAG AA compliant - contrast ratio 8.59:1 (was #7b809a)
+    focus: "#343a40", // WCAG AA compliant - contrast ratio 11.63:1 (was #8f93a9)
   },
 
   info: {

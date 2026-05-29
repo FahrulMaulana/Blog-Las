@@ -20,14 +20,17 @@ export default {
   socials: [
     {
       icon: <FacebookIcon />,
+      label: "Facebook Indian Jaya Las",
       // link: "https://www.facebook.com/CreativeTim/",
     },
     {
       icon: <TwitterIcon />,
+      label: "Twitter Indian Jaya Las",
       // link: "https://twitter.com/creativetim",
     },
     {
       icon: <YouTubeIcon />,
+      label: "YouTube Indian Jaya Las",
       // link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
     },
   ],
