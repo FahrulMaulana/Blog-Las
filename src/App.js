@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 
 // react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
@@ -30,16 +30,14 @@ import ErrorBoundary from "components/ErrorBoundary";
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 
-// Service Pages
-import LasKanopi from "pages/Services/LasKanopi";
-import LasPagar from "pages/Services/LasPagar";
-import LasTralis from "pages/Services/LasTralis";
-import LasStainless from "pages/Services/LasStainless";
-import LasPanggilan from "pages/Services/LasPanggilan";
-
-// Blog Pages
-import BlogIndex from "pages/Blog/BlogIndex";
-import HargaJasaLasTerbaru2026 from "pages/Blog/HargaJasaLasTerbaru2026";
+// Lazy load service and blog pages
+const LasKanopi = lazy(() => import("pages/Services/LasKanopi"));
+const LasPagar = lazy(() => import("pages/Services/LasPagar"));
+const LasTralis = lazy(() => import("pages/Services/LasTralis"));
+const LasStainless = lazy(() => import("pages/Services/LasStainless"));
+const LasPanggilan = lazy(() => import("pages/Services/LasPanggilan"));
+const BlogIndex = lazy(() => import("pages/Blog/BlogIndex"));
+const HargaJasaLasTerbaru2026 = lazy(() => import("pages/Blog/HargaJasaLasTerbaru2026"));
 
 // Material Kit 2 React routes
 import routes from "routes";
@@ -71,18 +69,23 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ErrorBoundary>
-          <Routes>
-            {getRoutes(routes)}
-            <Route path="/" element={<Presentation />} />
-            <Route path="/las-kanopi" element={<LasKanopi />} />
-            <Route path="/las-pagar" element={<LasPagar />} />
-            <Route path="/las-tralis" element={<LasTralis />} />
-            <Route path="/las-stainless" element={<LasStainless />} />
-            <Route path="/las-panggilan" element={<LasPanggilan />} />
-            <Route path="/blog" element={<BlogIndex />} />
-            <Route path="/blog/harga-jasa-las-terbaru-2026" element={<HargaJasaLasTerbaru2026 />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+          <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
+            <Routes>
+              {getRoutes(routes)}
+              <Route path="/" element={<Presentation />} />
+              <Route path="/las-kanopi" element={<LasKanopi />} />
+              <Route path="/las-pagar" element={<LasPagar />} />
+              <Route path="/las-tralis" element={<LasTralis />} />
+              <Route path="/las-stainless" element={<LasStainless />} />
+              <Route path="/las-panggilan" element={<LasPanggilan />} />
+              <Route path="/blog" element={<BlogIndex />} />
+              <Route
+                path="/blog/harga-jasa-las-terbaru-2026"
+                element={<HargaJasaLasTerbaru2026 />}
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </Suspense>
         </ErrorBoundary>
       </ThemeProvider>
     </HelmetProvider>

@@ -26,7 +26,6 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
-    "chroma-js": "2.4.2",
     "flatpickr": "4.6.13",
     "framer-motion": "^11.13.1",
     "prop-types": "15.8.1",
@@ -44,10 +43,10 @@
     "web-vitals": "3.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "postbuild": "node scripts/generate-sitemap.js",
-    "test": "react-scripts test",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "prettify": "prettier --write .",
@@ -73,7 +72,9 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "ajv": "^7.2.4",
+    "compression-webpack-plugin": "^12.0.0",
     "eslint": "8.38.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.27.5",

@@ -15,14 +15,19 @@ Coded by www.creative-tim.com
 
 /**
   The hexToRgb() function helps you to change the hex color code to rgb
-  using chroma-js library.
+  using a lightweight implementation instead of chroma-js.
  */
 
-// chroma-js is a library for all kinds of color conversions and color scales.
-import chroma from "chroma-js";
-
 function hexToRgb(color) {
-  return chroma(color).rgb().join(", ");
+  // Remove # if present
+  const hex = color.replace("#", "");
+
+  // Parse hex values
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+
+  return `${r}, ${g}, ${b}`;
 }
 
 export default hexToRgb;

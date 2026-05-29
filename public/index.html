@@ -16,16 +16,31 @@ Software.
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWZ1E0FZYK"></script>
+    <!-- Google tag (gtag.js) - Deferred with idle callback -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Load GA after page is idle
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FWZ1E0FZYK';
+          document.head.appendChild(script);
+          gtag("js", new Date());
+          gtag("config", "G-FWZ1E0FZYK");
+        }, { timeout: 2000 });
+      } else {
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FWZ1E0FZYK';
+          document.head.appendChild(script);
+          gtag("js", new Date());
+          gtag("config", "G-FWZ1E0FZYK");
+        }, 2000);
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-FWZ1E0FZYK");
     </script>
 
     <meta charset="utf-8" />
@@ -70,59 +85,36 @@ Software.
       fetchpriority="high"
     />
     
-    <!-- Optimized Font Loading (non-blocking) -->
+    <!-- Critical fonts only - load others on idle -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      />
+    </noscript>
+    
+    <!-- Load additional fonts after idle -->
     <script>
-      // Inline font loading script to avoid render blocking
-      (function() {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@400;700&display=swap';
-        document.head.appendChild(link);
-      })();
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&family=Roboto+Slab:wght@400;700&display=swap';
+          document.head.appendChild(link);
+          
+          var icons = document.createElement('link');
+          icons.rel = 'stylesheet';
+          icons.href = 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined&display=swap';
+          document.head.appendChild(icons);
+        });
+      }
     </script>
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@400;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@400;700&display=swap"
-      />
-    </noscript>
-    
-    <!-- Material Icons - defer loading -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-    
-    <!-- Font Awesome - defer loading -->
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
-    </noscript>
   </head>
   <body>
     <noscript>
