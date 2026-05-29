@@ -72,8 +72,8 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         component="img"
         src={image}
         alt={name}
-        width="600"
-        height="600"
+        width="300"
+        height="300"
         my="auto"
         opacity={pro ? 0.6 : 1}
         loading="lazy"

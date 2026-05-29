@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import React, { useRef, lazy, Suspense, useEffect } from "react";
+import React, { useRef, lazy, Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 // @mui material components
@@ -71,10 +71,26 @@ function Presentation() {
   const testiRef = useRef(null);
   const kontakRef = useRef(null);
   const areaRef = useRef(null);
+  const mapRef = useRef(null);
+  const [loadMap, setLoadMap] = useState(false);
 
-  // Intersection Observer for scroll animations
+  // Lazy load Google Maps when visible
   useEffect(() => {
-    // Tidak perlu visibility state karena semua langsung visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "100px" }
+    );
+
+    if (mapRef.current) {
+      observer.observe(mapRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const handleScroll = (ref) => {
@@ -1043,16 +1059,42 @@ function Presentation() {
                   Lokasi Bengkel
                 </MKTypography>
                 <MKBox
-                  component="iframe"
-                  title="Lokasi Bengkel Indian Jaya Las"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3234567890!2d106.7525!3d-6.3906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjYuMiJTIDEwNsKwNDUnMDkuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
-                  width="100%"
-                  height="300"
-                  sx={{ border: 0, borderRadius: "lg" }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+                  ref={mapRef}
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: "300px",
+                    borderRadius: "lg",
+                    overflow: "hidden",
+                    backgroundColor: "#e0e0e0",
+                  }}
+                >
+                  {loadMap ? (
+                    <MKBox
+                      component="iframe"
+                      title="Lokasi Bengkel Indian Jaya Las"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3234567890!2d106.7525!3d-6.3906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjYuMiJTIDEwNsKwNDUnMDkuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
+                      width="100%"
+                      height="300"
+                      sx={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  ) : (
+                    <MKBox
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "100%",
+                        color: "text.secondary",
+                      }}
+                    >
+                      <MKTypography variant="body2">Loading map...</MKTypography>
+                    </MKBox>
+                  )}
+                </MKBox>
                 <MKTypography variant="body2" color="text" mt={2}>
                   <strong>Alamat:</strong> JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI
                   KOTA DEPOK
