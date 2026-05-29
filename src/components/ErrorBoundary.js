@@ -36,9 +36,7 @@ class ErrorBoundary extends React.Component {
             fontFamily: "Roboto, Arial, sans-serif",
           }}
         >
-          <h1 style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>
-            Maaf, terjadi masalah.
-          </h1>
+          <h1 style={{ fontSize: "1.5rem", marginBottom: "0.75rem" }}>Maaf, terjadi masalah.</h1>
           <p style={{ margin: 0 }}>
             Silakan refresh halaman atau hubungi kami jika masalah ini terus berulang.
           </p>
