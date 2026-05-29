@@ -46,9 +46,9 @@ function DesignBlocks() {
       </Grid>
       <Grid item xs={12} lg={9}>
         <Grid container spacing={3}>
-          {items.map(({ image, name, count, route, pro }) => (
-            <Grid item xs={12} md={4} sx={{ mb: 2 }} key={name}>
-              <Link to={pro ? "/" : route}>
+          {items.map(({ image, name, count, route, pro }, index) => (
+            <Grid item xs={12} md={4} sx={{ mb: 2 }} key={`${title}-${index}`}>
+              <Link to={pro ? "/" : route || "/"} aria-label={`Lihat gambar ${title} ${index + 1}`}>
                 <ExampleCard image={image} name={name} count={count} pro={pro} />
               </Link>
             </Grid>
@@ -80,6 +80,9 @@ function DesignBlocks() {
               "& .MuiBadge-badge": {
                 backgroundColor: "#0d47a1",
                 color: "#ffffff",
+                fontSize: "0.875rem",
+                fontWeight: "bold",
+                padding: "8px 16px",
               },
             }}
           />

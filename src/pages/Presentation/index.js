@@ -719,7 +719,7 @@ function Presentation() {
                         }}
                       />
                     </MKBox>
-                    <MKTypography variant="h5" fontWeight="bold" mb={2} color="dark">
+                    <MKTypography variant="h3" fontWeight="bold" mb={2} color="dark">
                       {service.title}
                     </MKTypography>
                     <MKTypography variant="body2" color="text" mb={3}>
@@ -899,7 +899,7 @@ function Presentation() {
                     {process.icon}
                   </MKBox>
 
-                  <MKTypography variant="h6" fontWeight="bold" mb={1.5} color="dark">
+                  <MKTypography variant="body1" fontWeight="bold" mb={1.5} color="dark">
                     {process.title}
                   </MKTypography>
 
@@ -994,7 +994,7 @@ function Presentation() {
 
             <Grid item xs={12} md={6}>
               <MKBox>
-                <MKTypography variant="h5" mb={3}>
+                <MKTypography variant="h3" mb={3}>
                   Wilayah Layanan
                 </MKTypography>
                 <Grid container spacing={2}>
@@ -1039,7 +1039,7 @@ function Presentation() {
 
             <Grid item xs={12} md={6}>
               <MKBox>
-                <MKTypography variant="h5" mb={3}>
+                <MKTypography variant="h3" mb={3}>
                   Lokasi Bengkel
                 </MKTypography>
                 <MKBox

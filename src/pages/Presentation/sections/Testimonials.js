@@ -223,7 +223,7 @@ function Information() {
 
                   {/* Name and Date */}
                   <MKBox>
-                    <MKTypography variant="h6" fontWeight="bold" mb={0.5}>
+                    <MKTypography variant="body1" fontWeight="bold" mb={0.5}>
                       {testimonial.name}
                     </MKTypography>
                     <MKTypography
