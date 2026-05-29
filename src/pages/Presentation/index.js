@@ -301,7 +301,7 @@ function Presentation() {
 
               {/* Subheading */}
               <MKTypography
-                variant="h5"
+                variant="body1"
                 color="white"
                 fontWeight="regular"
                 mb={{ xs: 2, md: 3 }}
@@ -913,7 +913,7 @@ function Presentation() {
 
           {/* CTA After Process */}
           <MKBox textAlign="center" mt={6}>
-            <MKTypography variant="h5" mb={3} fontWeight="medium">
+            <MKTypography variant="h3" mb={3} fontWeight="medium">
               Siap Memulai Project Anda?
             </MKTypography>
             <MKBox

@@ -50,7 +50,9 @@ function DefaultFooter({ content }) {
                   mb={2}
                 />
               </Link>
-              <MKTypography variant="h6">{brand.name}</MKTypography>
+              <MKTypography variant="body1" fontWeight="bold">
+                {brand.name}
+              </MKTypography>
             </MKBox>
             <MKBox display="flex" alignItems="center" mt={3}>
               {validSocials.map(({ icon, link, label }, key) => (
