@@ -16,7 +16,7 @@ Software.
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <!-- Google tag (gtag.js) - Defer until page fully loaded -->
+    <!-- Google tag (gtag.js) - Load on interaction -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -33,17 +33,11 @@ Software.
         gtag("config", "G-FWZ1E0FZYK");
       }
       
-      // Load only after page is fully interactive
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGA, { timeout: 5000 });
-      } else {
-        setTimeout(loadGA, 5000);
-      }
-      
-      // Or on first meaningful interaction
-      ['click', 'scroll'].forEach(function(e) {
+      // Load on first interaction or after 3s
+      ['scroll', 'click', 'mousemove', 'touchstart', 'keydown'].forEach(function(e) {
         window.addEventListener(e, loadGA, { once: true, passive: true });
       });
+      setTimeout(loadGA, 3000);
     </script>
 
     <meta charset="utf-8" />
