@@ -341,9 +341,6 @@ function Presentation() {
                       fontWeight="medium"
                       sx={{
                         fontSize: { xs: "0.875rem", md: "1rem" },
-                          "0%": { opacity: 0 },
-                          "100%": { opacity: 1 },
-                        },
                       }}
                     >
                       {feature}
