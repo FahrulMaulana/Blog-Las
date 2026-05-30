@@ -302,11 +302,7 @@ function Presentation() {
                   fontWeight: 800,
                   lineHeight: 1.2,
                   textShadow: "2px 4px 8px rgba(0,0,0,0.3)",
-                  animation: "fadeInLeft 1s ease-out 0.2s backwards",
-                  "@keyframes fadeInLeft": {
-                    "0%": { opacity: 0, transform: "translateX(-30px)" },
-                    "100%": { opacity: 1, transform: "translateX(0)" },
-                  },
+                  willChange: "auto",
                 }}
               >
                 Bengkel Las Profesional <br />
@@ -325,7 +321,6 @@ function Presentation() {
                   opacity: 0.95,
                   lineHeight: 1.6,
                   fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
-                  animation: "fadeInLeft 1s ease-out 0.4s backwards",
                 }}
               >
                 Jasa Las Kanopi, Pagar, Tralis & Stainless di Depok, Pamulang, BSD & Sekitarnya
@@ -346,8 +341,6 @@ function Presentation() {
                       fontWeight="medium"
                       sx={{
                         fontSize: { xs: "0.875rem", md: "1rem" },
-                        animation: `fadeIn 1s ease-out ${0.6 + index * 0.1}s backwards`,
-                        "@keyframes fadeIn": {
                           "0%": { opacity: 0 },
                           "100%": { opacity: 1 },
                         },
@@ -364,13 +357,6 @@ function Presentation() {
                 display="flex"
                 flexDirection={{ xs: "column", sm: "row" }}
                 gap={2}
-                sx={{
-                  animation: "fadeInUp 1s ease-out 0.8s backwards",
-                  "@keyframes fadeInUp": {
-                    "0%": { opacity: 0, transform: "translateY(20px)" },
-                    "100%": { opacity: 1, transform: "translateY(0)" },
-                  },
-                }}
               >
                 <MKBox
                   component="a"
