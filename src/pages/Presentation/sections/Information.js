@@ -55,7 +55,7 @@ function Information() {
                 // description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
                   type: "internal",
-                  route: "https://wa.me/081212154019",
+                  route: "https://wa.me/6281212154019",
                   label: "Klik Disini",
                 }}
               />

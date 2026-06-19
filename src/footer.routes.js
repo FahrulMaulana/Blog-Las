@@ -1,8 +1,3 @@
-// @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-
 // Material Kit 2 React components
 import MKTypography from "components/MKTypography";
 
@@ -17,23 +12,7 @@ export default {
     image: logo,
     route: "/",
   },
-  socials: [
-    {
-      icon: <FacebookIcon />,
-      label: "Facebook Indian Jaya Las",
-      // link: "https://www.facebook.com/CreativeTim/",
-    },
-    {
-      icon: <TwitterIcon />,
-      label: "Twitter Indian Jaya Las",
-      // link: "https://twitter.com/creativetim",
-    },
-    {
-      icon: <YouTubeIcon />,
-      label: "YouTube Indian Jaya Las",
-      // link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
-    },
-  ],
+  socials: [],
   menus: [
     {
       name: "Informasi Kami :",
@@ -54,8 +33,8 @@ export default {
     {
       name: "Kontak Kami :",
       items: [
-        { name: "081212154019", href: "https://wa.me/081212154019" },
-        { name: "081380004166", href: "https://wa.me/081380004166" },
+        { name: "081212154019", href: "https://wa.me/6281212154019" },
+        { name: "081380004166", href: "https://wa.me/6281380004166" },
       ],
     },
     {

@@ -38,6 +38,7 @@ const LasStainless = lazy(() => import("pages/Services/LasStainless"));
 const LasPanggilan = lazy(() => import("pages/Services/LasPanggilan"));
 const BlogIndex = lazy(() => import("pages/Blog/BlogIndex"));
 const HargaJasaLasTerbaru2026 = lazy(() => import("pages/Blog/HargaJasaLasTerbaru2026"));
+const LocationPage = lazy(() => import("pages/Locations/LocationPage"));
 
 // Material Kit 2 React routes
 import routes from "routes";
@@ -83,6 +84,7 @@ export default function App() {
                 path="/blog/harga-jasa-las-terbaru-2026"
                 element={<HargaJasaLasTerbaru2026 />}
               />
+              <Route path="/jasa-las-:location" element={<LocationPage />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </Suspense>

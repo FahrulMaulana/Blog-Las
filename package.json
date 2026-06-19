@@ -45,7 +45,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "node scripts/generate-sitemap.js && node scripts/inject-preloads.js",
+    "postbuild": "react-snap && node scripts/generate-sitemap.js && node scripts/inject-preloads.js",
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
@@ -86,10 +86,30 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.7",
+    "react-snap": "^1.23.0",
     "source-map-explorer": "^2.5.3",
     "webpack-bundle-analyzer": "^5.1.1"
   },
   "optionalDependencies": {
     "sharp": "^0.34.5"
+  },
+  "reactSnap": {
+    "source": "build",
+    "inlineCss": true,
+    "puppeteerArgs": ["--no-sandbox"],
+    "include": [
+      "/",
+      "/las-kanopi",
+      "/las-pagar",
+      "/las-tralis",
+      "/las-stainless",
+      "/las-panggilan",
+      "/blog",
+      "/blog/harga-jasa-las-terbaru-2026",
+      "/jasa-las-depok",
+      "/jasa-las-pamulang",
+      "/jasa-las-bsd",
+      "/jasa-las-ciputat"
+    ]
   }
 }

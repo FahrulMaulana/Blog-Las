@@ -14,18 +14,26 @@ Coded by www.creative-tim.com
 */
 
 import App from "App";
-import * as ReactDOMClient from "react-dom/client";
+import { hydrateRoot, createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 // import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const container = document.getElementById("root");
-const root = ReactDOMClient.createRoot(container);
 
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+if (container.hasChildNodes()) {
+  hydrateRoot(
+    container,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+} else {
+  createRoot(container).render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
 
 // Register service worker for PWA capabilities
 // Note: Uncomment after setting up workbox in CRA or migrating to Next.js

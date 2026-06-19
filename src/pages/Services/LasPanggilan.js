@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -9,13 +10,14 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
+import Breadcrumb from "components/Breadcrumb";
 import footerRoutes from "footer.routes";
 import lasImage from "assets/images/las.jpg";
 
 function LasPanggilan() {
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/081212154019?text=Halo, saya ingin panggil tukang las ke lokasi",
+      "https://wa.me/6281212154019?text=Halo, saya ingin panggil tukang las ke lokasi",
       "_blank"
     );
   };
@@ -63,7 +65,7 @@ function LasPanggilan() {
               "Jasa las panggilan ke rumah untuk perbaikan dan pembuatan berbagai produk las",
             availableChannel: {
               "@type": "ServiceChannel",
-              serviceUrl: "https://wa.me/081212154019",
+              serviceUrl: "https://wa.me/6281212154019",
               servicePhone: "081212154019",
             },
           })}
@@ -82,7 +84,7 @@ function LasPanggilan() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}
@@ -90,6 +92,11 @@ function LasPanggilan() {
       />
 
       <MKBox component="main" id="main-content">
+
+      <Breadcrumb items={[
+        { name: "Beranda", path: "/", url: "https://indianjayalas.com/" },
+        { name: "Las Panggilan", path: "/las-panggilan", url: "https://indianjayalas.com/las-panggilan" },
+      ]} />
 
       <MKBox
         minHeight="50vh"
@@ -391,6 +398,17 @@ function LasPanggilan() {
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Panggil Tukang Las
             </MKButton>
+          </MKBox>
+
+          {/* Layanan Lainnya - Internal Links */}
+          <MKBox py={4} mt={4}>
+            <MKTypography variant="h3" mb={2}>Layanan Lainnya</MKTypography>
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-kanopi" color="info" variant="body2">Jasa Las Kanopi</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-pagar" color="info" variant="body2">Jasa Las Pagar</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-tralis" color="info" variant="body2">Jasa Las Tralis</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-stainless" color="info" variant="body2">Jasa Las Stainless</MKTypography></Grid>
+            </Grid>
           </MKBox>
         </Container>
       </Card>

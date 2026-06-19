@@ -64,7 +64,7 @@ function Download() {
               color="info"
               size="large"
               component="a"
-              href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+              href="https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las"
               target="_blank"
               rel="noopener noreferrer"
               sx={{

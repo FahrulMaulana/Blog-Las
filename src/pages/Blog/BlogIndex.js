@@ -85,7 +85,7 @@ function BlogIndex() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}

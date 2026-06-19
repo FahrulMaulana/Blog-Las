@@ -54,7 +54,7 @@ const routes = [
   {
     name: "whatsapp",
     icon: <WhatsApp />,
-    href: "https://wa.me/081212154019",
+    href: "https://wa.me/6281212154019",
   },
 ];
 

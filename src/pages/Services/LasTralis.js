@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -9,13 +10,14 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
+import Breadcrumb from "components/Breadcrumb";
 import footerRoutes from "footer.routes";
 import bgImage from "assets/images/teralis/teralis4.jpg";
 
 function LasTralis() {
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las tralis",
+      "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las tralis",
       "_blank"
     );
   };
@@ -67,7 +69,7 @@ function LasTralis() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}
@@ -75,6 +77,11 @@ function LasTralis() {
       />
 
       <MKBox component="main" id="main-content">
+
+      <Breadcrumb items={[
+        { name: "Beranda", path: "/", url: "https://indianjayalas.com/" },
+        { name: "Las Tralis", path: "/las-tralis", url: "https://indianjayalas.com/las-tralis" },
+      ]} />
 
       <MKBox
         minHeight="50vh"
@@ -388,6 +395,17 @@ function LasTralis() {
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Hubungi Kami Sekarang
             </MKButton>
+          </MKBox>
+
+          {/* Layanan Lainnya - Internal Links */}
+          <MKBox py={4} mt={4}>
+            <MKTypography variant="h3" mb={2}>Layanan Lainnya</MKTypography>
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-kanopi" color="info" variant="body2">Jasa Las Kanopi</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-pagar" color="info" variant="body2">Jasa Las Pagar</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-stainless" color="info" variant="body2">Jasa Las Stainless</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-panggilan" color="info" variant="body2">Jasa Las Panggilan</MKTypography></Grid>
+            </Grid>
           </MKBox>
         </Container>
       </Card>

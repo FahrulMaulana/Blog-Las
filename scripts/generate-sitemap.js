@@ -11,6 +11,12 @@ const pages = [
   { url: "/las-tralis", priority: "0.9", changefreq: "monthly" },
   { url: "/las-stainless", priority: "0.9", changefreq: "monthly" },
   { url: "/las-panggilan", priority: "0.9", changefreq: "monthly" },
+  { url: "/blog", priority: "0.7", changefreq: "weekly" },
+  { url: "/blog/harga-jasa-las-terbaru-2026", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-depok", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-pamulang", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-bsd", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-ciputat", priority: "0.8", changefreq: "monthly" },
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

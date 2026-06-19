@@ -230,7 +230,7 @@ function Presentation() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}
@@ -357,7 +357,7 @@ function Presentation() {
               >
                 <MKBox
                   component="a"
-                  href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+                  href="https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
@@ -529,7 +529,7 @@ function Presentation() {
 
                         {/* Number */}
                         <MKTypography
-                          variant="h1"
+                          variant="h2"
                           fontWeight="bold"
                           sx={{
                             color: "rgba(255,255,255,0.95)",
@@ -917,7 +917,7 @@ function Presentation() {
             </MKTypography>
             <MKBox
               component="a"
-              href="https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las"
+              href="https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
@@ -1115,7 +1115,7 @@ function Presentation() {
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.)",
           borderRadius: "50%",
         }}
-        onClick={() => window.open("https://wa.me/081212154019", "_blank")}
+        onClick={() => window.open("https://wa.me/6281212154019", "_blank")}
       >
         <img
           src="/wa.webp"

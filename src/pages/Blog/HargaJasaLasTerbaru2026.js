@@ -16,7 +16,7 @@ import bgImage from "assets/images/bg-about-us.jpg";
 function HargaJasaLasTerbaru2026() {
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang harga jasa las",
+      "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang harga jasa las",
       "_blank"
     );
   };
@@ -24,9 +24,7 @@ function HargaJasaLasTerbaru2026() {
   return (
     <>
       <Helmet>
-        <title>
-          Harga Jasa Las Terbaru 2026 - Kanopi, Pagar, Tralis, Stainless | Indian Jaya Las
-        </title>
+        <title>Harga Jasa Las 2026 Update - Indian Jaya Las</title>
         <meta
           name="description"
           content="Daftar lengkap harga jasa las terbaru 2026 untuk kanopi, pagar, tralis, dan stainless steel. Update harga material dan jasa pemasangan di Depok & Tangerang Selatan."
@@ -75,7 +73,7 @@ function HargaJasaLasTerbaru2026() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}

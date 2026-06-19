@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -9,6 +10,7 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
+import Breadcrumb from "components/Breadcrumb";
 import footerRoutes from "footer.routes";
 
 // Images
@@ -17,7 +19,7 @@ import kanopiImage from "assets/images/kanopi11.jpg";
 function LasKanopi() {
   const handleWhatsApp = () => {
     window.open(
-      "https://wa.me/081212154019?text=Halo, saya ingin konsultasi tentang jasa las kanopi",
+      "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las kanopi",
       "_blank"
     );
   };
@@ -25,9 +27,7 @@ function LasKanopi() {
   return (
     <>
       <Helmet>
-        <title>
-          Jasa Las Kanopi Depok & Tangerang Selatan - Harga Terjangkau | Indian Jaya Las
-        </title>
+        <title>Jasa Las Kanopi Depok & Tangsel - Indian Jaya Las</title>
         <meta
           name="description"
           content="Jasa las kanopi profesional di Depok, Pamulang, BSD, Ciputat. Free survey & pemasangan. Kanopi baja ringan, hollow, atap alderon. Hubungi 081212154019"
@@ -126,7 +126,7 @@ function LasKanopi() {
         ]}
         action={{
           type: "external",
-          route: "https://wa.me/081212154019",
+          route: "https://wa.me/6281212154019",
           label: "Hubungi Kami",
           color: "info",
         }}
@@ -134,6 +134,11 @@ function LasKanopi() {
       />
 
       <MKBox component="main" id="main-content">
+
+      <Breadcrumb items={[
+        { name: "Beranda", path: "/", url: "https://indianjayalas.com/" },
+        { name: "Las Kanopi", path: "/las-kanopi", url: "https://indianjayalas.com/las-kanopi" },
+      ]} />
 
       <MKBox
         minHeight="50vh"
@@ -482,6 +487,17 @@ function LasKanopi() {
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Hubungi Kami Sekarang
             </MKButton>
+          </MKBox>
+
+          {/* Layanan Lainnya - Internal Links */}
+          <MKBox py={4} mt={4}>
+            <MKTypography variant="h3" mb={2}>Layanan Lainnya</MKTypography>
+            <Grid container spacing={2}>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-pagar" color="info" variant="body2">Jasa Las Pagar</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-tralis" color="info" variant="body2">Jasa Las Tralis</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-stainless" color="info" variant="body2">Jasa Las Stainless</MKTypography></Grid>
+              <Grid item xs={6} md={3}><MKTypography component={Link} to="/las-panggilan" color="info" variant="body2">Jasa Las Panggilan</MKTypography></Grid>
+            </Grid>
           </MKBox>
         </Container>
       </Card>
