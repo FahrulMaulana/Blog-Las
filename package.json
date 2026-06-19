@@ -45,7 +45,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "react-snap && node scripts/generate-sitemap.js && node scripts/inject-preloads.js",
+    "postbuild": "node scripts/generate-sitemap.js && node scripts/inject-preloads.js",
+    "prerender": "npm run build && react-snap",
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
