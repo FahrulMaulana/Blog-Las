@@ -1,19 +1,27 @@
-const fs = require('fs');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
+const chromium = require('@sparticuz/chromium');
 
 async function launchBrowser() {
-  // No system Chrome fallback: build and tests use the lockfile-pinned browser.
-  const executablePath = puppeteer.executablePath();
-  if (!fs.existsSync(executablePath)) {
-    throw new Error(`Pinned Chrome missing at ${executablePath}. Run npm run browser:install.`);
-  }
+  // Use the lockfile-pinned serverless binary and its bundled libraries on both
+  // Vercel and local QA. Never fall back to system Chrome or a browser download.
+  const executablePath = await chromium.executablePath();
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: 'shell',
     executablePath,
-    args: ['--no-sandbox', '--disable-dev-shm-usage'],
+    args: chromium.args,
   });
   console.log(`Browser: ${await browser.version()} (${executablePath})`);
   return browser;
+}
+
+if (require.main === module) {
+  // Keep browser:install as an offline extraction + real launch smoke test.
+  launchBrowser()
+    .then((browser) => browser.close())
+    .catch((error) => {
+      console.error(error);
+      process.exitCode = 1;
+    });
 }
 
 module.exports = { launchBrowser };

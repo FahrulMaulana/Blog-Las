@@ -45,7 +45,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "browser:install": "puppeteer browsers install chrome",
+    "browser:install": "node scripts/browser.js",
     "postbuild": "npm run browser:install && node scripts/generate-sitemap.js && node scripts/inject-preloads.js && node scripts/prerender.js && node scripts/test-seo-artifacts.js",
     "prerender": "node scripts/prerender.js && node scripts/test-seo-artifacts.js",
     "test:seo": "node scripts/test-seo.js && node scripts/test-seo-artifacts.js",
@@ -89,7 +89,8 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.7",
-    "puppeteer": "24.37.5",
+    "@sparticuz/chromium": "143.0.4",
+    "puppeteer-core": "24.33.0",
     "source-map-explorer": "^2.5.3",
     "webpack-bundle-analyzer": "^5.1.1"
   },
