@@ -1,8 +1,8 @@
 // Material Kit 2 React components
 import MKTypography from "components/MKTypography";
 
-// Images
-import logo from "assets/images/logo-optimized.webp";
+// Share the same transparent blue welder artwork as the site icons.
+const logo = "/pngwing.webp";
 
 const date = new Date().getFullYear();
 

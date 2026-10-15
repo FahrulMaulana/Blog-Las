@@ -52,33 +52,17 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const [nestedDropdownName, setNestedDropdownName] = useState("");
   const [arrowRef, setArrowRef] = useState(null);
   const [mobileNavbar, setMobileNavbar] = useState(false);
-  const [mobileView, setMobileView] = useState(false);
 
-  const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+  const openMobileNavbar = () => setMobileNavbar((open) => !open);
 
   useEffect(() => {
-    // A function that sets the display state for the DefaultNavbarMobile.
-    function displayMobileNavbar() {
-      if (window.innerWidth < breakpoints.values.lg) {
-        setMobileView(true);
-        setMobileNavbar(false);
-      } else {
-        setMobileView(false);
-        setMobileNavbar(false);
-      }
-    }
-
-    /** 
-     The event listener that's calling the displayMobileNavbar function when 
-     resizing the window.
-    */
-    window.addEventListener("resize", displayMobileNavbar);
-
-    // Call the displayMobileNavbar function to set the state with the initial value.
-    displayMobileNavbar();
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", displayMobileNavbar);
+    // CSS controls visibility; only reset menu state when crossing the breakpoint.
+    // No startup viewport read or state update is needed.
+    if (!window.matchMedia) return undefined;
+    const desktop = window.matchMedia(`(min-width: ${breakpoints.values.lg}px)`);
+    const closeMobileNavbar = () => setMobileNavbar(false);
+    desktop.addEventListener("change", closeMobileNavbar);
+    return () => desktop.removeEventListener("change", closeMobileNavbar);
   }, []);
 
   const renderNavbarItems = routes.map(({ name, icon, route, href, collapse }) => {
@@ -550,12 +534,13 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
           </MKBox>
         </MKBox>
         <MKBox
+          display={{ xs: "block", lg: "none" }}
           bgColor={transparent ? "white" : "transparent"}
           shadow={transparent ? "lg" : "none"}
           borderRadius="xl"
           px={transparent ? 2 : 0}
         >
-          {mobileView && <DefaultNavbarMobile routes={routes} open={mobileNavbar} onClose={() => setMobileNavbar(false)} />}
+          <DefaultNavbarMobile routes={routes} open={mobileNavbar} onClose={() => setMobileNavbar(false)} />
         </MKBox>
       </MKBox>
       {dropdownMenu}
