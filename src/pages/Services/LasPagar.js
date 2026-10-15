@@ -31,7 +31,7 @@ function LasPagar() {
         <title>Jasa Las Pagar Besi Hollow & Minimalis Depok | Indian Jaya Las</title>
         <meta
           name="description"
-          content="Jasa las pagar besi hollow minimalis di Depok, Pamulang, BSD. Pagar rumah, pagar besi, pagar hollow kuat & estetis. Free survey. Telp 081212154019"
+          content="Jasa las pagar besi hollow minimalis di Depok, Pamulang, BSD. Pagar rumah, pagar besi, pagar hollow kuat & estetis. Diskusikan survei. Telp 081212154019"
         />
         <meta
           name="keywords"
@@ -44,7 +44,7 @@ function LasPagar() {
         <meta property="og:title" content="Jasa Las Pagar Besi Hollow & Minimalis Depok" />
         <meta
           property="og:description"
-          content="Jasa las pagar profesional. Free survey & pemasangan. Area Depok, Pamulang, BSD."
+          content="Jasa las pagar profesional. Survei dan pemasangan sesuai kesepakatan. Area Depok, Pamulang, BSD."
         />
         <meta property="og:image" content="https://indianjayalas.com/pagar-preview.jpg" />
 
@@ -61,7 +61,7 @@ function LasPagar() {
                 streetAddress: "JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR",
                 addressLocality: "Bojongsari",
                 addressRegion: "Depok",
-                postalCode: "16516",
+
                 addressCountry: "ID",
               },
               telephone: "081212154019",
@@ -128,7 +128,7 @@ function LasPagar() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Pagar Berkualitas, Kuat & Estetis - Free Survey & Pemasangan
+              Pagar Berkualitas, Kuat & Estetis - Survei & Spesifikasi Pemasangan
             </MKTypography>
             <MKButton color="success" size="large" sx={{ mt: 4 }} onClick={handleWhatsApp}>
               Konsultasi Gratis via WhatsApp
@@ -160,6 +160,15 @@ function LasPagar() {
                 <strong>Indian Jaya Las</strong> menyediakan jasa pembuatan pagar besi hollow dengan
                 desain minimalis modern yang tidak hanya kuat, tetapi juga menambah nilai estetika
                 rumah Anda.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Spesifikasi Pagar yang Perlu Disepakati</MKTypography>
+              <MKTypography variant="body1" color="text" mb={2}>Kirim lebar bukaan, tinggi pagar, foto tiang, dan contoh model. Tentukan sistem geser atau ayun, ruang gerak daun, profil dan ketebalan hollow, engsel atau rel, kunci, serta lapisan dasar dan cat akhir. Sampaikan jika pagar lama perlu dibongkar.</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Untuk kebutuhan terkait, lihat <Link to="/las-tralis">tralis untuk bukaan jendela</Link>.
+                Workshop berada di Pondok Petir, Bojongsari. Bahas lokasi dan akses melalui halaman{" "}
+                <Link to="/jasa-las-depok">layanan Depok</Link> atau{" "}
+                <Link to="/jasa-las-pamulang">layanan Pamulang</Link>; jadwal survei dikonfirmasi terlebih dahulu.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -195,20 +204,20 @@ function LasPagar() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Free Survey
+                      ✓ Rencana Survei
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Gratis pengukuran dan konsultasi ke lokasi
+                      Sepakati jadwal dan ketentuan pengukuran di lokasi
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="info" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Free Pemasangan
+                      ✓ Lingkup Pemasangan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Gratis jasa instalasi profesional
+                      Pastikan biaya instalasi tercantum dalam penawaran
                     </MKTypography>
                   </MKBox>
                 </Grid>
@@ -225,17 +234,17 @@ function LasPagar() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="error" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Garansi Kualitas
+                      ✓ Pemeriksaan Hasil
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Material berkualitas dengan garansi
+                      Periksa material dan finishing sesuai spesifikasi
                     </MKTypography>
                   </MKBox>
                 </Grid>
               </Grid>
 
               <MKTypography variant="h3" mt={4} mb={2}>
-                Estimasi Harga Las Pagar Per Meter (2026)
+                Estimasi Harga Las Pagar — Konfirmasi Satuan dan Spesifikasi
               </MKTypography>
               <MKBox
                 component="table"
@@ -256,7 +265,7 @@ function LasPagar() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per Meter
+                        Estimasi (satuan dikonfirmasi)
                       </MKTypography>
                     </th>
                   </tr>
@@ -290,8 +299,10 @@ function LasPagar() {
               </MKBox>
 
               <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
-                *Harga dapat berubah sewaktu-waktu tergantung ketersediaan material. Hubungi kami
-                untuk penawaran terbaik.
+                *Kisaran ini adalah estimasi bersyarat, bukan harga final. Sebelum memakai angka
+                di tabel, konfirmasikan apakah penawaran dihitung per m panjang dengan tinggi
+                tertentu atau per m² bidang. Jangan membandingkan angka tanpa menyamakan tinggi,
+                profil, ketebalan, engsel/rel, finishing, serta lingkup pemasangan setelah survei.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -310,7 +321,7 @@ function LasPagar() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Tim kami akan survey ke lokasi (GRATIS)
+                    Sepakati jadwal, biaya, dan kebutuhan survei lokasi
                   </MKTypography>
                 </li>
                 <li>
@@ -367,7 +378,7 @@ function LasPagar() {
                   Konsultasi Gratis
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
-                  Hubungi kami sekarang untuk survey dan penawaran terbaik
+                  Hubungi kami sekarang untuk survey dan penawaran sesuai spesifikasi
                 </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>
                   Chat WhatsApp
@@ -398,7 +409,7 @@ function LasPagar() {
               Siap Pasang Pagar di Rumah Anda?
             </MKTypography>
             <MKTypography variant="body1" color="white" mb={3}>
-              Dapatkan penawaran terbaik dan gratis survey. Konsultasi sekarang!
+              Kirim ukuran dan foto lokasi untuk membahas penawaran serta jadwal survei.
             </MKTypography>
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Hubungi Kami Sekarang

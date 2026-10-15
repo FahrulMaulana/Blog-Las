@@ -2,7 +2,15 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "devCommand": "npm start",
-  "framework": "create-react-app",
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.indianjayalas.com" }],
+      "destination": "https://indianjayalas.com/:path*",
+      "permanent": true
+    }
+  ],
   "installCommand": "npm ci --legacy-peer-deps",
   "rewrites": [
     {"source": "/las-kanopi", "destination": "/las-kanopi/index.html"},
@@ -22,11 +30,7 @@
     {"source": "/jasa-las-tangerang", "destination": "/jasa-las-tangerang/index.html"},
     {"source": "/jasa-las-sawangan", "destination": "/jasa-las-sawangan/index.html"},
     {"source": "/jasa-las-parung", "destination": "/jasa-las-parung/index.html"},
-    {"source": "/jasa-las-cinere", "destination": "/jasa-las-cinere/index.html"},
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    {"source": "/jasa-las-cinere", "destination": "/jasa-las-cinere/index.html"}
   ],
   "headers": [
     {

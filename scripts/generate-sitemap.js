@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const baseUrl = "https://indianjayalas.com";
-const today = new Date().toISOString().split("T")[0];
+// No verified per-page modification dates are maintained. Omit lastmod rather
+// than advertising the build date as a content update to crawlers.
 
 const pages = [
   { url: "/", priority: "1.0", changefreq: "weekly" },
@@ -36,7 +37,6 @@ ${pages
   .map(
     (page) => `    <url>
         <loc>${baseUrl}${page.url}</loc>
-        <lastmod>${today}</lastmod>
         <changefreq>${page.changefreq}</changefreq>
         <priority>${page.priority}</priority>
     </url>`

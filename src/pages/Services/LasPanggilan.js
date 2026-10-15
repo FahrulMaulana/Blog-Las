@@ -26,21 +26,21 @@ function LasPanggilan() {
   return (
     <>
       <Helmet>
-        <title>Jasa Las Panggilan Depok 24 Jam - Tukang Las Terdekat | Indian Jaya Las</title>
+        <title>Jasa Las Panggilan Depok & Pamulang | Indian Jaya Las</title>
         <meta
           name="description"
-          content="Jasa las panggilan ke rumah 24 jam di Depok, Pamulang, BSD. Tukang las terdekat siap datang. Perbaikan pagar, kanopi, teralis, dll. Telp 081212154019"
+          content="Jasa las panggilan untuk perbaikan pagar, kanopi, dan tralis di Depok dan Pamulang. Kirim foto kerusakan dan alamat untuk konfirmasi biaya serta jadwal."
         />
         <meta
           name="keywords"
-          content="jasa las panggilan depok, tukang las terdekat, las panggilan 24 jam, bengkel las panggilan, las keliling depok"
+          content="jasa las panggilan depok, tukang las terdekat, jadwal las panggilan, bengkel las panggilan, las keliling depok"
         />
         <link rel="canonical" href="https://indianjayalas.com/las-panggilan" />
 
-        <meta property="og:title" content="Jasa Las Panggilan Depok 24 Jam - Tukang Las Terdekat" />
+        <meta property="og:title" content="Jasa Las Panggilan Depok & Pamulang" />
         <meta
           property="og:description"
-          content="Tukang las profesional siap datang ke lokasi Anda. Cepat & terpercaya."
+          content="Kirim foto kerusakan dan alamat untuk membahas kelayakan perbaikan, biaya, serta jadwal kunjungan."
         />
         <meta property="og:url" content="https://indianjayalas.com/las-panggilan" />
 
@@ -120,7 +120,7 @@ function LasPanggilan() {
                 [breakpoints.down("md")]: { fontSize: size["3xl"] },
               })}
             >
-              Jasa Las Panggilan Depok - Tukang Las Terdekat Siap Datang
+              Jasa Las Panggilan untuk Perbaikan di Depok
             </MKTypography>
             <MKTypography
               variant="h6"
@@ -129,7 +129,7 @@ function LasPanggilan() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Layanan Las Panggilan Cepat & Profesional - Melayani 24 Jam
+              Kelayakan Pekerjaan, Biaya, dan Jadwal Dikonfirmasi Terlebih Dahulu
             </MKTypography>
             <MKButton color="success" size="large" sx={{ mt: 4 }} onClick={handleWhatsApp}>
               Panggil Tukang Las Sekarang
@@ -143,14 +143,23 @@ function LasPanggilan() {
           <Grid container spacing={3} sx={{ mt: 6 }}>
             <Grid item xs={12} lg={8}>
               <MKTypography variant="h2" mb={3}>
-                Butuh Tukang Las Darurat? Kami Siap Datang!
+                Periksa Kebutuhan Perbaikan Sebelum Memesan
               </MKTypography>
 
               <MKTypography variant="body1" mb={2}>
                 <strong>Indian Jaya Las</strong> menyediakan layanan las panggilan untuk berbagai
-                kebutuhan perbaikan dan pembuatan di lokasi Anda. Tukang las berpengalaman kami siap
-                datang dengan peralatan lengkap untuk menyelesaikan pekerjaan Anda dengan cepat dan
-                profesional.
+                kebutuhan perbaikan di lokasi Anda. Kirim foto dekat kerusakan dan foto keseluruhan
+                agar kebutuhan material, alat, dan kelayakan pengerjaan di lokasi dapat dibahas.
+                Jadwal kedatangan perlu dikonfirmasi, bukan layanan darurat yang selalu tersedia.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Siapkan Lokasi untuk Penilaian Perbaikan</MKTypography>
+              <MKTypography variant="body1" color="text" mb={2}>Kirim alamat atau pin lokasi, foto dekat kerusakan, foto keseluruhan, ukuran perkiraan, dan kebutuhan waktu. Jelaskan akses listrik serta kondisi area kerja. Hindari memakai bagian yang longgar atau berisiko roboh; kelayakan tambal atau penggantian material perlu diperiksa sebelum pengelasan.</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Untuk kebutuhan terkait, lihat <Link to="/las-kanopi">pilihan pembuatan kanopi baru</Link>.
+                Workshop berada di Pondok Petir, Bojongsari. Bahas lokasi dan akses melalui halaman{" "}
+                <Link to="/jasa-las-depok">layanan Depok</Link> atau{" "}
+                <Link to="/jasa-las-pamulang">layanan Pamulang</Link>; jadwal survei dikonfirmasi terlebih dahulu.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -174,7 +183,7 @@ function LasPanggilan() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    <strong>Las Darurat</strong> - Perbaikan mendesak 24 jam
+                    <strong>Perbaikan Mendesak</strong> - Tanyakan ketersediaan jadwal sebelum memesan
                   </MKTypography>
                 </li>
                 <li>
@@ -191,30 +200,30 @@ function LasPanggilan() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ⚡ Cepat Datang
+                      Jadwal Kunjungan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Respon cepat, tukang las siap datang ke lokasi
+                      Konfirmasikan ketersediaan jadwal sesuai alamat dan pekerjaan
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="info" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      🔧 Peralatan Lengkap
+                      Kebutuhan Alat
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Membawa semua peralatan las profesional
+                      Bahas akses listrik dan area kerja sebelum kunjungan
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="warning" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      👨‍🔧 Tukang Berpengalaman
+                      Kondisi Material
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Teknisi las bersertifikat dan ahli
+                      Foto karat dan sambungan membantu menilai kebutuhan penggantian
                     </MKTypography>
                   </MKBox>
                 </Grid>
@@ -293,7 +302,7 @@ function LasPanggilan() {
               </MKBox>
 
               <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
-                *Biaya final tergantung kompleksitas pekerjaan dan material yang dibutuhkan
+                *Kisaran ini bukan penawaran final. Biaya bergantung pada kondisi material, jumlah titik, akses, spesifikasi, dan survei. Konfirmasikan biaya panggil, material pengganti, serta finishing sebelum menyetujui pekerjaan.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -343,7 +352,7 @@ function LasPanggilan() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Tukang las datang ke lokasi dengan peralatan lengkap
+                    Kunjungan dilakukan setelah jadwal dan kebutuhan alat disepakati
                   </MKTypography>
                 </li>
                 <li>
@@ -366,7 +375,7 @@ function LasPanggilan() {
                   Panggil Sekarang!
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
-                  Tukang las siap datang ke lokasi Anda
+                  Kirim foto kerusakan dan alamat untuk mengecek jadwal
                 </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>
                   Chat WhatsApp
@@ -380,10 +389,10 @@ function LasPanggilan() {
 
               <MKBox bgColor="white" borderRadius="lg" p={3} sx={{ border: "2px solid #e0e0e0" }}>
                 <MKTypography variant="h6" mb={2}>
-                  Layanan 24 Jam
+                  Konfirmasi Jadwal
                 </MKTypography>
                 <MKTypography variant="body2" color="text">
-                  Untuk pekerjaan darurat, kami melayani panggilan 24 jam. Hubungi segera!
+                  Ketersediaan kunjungan dan waktu pengerjaan disepakati melalui WhatsApp. Jangan mengandalkan kunjungan langsung tanpa konfirmasi.
                 </MKTypography>
               </MKBox>
             </Grid>

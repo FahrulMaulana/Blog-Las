@@ -29,7 +29,7 @@ function LasStainless() {
         <title>Jasa Las Stainless Steel Depok - Pagar, Railing, Kanopi | Indian Jaya Las</title>
         <meta
           name="description"
-          content="Jasa las stainless steel di Depok & Tangerang Selatan. Pagar stainless, railing tangga, kanopi stainless. Anti karat, awet. Telp 081212154019"
+          content="Jasa las stainless steel di Depok & Tangerang Selatan. Pagar stainless, railing tangga, kanopi stainless. Pilihan grade dan finishing sesuai kebutuhan. Telp 081212154019"
         />
         <meta
           name="keywords"
@@ -40,7 +40,7 @@ function LasStainless() {
         <meta property="og:title" content="Jasa Las Stainless Steel Depok" />
         <meta
           property="og:description"
-          content="Jasa las stainless profesional. Anti karat, tahan lama."
+          content="Jasa las stainless profesional. Diskusikan grade, ketebalan, dan finishing."
         />
         <meta property="og:url" content="https://indianjayalas.com/las-stainless" />
 
@@ -115,7 +115,7 @@ function LasStainless() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Material Premium Anti Karat untuk Hasil Maksimal
+              Pilih Grade, Ketebalan, dan Finishing Sesuai Penggunaan
             </MKTypography>
             <MKBox width="100%" display="flex" justifyContent="center" mt={4}>
               <MKButton color="success" size="large" onClick={handleWhatsApp}>
@@ -134,9 +134,18 @@ function LasStainless() {
                 Stainless Steel - Material Premium untuk Rumah Modern
               </MKTypography>
               <MKTypography variant="body1" mb={2}>
-                Stainless steel adalah material premium yang tahan karat, awet puluhan tahun, dan
-                memiliki tampilan mengkilap yang elegan. <strong>Indian Jaya Las</strong> ahli dalam
+                Ketahanan korosi stainless steel bergantung pada grade, lingkungan, sambungan,
+                serta perawatan; material ini bukan berarti bebas karat dalam semua kondisi. <strong>Indian Jaya Las</strong> ahli dalam
                 pembuatan berbagai produk stainless steel untuk rumah dan komersial.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Pertanyaan Sebelum Memilih Stainless</MKTypography>
+              <MKTypography variant="body1" color="text" mb={2}>Minta grade material dicantumkan dalam penawaran, bukan hanya istilah stainless. Bahas ketebalan pipa atau plat, dimensi, lingkungan pemasangan, detail sambungan, dan finishing mengkilap atau doff. Untuk railing, sertakan panjang, tinggi, serta foto tangga dan dudukannya.</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Untuk kebutuhan terkait, lihat <Link to="/las-pagar">alternatif pagar besi hollow</Link>.
+                Workshop berada di Pondok Petir, Bojongsari. Bahas lokasi dan akses melalui halaman{" "}
+                <Link to="/jasa-las-depok">layanan Depok</Link> atau{" "}
+                <Link to="/jasa-las-pamulang">layanan Pamulang</Link>; jadwal survei dikonfirmasi terlebih dahulu.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -160,7 +169,7 @@ function LasStainless() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    <strong>Pintu & Jendela Stainless</strong> - Anti karat maksimal
+                    <strong>Pintu & Jendela Stainless</strong> - Pilih grade sesuai lingkungan pemasangan
                   </MKTypography>
                 </li>
                 <li>
@@ -177,10 +186,10 @@ function LasStainless() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Anti Karat
+                      ✓ Pilihan Grade
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Tidak berkarat meski terkena air & cuaca ekstrem
+                      Sesuaikan grade dengan paparan air, lingkungan, dan kebutuhan perawatan
                     </MKTypography>
                   </MKBox>
                 </Grid>
@@ -210,14 +219,14 @@ function LasStainless() {
                       ✓ Minim Perawatan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Cukup lap bersih saja
+                      Tanyakan cara membersihkan sesuai grade dan finishing
                     </MKTypography>
                   </MKBox>
                 </Grid>
               </Grid>
 
               <MKTypography variant="h3" mt={4} mb={2}>
-                Estimasi Harga Stainless Steel Per Meter (2026)
+                Estimasi Harga Stainless Steel — Konfirmasi Satuan dan Spesifikasi
               </MKTypography>
               <MKBox
                 component="table"
@@ -238,7 +247,7 @@ function LasStainless() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per Meter
+                        Estimasi (satuan dikonfirmasi)
                       </MKTypography>
                     </th>
                   </tr>
@@ -280,8 +289,10 @@ function LasStainless() {
               </MKBox>
 
               <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
-                *Harga material premium stainless steel dapat berubah sesuai grade dan finishing
-                yang dipilih.
+                *Kisaran ini bukan penawaran final. Pastikan satuan m panjang atau m² bidang
+                pada tiap produk; railing dan kanopi tidak dapat dibandingkan dengan satuan yang
+                sama tanpa spesifikasi. Grade, ketebalan, sambungan, finishing, akses pemasangan,
+                dan hasil survei menentukan biaya.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -300,7 +311,7 @@ function LasStainless() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Tim kami akan survey ke lokasi (GRATIS)
+                    Sepakati jadwal, biaya, dan kebutuhan survei lokasi
                   </MKTypography>
                 </li>
                 <li>
@@ -310,12 +321,12 @@ function LasStainless() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Pengerjaan oleh ahli las stainless bersertifikat
+                    Sepakati grade, ketebalan, detail sambungan, dan lingkup pengerjaan
                   </MKTypography>
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Pemasangan rapi dan garansi kualitas
+                    Periksa sambungan dan finishing saat serah terima
                   </MKTypography>
                 </li>
               </MKBox>
@@ -359,7 +370,7 @@ function LasStainless() {
                   Konsultasi Gratis
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
-                  Hubungi kami untuk survey dan penawaran terbaik
+                  Hubungi kami untuk survey dan penawaran sesuai spesifikasi
                 </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>
                   Chat WhatsApp

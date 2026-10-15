@@ -24,10 +24,10 @@ function HargaJasaLasTerbaru2026() {
   return (
     <>
       <Helmet>
-        <title>Harga Jasa Las 2026 Update - Indian Jaya Las</title>
+        <title>Estimasi Biaya Jasa Las & Satuan Harga | Indian Jaya Las</title>
         <meta
           name="description"
-          content="Daftar lengkap harga jasa las terbaru 2026 untuk kanopi, pagar, tralis, dan stainless steel. Update harga material dan jasa pemasangan di Depok & Tangerang Selatan."
+          content="Panduan estimasi anggaran kanopi dan pagar: pahami satuan m dan m², spesifikasi material, finishing, serta data untuk penawaran setelah survei."
         />
         <meta
           name="keywords"
@@ -35,10 +35,10 @@ function HargaJasaLasTerbaru2026() {
         />
         <link rel="canonical" href="https://indianjayalas.com/blog/harga-jasa-las-terbaru-2026" />
 
-        <meta property="og:title" content="Harga Jasa Las Terbaru 2026 - Update Lengkap" />
+        <meta property="og:title" content="Estimasi Biaya Jasa Las: Satuan dan Spesifikasi" />
         <meta
           property="og:description"
-          content="Daftar lengkap harga jasa las terbaru tahun 2026"
+          content="Kisaran anggaran awal, satuan pengukuran, serta faktor penawaran jasa las."
         />
         <meta property="og:url" content="https://indianjayalas.com/blog/harga-jasa-las-terbaru-2026" />
 
@@ -46,7 +46,7 @@ function HargaJasaLasTerbaru2026() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: "Harga Jasa Las Terbaru 2026 - Update Lengkap Semua Layanan",
+            headline: "Estimasi Biaya Jasa Las: Satuan dan Spesifikasi",
             author: {
               "@type": "Organization",
               name: "Indian Jaya Las",
@@ -103,7 +103,7 @@ function HargaJasaLasTerbaru2026() {
                 [breakpoints.down("md")]: { fontSize: size["3xl"] },
               })}
             >
-              Harga Jasa Las Terbaru 2026
+              Estimasi Biaya Jasa Las: Satuan dan Spesifikasi
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -112,7 +112,7 @@ function HargaJasaLasTerbaru2026() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Update Lengkap Harga Kanopi, Pagar, Tralis, dan Stainless Steel
+              Panduan Anggaran Awal untuk Kanopi dan Pagar
             </MKTypography>
           </Grid>
         </Container>
@@ -127,19 +127,19 @@ function HargaJasaLasTerbaru2026() {
               </MKTypography>
 
               <MKTypography variant="body1" color="text" mb={3}>
-                Merencanakan proyek las untuk rumah Anda? Mengetahui harga jasa las terbaru sangat
-                penting untuk mempersiapkan budget yang tepat. Artikel ini memberikan informasi
-                lengkap harga jasa las tahun 2026 untuk berbagai jenis layanan, mulai dari kanopi,
-                pagar, tralis, hingga stainless steel.
+                Angka di bawah adalah kisaran estimasi untuk membantu diskusi anggaran, bukan
+                daftar harga final atau bukti pembaruan harga pasar. Penawaran bergantung pada
+                ukuran, spesifikasi, kondisi lokasi, dan hasil survei. Pastikan material, pemasangan,
+                pengiriman, pembongkaran, serta finishing dijelaskan dalam penawaran tertulis.
               </MKTypography>
 
               <MKTypography variant="h3" mb={2}>
-                Harga Las Kanopi Per Meter 2026
+                Estimasi Kanopi per m²
               </MKTypography>
 
               <MKTypography variant="body1" color="text" mb={2}>
-                Kanopi adalah salah satu produk las paling populer untuk melindungi kendaraan dan
-                teras rumah. Berikut update harga terbaru:
+                Untuk kanopi, m² menunjukkan luas panjang × lebar, bukan panjang saja.
+                Samakan jenis dan ketebalan atap serta rangka sebelum membandingkan kisaran berikut:
               </MKTypography>
 
               <MKBox
@@ -162,7 +162,7 @@ function HargaJasaLasTerbaru2026() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per M²
+                        Estimasi per m²
                       </MKTypography>
                     </th>
                   </tr>
@@ -204,7 +204,7 @@ function HargaJasaLasTerbaru2026() {
               </MKBox>
 
               <MKTypography variant="h3" mb={2}>
-                Harga Las Pagar Per Meter 2026
+                Estimasi Pagar — Konfirmasikan Satuan
               </MKTypography>
 
               <MKBox
@@ -227,7 +227,7 @@ function HargaJasaLasTerbaru2026() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per Meter
+                        Estimasi (satuan dikonfirmasi)
                       </MKTypography>
                     </th>
                   </tr>
@@ -259,6 +259,16 @@ function HargaJasaLasTerbaru2026() {
                   </tr>
                 </tbody>
               </MKBox>
+
+              <MKTypography variant="h3" mb={2}>Siapkan Pertanyaan untuk Penawaran</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Tanyakan ukuran profil dan ketebalan material, pilihan atap serta talang untuk
+                kanopi, sistem buka pagar, lapisan antikarat, dan cat akhir. Kirim ukuran awal,
+                foto tumpuan atau tiang, contoh model, alamat, dan kondisi akses melalui WhatsApp.
+                Workshop berada di Pondok Petir, Bojongsari; lihat informasi kunjungan untuk{" "}
+                <Link to="/jasa-las-depok">Depok</Link> dan{" "}
+                <Link to="/jasa-las-pamulang">Pamulang</Link>. Jadwal serta biaya survei dikonfirmasi dahulu.
+              </MKTypography>
 
               <MKTypography variant="h3" mb={2}>
                 Faktor yang Mempengaruhi Harga
@@ -307,12 +317,12 @@ function HargaJasaLasTerbaru2026() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Manfaatkan promo free survey dan pemasangan
+                    Pastikan biaya survei, pemasangan, dan pengiriman tercantum
                   </MKTypography>
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Pesan dalam jumlah banyak untuk harga lebih murah
+                    Bandingkan penawaran dengan dimensi, ketebalan, dan finishing yang sama
                   </MKTypography>
                 </li>
               </MKBox>
@@ -322,7 +332,7 @@ function HargaJasaLasTerbaru2026() {
                   Konsultasi Gratis!
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2}>
-                  Dapatkan estimasi harga akurat untuk proyek las Anda. Hubungi kami sekarang!
+                  Kirim ukuran awal, foto lokasi, pilihan model, dan alamat untuk membahas estimasi bersyarat.
                 </MKTypography>
                 <MKButton color="success" onClick={handleWhatsApp}>
                   Chat WhatsApp
@@ -335,9 +345,10 @@ function HargaJasaLasTerbaru2026() {
                 sx={{ backgroundColor: "#f8f9fa", borderLeft: "4px solid #1976d2" }}
               >
                 <MKTypography variant="body2" color="text">
-                  <strong>Catatan:</strong> Harga dapat berubah sewaktu-waktu tergantung harga
-                  material di pasaran. Untuk harga pasti, silakan hubungi kami untuk survey dan
-                  penawaran langsung.
+                  <strong>Catatan:</strong> Kisaran bukan penawaran mengikat. Untuk pagar, konfirmasikan apakah biaya per
+                  m panjang dengan tinggi tertentu atau per m² bidang. Untuk penawaran yang dapat
+                  dibandingkan, minta rincian profil, ketebalan, engsel atau rel, finishing, serta
+                  lingkup kerja setelah survei.
                 </MKTypography>
               </MKBox>
             </Grid>
@@ -354,20 +365,20 @@ function HargaJasaLasTerbaru2026() {
                 </MKTypography>
                 <MKBox
                   component={Link}
-                  to="/blog/harga-kanopi-per-meter-tangerang-selatan"
+                  to="/las-pagar"
                   sx={{ textDecoration: "none" }}
                 >
                   <MKTypography variant="body2" color="info" mb={2}>
-                    → Harga Kanopi Per Meter di Tangerang Selatan
+                    → Spesifikasi Pagar dan Persiapan Penawaran
                   </MKTypography>
                 </MKBox>
                 <MKBox
                   component={Link}
-                  to="/blog/tips-memilih-tukang-las-profesional"
+                  to="/las-panggilan"
                   sx={{ textDecoration: "none" }}
                 >
                   <MKTypography variant="body2" color="info" mb={2}>
-                    → Tips Memilih Tukang Las Profesional
+                    → Penilaian Kebutuhan Perbaikan Las
                   </MKTypography>
                 </MKBox>
                 <MKBox component={Link} to="/las-kanopi" sx={{ textDecoration: "none" }}>

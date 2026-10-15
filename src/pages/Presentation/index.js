@@ -119,7 +119,7 @@ function Presentation() {
         />
         <meta property="twitter:image" content="https://indianjayalas.com/og-image.jpg" />
 
-        {/* JSON-LD LocalBusiness Schema with Aggregate Rating */}
+        {/* JSON-LD LocalBusiness Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -136,21 +136,9 @@ function Presentation() {
               postalCode: "16516",
               addressCountry: "ID",
             },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: "-6.3906",
-              longitude: "106.7525",
-            },
             url: "https://indianjayalas.com",
             telephone: "081212154019",
             priceRange: "$$",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "2000",
-              bestRating: "5",
-              worstRating: "1",
-            },
             openingHoursSpecification: [
               {
                 "@type": "OpeningHoursSpecification",
@@ -976,26 +964,32 @@ function Presentation() {
                 </MKTypography>
                 <Grid container spacing={2}>
                   {[
-                    "Depok",
-                    "Pamulang",
-                    "BSD",
-                    "Ciputat",
-                    "Serpong",
-                    "Bojongsari",
-                    "Sawangan",
-                    "Cinere",
-                    "Lenteng Agung",
-                    "Jagakarsa",
-                    "Jakarta Selatan",
-                    "Tangerang Selatan",
+                    // Explicit whitelist: names without an existing exact-match route stay text.
+                    { name: "Depok", href: "/jasa-las-depok" },
+                    { name: "Pamulang", href: "/jasa-las-pamulang" },
+                    { name: "BSD", href: "/jasa-las-bsd" },
+                    { name: "Ciputat", href: "/jasa-las-ciputat" },
+                    { name: "Serpong" },
+                    { name: "Bojongsari" },
+                    { name: "Sawangan", href: "/jasa-las-sawangan" },
+                    { name: "Cinere", href: "/jasa-las-cinere" },
+                    { name: "Lenteng Agung" },
+                    { name: "Jagakarsa" },
+                    { name: "Jakarta Selatan", href: "/jasa-las-jakarta-selatan" },
+                    { name: "Tangerang Selatan" },
                   ].map((area) => (
-                    <Grid item xs={6} md={4} key={area}>
+                    <Grid item xs={6} md={4} key={area.name}>
                       <MKBox
+                        component={area.href ? "a" : "div"}
+                        href={area.href}
                         bgColor="grey-100"
                         borderRadius="md"
                         p={1.5}
                         textAlign="center"
                         sx={{
+                          display: "block",
+                          textDecoration: "none",
+                          color: "inherit",
                           "&:hover": {
                             backgroundColor: "info.main",
                             color: "white",
@@ -1005,7 +999,7 @@ function Presentation() {
                         }}
                       >
                         <MKTypography variant="body2" fontWeight="bold">
-                          {area}
+                          {area.name}
                         </MKTypography>
                       </MKBox>
                     </Grid>

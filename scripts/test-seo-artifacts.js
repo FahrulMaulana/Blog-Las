@@ -30,3 +30,4 @@ for (const url of urls) {
   console.log(`PASS ${route}: rendered HTML, single self canonical, unique title/description, schema`);
 }
 console.log(`PASS ${urls.length} sitemap URLs match generated artifacts`);
+require('./test-seo-cleanup');

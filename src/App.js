@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 import { useEffect, lazy, Suspense } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
@@ -25,6 +25,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 // React Helmet Async
 import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "components/ErrorBoundary";
+import NotFound from "components/NotFound";
 
 // Material Kit 2 React themes
 import theme from "assets/theme";
@@ -42,6 +43,22 @@ const LocationPage = lazy(() => import("pages/Locations/LocationPage"));
 
 // Material Kit 2 React routes
 import routes from "routes";
+
+// Keep this allowlist aligned with the published prerendered location pages.
+// Retain :locationSlug so LocationPage can continue reading its route parameter.
+const locationPaths = [
+  "depok",
+  "pamulang",
+  "bsd",
+  "ciputat",
+  "jakarta-selatan",
+  "bogor",
+  "bekasi",
+  "tangerang",
+  "sawangan",
+  "parung",
+  "cinere",
+].map((slug) => `/jasa-las-${slug}`);
 
 export default function App() {
   const { pathname } = useLocation();
@@ -84,8 +101,17 @@ export default function App() {
                 path="/blog/harga-jasa-las-terbaru-2026"
                 element={<HargaJasaLasTerbaru2026 />}
               />
-              <Route path="/:locationSlug" element={<LocationPage />} />
-              <Route path="*" element={<Navigate to="/" />} />
+              <Route
+                path="/:locationSlug"
+                element={
+                  locationPaths.includes(pathname.replace(/\/$/, "")) ? (
+                    <LocationPage />
+                  ) : (
+                    <NotFound />
+                  )
+                }
+              />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>

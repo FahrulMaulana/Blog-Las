@@ -29,7 +29,7 @@ function LasTralis() {
         <title>Jasa Las Tralis Jendela & Pintu Depok | Indian Jaya Las</title>
         <meta
           name="description"
-          content="Jasa las tralis jendela & pintu di Depok, Pamulang, BSD. Tralis minimalis, motif, dan custom. Keamanan maksimal. Free survey. Telp 081212154019"
+          content="Jasa las tralis jendela & pintu di Depok, Pamulang, BSD. Tralis minimalis, motif, dan custom. Sesuaikan bukaan dan dudukan. Diskusikan survei. Telp 081212154019"
         />
         <meta
           name="keywords"
@@ -115,7 +115,7 @@ function LasTralis() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Keamanan Maksimal dengan Desain Estetis - Free Survey
+              Sesuaikan Motif, Dudukan, dan Akses Bukaan - Rencana Survei
             </MKTypography>
             <MKBox width="100%" display="flex" justifyContent="center" mt={4}>
               <MKButton color="success" size="large" onClick={handleWhatsApp}>
@@ -143,7 +143,16 @@ function LasTralis() {
 
               <MKTypography variant="body1" color="text" mb={2}>
                 Dengan material berkualitas dan pemasangan profesional, tralis kami menjamin
-                keamanan maksimal tanpa mengurangi nilai estetika rumah Anda.
+                kebutuhan pengaman bukaan dengan desain yang disesuaikan rumah Anda.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Ukur Bukaan dan Rencanakan Akses</MKTypography>
+              <MKTypography variant="body1" color="text" mb={2}>Kirim ukuran lebar × tinggi tiap jendela atau pintu dan foto kusennya. Bahas ukuran batang, ketebalan, jarak motif, titik pengikat, dan finishing. Jangan menutup satu-satunya jalur evakuasi; tanyakan opsi bukaan yang dapat dioperasikan dari dalam.</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Untuk kebutuhan terkait, lihat <Link to="/las-pagar">pagar rumah</Link>.
+                Workshop berada di Pondok Petir, Bojongsari. Bahas lokasi dan akses melalui halaman{" "}
+                <Link to="/jasa-las-depok">layanan Depok</Link> atau{" "}
+                <Link to="/jasa-las-pamulang">layanan Pamulang</Link>; jadwal survei dikonfirmasi terlebih dahulu.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -186,7 +195,7 @@ function LasTralis() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      🔒 Keamanan Maksimal
+                      Dudukan dan Pengikat
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
                       Material kuat dan pemasangan kokoh
@@ -206,7 +215,7 @@ function LasTralis() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="warning" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ⚡ Pemasangan Cepat
+                      Rencana Pemasangan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
                       Tim profesional berpengalaman
@@ -216,17 +225,17 @@ function LasTralis() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="error" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      💰 Harga Terjangkau
+                      Rincian Spesifikasi
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Kualitas premium dengan harga kompetitif
+                      Bandingkan material, ketebalan, dan finishing yang sama
                     </MKTypography>
                   </MKBox>
                 </Grid>
               </Grid>
 
               <MKTypography variant="h3" mt={4} mb={2}>
-                Estimasi Harga Tralis Per Meter (2026)
+                Estimasi Harga Tralis — Konfirmasi Satuan dan Spesifikasi
               </MKTypography>
               <MKBox
                 component="table"
@@ -247,7 +256,7 @@ function LasTralis() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per Meter
+                        Estimasi (satuan dikonfirmasi)
                       </MKTypography>
                     </th>
                   </tr>
@@ -281,8 +290,9 @@ function LasTralis() {
               </MKBox>
 
               <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
-                *Harga dapat berubah sewaktu-waktu tergantung ketersediaan material dan kompleksitas
-                desain.
+                *Kisaran ini untuk anggaran awal, bukan penawaran final. Konfirmasikan satuan
+                m panjang atau m² bidang, ukuran tiap bukaan, ketebalan batang, kerapatan motif,
+                dudukan, finishing, serta pemasangan. Biaya ditentukan oleh spesifikasi dan survei.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -301,7 +311,7 @@ function LasTralis() {
                 </li>
                 <li>
                   <MKTypography variant="body1" mb={1}>
-                    Tim kami akan survey ke lokasi (GRATIS)
+                    Sepakati jadwal, biaya, dan kebutuhan survei lokasi
                   </MKTypography>
                 </li>
                 <li>
@@ -360,7 +370,7 @@ function LasTralis() {
                   Konsultasi Gratis
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
-                  Hubungi kami untuk survey dan penawaran terbaik
+                  Hubungi kami untuk survey dan penawaran sesuai spesifikasi
                 </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>
                   Chat WhatsApp
@@ -391,7 +401,7 @@ function LasTralis() {
               Butuh Tralis untuk Keamanan Rumah?
             </MKTypography>
             <MKTypography variant="body1" color="white" mb={3}>
-              Dapatkan penawaran terbaik dan gratis survey. Konsultasi sekarang!
+              Kirim ukuran dan foto lokasi untuk membahas penawaran serta jadwal survei.
             </MKTypography>
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Hubungi Kami Sekarang

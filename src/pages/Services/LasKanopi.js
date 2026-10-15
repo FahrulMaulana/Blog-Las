@@ -31,7 +31,7 @@ function LasKanopi() {
         <title>Jasa Las Kanopi Depok & Tangsel - Indian Jaya Las</title>
         <meta
           name="description"
-          content="Jasa las kanopi profesional di Depok, Pamulang, BSD, Ciputat. Free survey & pemasangan. Kanopi baja ringan, hollow, atap alderon. Hubungi 081212154019"
+          content="Jasa las kanopi profesional di Depok, Pamulang, BSD, Ciputat. Survei dan pemasangan sesuai kesepakatan. Kanopi baja ringan, hollow, atap alderon. Hubungi 081212154019"
         />
         <meta
           name="keywords"
@@ -48,7 +48,7 @@ function LasKanopi() {
         />
         <meta
           property="og:description"
-          content="Jasa las kanopi profesional. Free survey & pemasangan. Area Depok, Pamulang, BSD, Ciputat."
+          content="Jasa las kanopi profesional. Survei dan pemasangan sesuai kesepakatan. Area Depok, Pamulang, BSD, Ciputat."
         />
         <meta property="og:image" content="https://indianjayalas.com/kanopi-preview.jpg" />
 
@@ -58,7 +58,7 @@ function LasKanopi() {
         <meta property="twitter:title" content="Jasa Las Kanopi Depok & Tangerang Selatan" />
         <meta
           property="twitter:description"
-          content="Jasa las kanopi profesional. Free survey & pemasangan."
+          content="Jasa las kanopi profesional. Survei dan pemasangan sesuai kesepakatan."
         />
         <meta property="twitter:image" content="https://indianjayalas.com/kanopi-preview.jpg" />
 
@@ -76,17 +76,12 @@ function LasKanopi() {
                 streetAddress: "JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR",
                 addressLocality: "Bojongsari",
                 addressRegion: "Depok",
-                postalCode: "16516",
+
                 addressCountry: "ID",
               },
               telephone: "081212154019",
               url: "https://indianjayalas.com",
               priceRange: "$$",
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "-6.3906",
-                longitude: "106.7525",
-              },
             },
             areaServed: [
               "Depok",
@@ -99,18 +94,8 @@ function LasKanopi() {
               "Cinere",
             ],
             description:
-              "Jasa pembuatan dan pemasangan kanopi baja ringan, hollow, dan atap alderon dengan kualitas terbaik",
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "IDR",
-              price: "350000",
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: "350000",
-                priceCurrency: "IDR",
-                unitText: "PER_METER",
-              },
-            },
+              "Jasa pembuatan dan pemasangan kanopi; spesifikasi rangka, atap, dan biaya dikonfirmasi setelah survei.",
+
           })}
         </script>
       </Helmet>
@@ -173,7 +158,7 @@ function LasKanopi() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Kanopi Berkualitas, Free Survey & Pemasangan - Melayani Depok, Pamulang, BSD, Ciputat
+              Kanopi Berkualitas, Survei & Spesifikasi Pemasangan - Melayani Depok, Pamulang, BSD, Ciputat
               & Sekitarnya
             </MKTypography>
             <MKButton color="success" size="large" sx={{ mt: 4 }} onClick={handleWhatsApp}>
@@ -203,15 +188,26 @@ function LasKanopi() {
               </MKTypography>
 
               <MKTypography variant="body1" color="text" mb={2}>
-                <strong>Indian Jaya Las</strong> adalah bengkel las profesional yang telah melayani
-                ribuan pelanggan di wilayah Depok, Tangerang Selatan, dan Jakarta. Kami spesialis
-                dalam pembuatan dan pemasangan kanopi dengan berbagai material berkualitas tinggi.
+                <strong>Indian Jaya Las</strong> berlokasi di Pondok Petir, Bojongsari, Depok.
+                Untuk merencanakan kanopi, tentukan area yang ingin ditutup, kebutuhan cahaya,
+                serta jalur pembuangan air sebelum membandingkan pilihan rangka dan atap.
               </MKTypography>
 
               <MKTypography variant="body1" color="text" mb={2}>
                 Kanopi berfungsi sebagai pelindung kendaraan, teras, dan area outdoor dari panas dan
                 hujan. Dengan desain yang tepat, kanopi juga dapat meningkatkan nilai estetika rumah
                 Anda.
+              </MKTypography>
+
+              <MKTypography variant="h3" mt={4} mb={2}>Sebelum Meminta Penawaran Kanopi</MKTypography>
+              <MKTypography variant="body1" color="text" mb={2}>Kirim panjang × lebar area, tinggi pemasangan, foto dinding atau tumpuan, dan pilihan atap. Tanyakan ukuran serta ketebalan rangka, arah kemiringan, talang, sambungan, dan sistem cat. Ukuran awal membantu diskusi; kelayakan tumpuan tetap perlu diperiksa saat survei.</MKTypography>
+              <MKTypography variant="body1" color="text" mb={3}>
+                Untuk kebutuhan terkait, lihat <Link to="/las-pagar">pagar untuk area depan rumah</Link>.
+                Baca <Link to="/blog/harga-jasa-las-terbaru-2026">panduan estimasi biaya dan satuan pengukuran</Link>{" "}
+                untuk membandingkan spesifikasi, atau buka <Link to="/blog">blog panduan las</Link>.
+                Workshop berada di Pondok Petir, Bojongsari. Bahas lokasi dan akses melalui halaman{" "}
+                <Link to="/jasa-las-depok">layanan Depok</Link> atau{" "}
+                <Link to="/jasa-las-pamulang">layanan Pamulang</Link>; jadwal survei dikonfirmasi terlebih dahulu.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -221,8 +217,8 @@ function LasKanopi() {
               <MKBox component="ul" sx={{ pl: 3 }}>
                 <li>
                   <MKTypography variant="body1" color="text" mb={1}>
-                    <strong>Kanopi Baja Ringan</strong> - Tahan karat, ringan, dan awet puluhan
-                    tahun
+                    <strong>Kanopi Baja Ringan</strong> - Tanyakan ukuran profil, ketebalan,
+                    pelapisan, dan jarak tumpuan yang sesuai bentang
                   </MKTypography>
                 </li>
                 <li>
@@ -232,8 +228,8 @@ function LasKanopi() {
                 </li>
                 <li>
                   <MKTypography variant="body1" color="text" mb={1}>
-                    <strong>Atap Alderon / Spandek</strong> - Anti bocor, tahan panas, pilihan warna
-                    beragam
+                    <strong>Atap Alderon / Spandek</strong> - Bandingkan ketebalan, kebutuhan
+                    cahaya, suara hujan, kemiringan, dan sambungan atap
                   </MKTypography>
                 </li>
                 <li>
@@ -257,47 +253,47 @@ function LasKanopi() {
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="success" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Free Survey
+                      ✓ Rencana Survei
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Gratis pengukuran dan konsultasi ke lokasi
+                      Sepakati jadwal dan ketentuan pengukuran di lokasi
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="info" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Free Pemasangan
+                      ✓ Lingkup Pemasangan
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Gratis jasa instalasi oleh teknisi berpengalaman
+                      Konfirmasikan pekerjaan instalasi dalam penawaran
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="warning" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Free Ongkir
+                      ✓ Pengiriman
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Gratis pengiriman area Jabodetabek
+                      Konfirmasikan biaya kirim sesuai alamat pemasangan
                     </MKTypography>
                   </MKBox>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKBox bgColor="error" color="white" borderRadius="md" p={2} mb={2}>
                     <MKTypography variant="h6" color="white" mb={1}>
-                      ✓ Garansi Kualitas
+                      ✓ Pemeriksaan Hasil
                     </MKTypography>
                     <MKTypography variant="body2" color="white">
-                      Bergaransi dan after sales service
+                      Sepakati pemeriksaan hasil saat serah terima
                     </MKTypography>
                   </MKBox>
                 </Grid>
               </Grid>
 
               <MKTypography variant="h3" mt={4} mb={2}>
-                Estimasi Harga Las Kanopi Per Meter (2026)
+                Kisaran Estimasi Las Kanopi per m²
               </MKTypography>
 
               <MKBox
@@ -325,7 +321,7 @@ function LasKanopi() {
                     </th>
                     <th>
                       <MKTypography variant="body2" fontWeight="bold">
-                        Harga Per Meter
+                        Estimasi per m²
                       </MKTypography>
                     </th>
                   </tr>
@@ -367,8 +363,10 @@ function LasKanopi() {
               </MKBox>
 
               <MKTypography variant="body2" color="text" mt={2} fontStyle="italic">
-                *Harga dapat berubah sewaktu-waktu tergantung ketersediaan material. Hubungi kami
-                untuk penawaran terbaik.
+                *Kisaran ini untuk perkiraan anggaran, bukan penawaran mengikat. Luas dihitung
+                dalam m² (panjang × lebar), bukan meter lari. Biaya final bergantung pada ketebalan
+                rangka, jenis atap, bentang, talang, finishing, akses, dan hasil survei.
+                Konfirmasikan apakah pembongkaran, pengiriman, dan pemasangan termasuk.
               </MKTypography>
 
               <MKTypography variant="h3" mt={4} mb={2}>
@@ -452,7 +450,7 @@ function LasKanopi() {
                   Konsultasi Gratis
                 </MKTypography>
                 <MKTypography variant="body2" color="white" mb={2} textAlign="center">
-                  Hubungi kami sekarang untuk survey dan penawaran terbaik
+                  Hubungi kami sekarang untuk survey dan penawaran sesuai spesifikasi
                 </MKTypography>
                 <MKButton color="success" fullWidth size="large" onClick={handleWhatsApp}>
                   Chat WhatsApp
@@ -483,7 +481,7 @@ function LasKanopi() {
               Siap Pasang Kanopi di Rumah Anda?
             </MKTypography>
             <MKTypography variant="body1" color="white" mb={3}>
-              Dapatkan penawaran terbaik dan gratis survey. Konsultasi sekarang!
+              Kirim ukuran dan foto lokasi untuk membahas penawaran serta jadwal survei.
             </MKTypography>
             <MKButton color="success" size="large" onClick={handleWhatsApp}>
               Hubungi Kami Sekarang

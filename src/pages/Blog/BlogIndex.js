@@ -17,41 +17,8 @@ function BlogIndex() {
   const articles = [
     {
       slug: "harga-jasa-las-terbaru-2026",
-      title: "Harga Jasa Las Terbaru 2026 - Update Lengkap Semua Layanan",
-      excerpt:
-        "Daftar lengkap harga jasa las terbaru tahun 2026 untuk kanopi, pagar, tralis, dan stainless steel. Update harga material dan jasa pemasangan.",
-      date: "9 Januari 2026",
-      image: bgImage,
-    },
-    {
-      slug: "harga-kanopi-per-meter-tangerang-selatan",
-      title: "Harga Kanopi Per Meter di Tangerang Selatan & Depok 2026",
-      excerpt:
-        "Panduan lengkap harga kanopi per meter untuk wilayah Tangerang Selatan, Depok, dan sekitarnya. Perbandingan material dan tips hemat budget.",
-      date: "9 Januari 2026",
-      image: bgImage,
-    },
-    {
-      slug: "model-kanopi-minimalis-terbaru",
-      title: "10 Model Kanopi Minimalis Terbaru 2026 yang Paling Diminati",
-      excerpt:
-        "Inspirasi desain kanopi minimalis modern untuk rumah Anda. Dari baja ringan hingga polycarbonate, temukan model yang cocok.",
-      date: "9 Januari 2026",
-      image: bgImage,
-    },
-    {
-      slug: "tips-memilih-tukang-las-profesional",
-      title: "7 Tips Memilih Tukang Las Profesional dan Terpercaya",
-      excerpt:
-        "Panduan lengkap memilih jasa las yang berkualitas. Cek pengalaman, portofolio, harga, hingga garansi yang ditawarkan.",
-      date: "9 Januari 2026",
-      image: bgImage,
-    },
-    {
-      slug: "perbandingan-pagar-besi-vs-hollow",
-      title: "Perbandingan Pagar Besi vs Hollow: Mana yang Lebih Baik?",
-      excerpt:
-        "Analisis lengkap kelebihan dan kekurangan pagar besi solid vs hollow. Dari segi harga, kekuatan, hingga perawatan.",
+      title: "Estimasi Biaya Jasa Las: Satuan dan Spesifikasi",
+      excerpt: "Kisaran anggaran kanopi dan pagar, perbedaan m dengan m², serta informasi yang perlu disiapkan untuk meminta penawaran.",
       date: "9 Januari 2026",
       image: bgImage,
     },
@@ -77,7 +44,7 @@ function BlogIndex() {
             "@id": "https://indianjayalas.com/blog#blog",
             url: "https://indianjayalas.com/blog",
             name: "Blog & Artikel Seputar Jasa Las",
-            description: "Tips, Panduan, dan Update Harga Terbaru",
+            description: "Panduan Spesifikasi dan Estimasi Anggaran",
             inLanguage: "id-ID",
             publisher: { "@type": "Organization", name: "Indian Jaya Las", url: "https://indianjayalas.com" },
           })}
@@ -129,7 +96,7 @@ function BlogIndex() {
               px={{ xs: 6, lg: 12 }}
               mt={2}
             >
-              Tips, Panduan, dan Update Harga Terbaru
+              Panduan Spesifikasi dan Estimasi Anggaran
             </MKTypography>
           </Grid>
         </Container>
