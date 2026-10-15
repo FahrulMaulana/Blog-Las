@@ -33,7 +33,7 @@ function Information() {
       role: "Pemilik Rumah",
       date: "1 minggu yang lalu",
       review:
-        "Bengkel Las India Jaya selalu memberikan hasil yang memuaskan. Saya sering memesan berbagai produk las dari mereka, dan setiap kali hasilnya selalu bagus. Terakhir, saya memesan pagar dan sangat puas dengan kekokohan serta desainnya. Harganya juga terjangkau untuk kualitas yang diberikan. Sangat merekomendasikan bengkel ini!",
+        "Bengkel Las Indian Jaya selalu memberikan hasil yang memuaskan. Saya sering memesan berbagai produk las dari mereka, dan setiap kali hasilnya selalu bagus. Terakhir, saya memesan pagar dan sangat puas dengan kekokohan serta desainnya. Harganya juga terjangkau untuk kualitas yang diberikan. Sangat merekomendasikan bengkel ini!",
       rating: 5,
       avatar: "👨",
       color: "#2196F3",
@@ -43,7 +43,7 @@ function Information() {
       role: "Kontraktor",
       date: "1 bulan yang lalu",
       review:
-        "Sudah lebih dari 15 tahun Bengkel Las India Jaya ada di sekitar sini, dan saya sudah sering memesan berbagai produk las dari mereka. Teralis yang saya pesan terakhir ini sangat kuat dan desainnya elegan. Harganya juga terjangkau untuk kualitas yang diberikan. Saya tidak ragu merekomendasikan mereka ke teman-teman saya!",
+        "Sudah lebih dari 15 tahun Bengkel Las Indian Jaya ada di sekitar sini, dan saya sudah sering memesan berbagai produk las dari mereka. Teralis yang saya pesan terakhir ini sangat kuat dan desainnya elegan. Harganya juga terjangkau untuk kualitas yang diberikan. Saya tidak ragu merekomendasikan mereka ke teman-teman saya!",
       rating: 5,
       avatar: "👨‍💼",
       color: "#4CAF50",
@@ -53,7 +53,7 @@ function Information() {
       role: "Pengusaha",
       date: "1 minggu yang lalu",
       review:
-        "Layanan dari India Jaya benar-benar luar biasa! Saya membuat kanopi untuk garasi, dan hasilnya lebih dari ekspektasi. Timnya sangat profesional, ramah, dan detail dalam pekerjaannya. Saya sudah menjadi pelanggan setia selama bertahun-tahun, dan mereka selalu konsisten memberikan hasil terbaik. Terima kasih, India Jaya!",
+        "Layanan dari Indian Jaya benar-benar luar biasa! Saya membuat kanopi untuk garasi, dan hasilnya lebih dari ekspektasi. Timnya sangat profesional, ramah, dan detail dalam pekerjaannya. Saya sudah menjadi pelanggan setia selama bertahun-tahun, dan mereka selalu konsisten memberikan hasil terbaik. Terima kasih, Indian Jaya!",
       rating: 5,
       avatar: "👔",
       color: "#FF9800",
@@ -63,7 +63,7 @@ function Information() {
       role: "Developer Property",
       date: "3 minggu yang lalu",
       review:
-        "Saya sangat puas dengan hasil kerja Bengkel Las India Jaya. Saya memesan pagar untuk rumah, dan hasilnya sangat rapi serta kokoh. Proses pengerjaannya juga cepat, dan mereka sangat komunikatif dalam menyesuaikan desain sesuai keinginan saya. Lokasinya strategis di Pondok Petir, jadi mudah diakses. Highly recommended!",
+        "Saya sangat puas dengan hasil kerja Bengkel Las Indian Jaya. Saya memesan pagar untuk rumah, dan hasilnya sangat rapi serta kokoh. Proses pengerjaannya juga cepat, dan mereka sangat komunikatif dalam menyesuaikan desain sesuai keinginan saya. Lokasinya strategis di Pondok Petir, jadi mudah diakses. Highly recommended!",
       rating: 5,
       avatar: "🏗️",
       color: "#9C27B0",

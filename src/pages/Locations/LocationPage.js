@@ -42,15 +42,66 @@ const locationData = {
     areas: ["Ciputat", "Ciputat Timur", "Pisangan", "Sawah Baru", "Jombang", "Serua"],
     highlight: "Melayani area Ciputat dengan cepat berkat lokasi workshop yang strategis di Bojongsari.",
   },
+  "jakarta-selatan": {
+    name: "Jakarta Selatan",
+    slug: "jakarta-selatan",
+    description: "Bengkel las profesional melayani seluruh Jakarta Selatan: Pasar Minggu, Lebak Bulus, Cilandak, Jagakarsa, Kebayoran, Pondok Indah, Mampang, Tebet, Setiabudi, Pancoran, dan sekitarnya.",
+    areas: ["Pasar Minggu", "Lebak Bulus", "Cilandak", "Jagakarsa", "Kebayoran Lama", "Kebayoran Baru", "Pondok Indah", "Mampang Prapatan", "Tebet", "Pancoran"],
+    highlight: "Jangkauan cepat ke Jakarta Selatan — hanya 30 menit dari workshop Bojongsari via Tol Depok-Antasari.",
+  },
+  bogor: {
+    name: "Bogor",
+    slug: "bogor",
+    description: "Jasa las bersertifikasi di Bogor Kota, Bogor Barat, Bogor Timur, Bogor Utara, Bogor Selatan, Cibinong, dan sekitarnya. Melayani rumah, ruko, dan proyek komersial.",
+    areas: ["Bogor Kota", "Bogor Barat", "Bogor Timur", "Bogor Utara", "Bogor Selatan", "Cibinong", "Cileungsi", "Tajur", "Dramaga", "Ciomas"],
+    highlight: "Melayani proyek besar maupun kecil di Bogor — free survey tanpa biaya tersembunyi.",
+  },
+  bekasi: {
+    name: "Bekasi",
+    slug: "bekasi",
+    description: "Bengkel las terpercaya untuk Bekasi Kota, Bekasi Barat, Bekasi Timur, Bekasi Selatan, Bekasi Utara, Pondok Gede, Jatiasih, dan area industri di sekitar Bekasi.",
+    areas: ["Bekasi Kota", "Bekasi Barat", "Bekasi Timur", "Bekasi Selatan", "Bekasi Utara", "Pondok Gede", "Jatiasih", "Bantar Gebang", "Rawalumbu", "Jatisampurna"],
+    highlight: "Berpengalaman menangani proyek las di kawasan perumahan dan industri Bekasi.",
+  },
+  tangerang: {
+    name: "Tangerang",
+    slug: "tangerang",
+    description: "Layanan jasa las lengkap untuk Tangerang Kota, Tangerang Selatan, Ciledug, Karawaci, Cipondoh, Pinang, dan sekitarnya. Spesialis pagar dan kanopi minimalis.",
+    areas: ["Tangerang Kota", "Ciledug", "Karawaci", "Cipondoh", "Pinang", "Batuceper", "Neglasari", "Benda", "Larangan", "Periuk"],
+    highlight: "Tim kami siap survey gratis ke seluruh Tangerang — hasil rapi dan bergaransi.",
+  },
+  sawangan: {
+    name: "Sawangan",
+    slug: "sawangan",
+    description: "Jasa las area Sawangan, Pengasinan, Bedahan, Kedaung, Cinangka, Pasir Putih — dekat dengan workshop utama kami di Bojongsari.",
+    areas: ["Sawangan Baru", "Sawangan Lama", "Pengasinan", "Bedahan", "Kedaung", "Cinangka", "Pasir Putih"],
+    highlight: "Area terdekat dari workshop — bisa same-day service untuk perbaikan darurat!",
+  },
+  parung: {
+    name: "Parung",
+    slug: "parung",
+    description: "Melayani jasa las di Parung, Kemang, Ciseeng, Bojong Gede, dan sekitarnya. Kanopi, pagar, tralis dengan harga terjangkau.",
+    areas: ["Parung", "Kemang", "Ciseeng", "Bojong Gede", "Tajur Halang", "Gunung Sindur", "Rumpin"],
+    highlight: "Harga bersahabat untuk warga Parung dan sekitarnya — kualitas tetap nomor satu.",
+  },
+  cinere: {
+    name: "Cinere",
+    slug: "cinere",
+    description: "Jasa las khusus area Cinere, Limo, Gandul dan Pangkalan Jati. Melayani perumahan elite dan cluster di kawasan Cinere.",
+    areas: ["Cinere", "Limo", "Gandul", "Pangkalan Jati"],
+    highlight: "Melayani cluster-cluster elite Cinere dengan standar finishing tinggi dan rapi.",
+  },
 };
 
 function LocationPage() {
-  const { location } = useParams();
-  const data = locationData[location];
+  const { locationSlug = "" } = useParams();
+  const location = locationSlug.startsWith("jasa-las-") ? locationSlug.slice(9) : "";
+  const data = Object.prototype.hasOwnProperty.call(locationData, location) ? locationData[location] : null;
 
   if (!data) return <Navigate to="/" />;
 
   const handleWhatsApp = () => {
+    if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { event_category: "conversion" });
     window.open(
       `https://wa.me/6281212154019?text=Halo, saya dari ${data.name} ingin konsultasi jasa las`,
       "_blank"
@@ -70,6 +121,12 @@ function LocationPage() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDesc} />
         <meta property="og:url" content={`https://indianjayalas.com/jasa-las-${data.slug}`} />
+        <meta property="og:image" content="https://indianjayalas.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={metaDesc} />
+        <meta property="twitter:image" content="https://indianjayalas.com/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -532,12 +532,18 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
               ))}
           </MKBox>
           <MKBox
+            component="button"
+            type="button"
+            aria-label={mobileNavbar ? "Tutup menu navigasi" : "Buka menu navigasi"}
+            aria-expanded={mobileNavbar}
+            aria-controls="mobile-navigation"
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}
             py={1.5}
             pl={1.5}
             color={transparent ? "white" : "inherit"}
-            sx={{ cursor: "pointer" }}
+            sx={{ cursor: "pointer", border: 0, background: "transparent", minWidth: 44, minHeight: 44 }}
+            onKeyDown={(event) => { if (event.key === "Escape") setMobileNavbar(false); }}
             onClick={openMobileNavbar}
           >
             <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
@@ -549,7 +555,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
           borderRadius="xl"
           px={transparent ? 2 : 0}
         >
-          {mobileView && <DefaultNavbarMobile routes={routes} open={mobileNavbar} />}
+          {mobileView && <DefaultNavbarMobile routes={routes} open={mobileNavbar} onClose={() => setMobileNavbar(false)} />}
         </MKBox>
       </MKBox>
       {dropdownMenu}

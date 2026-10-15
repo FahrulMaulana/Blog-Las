@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import React, { useRef, lazy, Suspense, useEffect, useState } from "react";
+import React, { useRef, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 
 // @mui material components
@@ -71,28 +71,6 @@ function Presentation() {
   const testiRef = useRef(null);
   const kontakRef = useRef(null);
   const areaRef = useRef(null);
-  const mapRef = useRef(null);
-  const [loadMap, setLoadMap] = useState(false);
-
-  // Lazy load Google Maps when visible
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setLoadMap(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "100px" }
-    );
-
-    if (mapRef.current) {
-      observer.observe(mapRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const handleScroll = (ref) => {
     if (ref && ref.current) {
       console.log("Scrolling to:", ref.current);
@@ -243,7 +221,7 @@ function Presentation() {
       <MKBox
         ref={homeRef}
         id="home"
-        minHeight="100vh"
+        minHeight={{ xs: "auto", md: "80vh" }}
         width="100%"
         sx={{
           backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), url(${bgImage})`,
@@ -254,8 +232,8 @@ function Presentation() {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          pt: { xs: 12, md: 0 },
-          pb: { xs: 6, md: 0 },
+          pt: { xs: 12, md: 14 },
+          pb: { xs: 6, md: 8 },
           "&::before": {
             content: '""',
             position: "absolute",
@@ -1042,41 +1020,19 @@ function Presentation() {
                   Lokasi Bengkel
                 </MKTypography>
                 <MKBox
-                  ref={mapRef}
-                  sx={{
-                    position: "relative",
-                    width: "100%",
-                    height: "300px",
-                    borderRadius: "lg",
-                    overflow: "hidden",
-                    backgroundColor: "#e0e0e0",
-                  }}
+                  component="a"
+                  href="https://www.google.com/maps/search/?api=1&query=JL.Bambu%20Kuning%20RT%20006%20RW%20001%20Pondok%20Petir%20Bojongsari%20Kota%20Depok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Buka alamat bengkel di Google Maps"
+                  sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", minHeight: 180, p: 3, borderRadius: "lg", backgroundColor: "#f0f4f8", textAlign: "center" }}
                 >
-                  {loadMap ? (
-                    <MKBox
-                      component="iframe"
-                      title="Lokasi Bengkel Indian Jaya Las"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3234567890!2d106.7525!3d-6.3906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjMnMjYuMiJTIDEwNsKwNDUnMDkuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
-                      width="100%"
-                      height="300"
-                      sx={{ border: 0 }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  ) : (
-                    <MKBox
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        height: "100%",
-                        color: "text.secondary",
-                      }}
-                    >
-                      <MKTypography variant="body2">Loading map...</MKTypography>
-                    </MKBox>
-                  )}
+                  <MKTypography variant="body1" fontWeight="bold" color="info">
+                    Buka alamat bengkel di Google Maps
+                  </MKTypography>
+                  <MKTypography variant="body2" color="text" mt={1}>
+                    Cari alamat dan petunjuk arah ke bengkel. Peta dibuka di tab baru.
+                  </MKTypography>
                 </MKBox>
                 <MKTypography variant="body2" color="text" mt={2}>
                   <strong>Alamat:</strong> JL.BAMBU KUNING RT 006 RW 001 PONDOK PETIR BOJONGSARI
@@ -1106,6 +1062,12 @@ function Presentation() {
       </MKBox>
 
       <MKBox
+        component="a"
+        href="https://wa.me/6281212154019"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat WhatsApp Indian Jaya"
+        display="block"
         position="fixed"
         bottom={{ xs: "35px", lg: "40px" }}
         right={{ xs: "25px", lg: "50px" }}
@@ -1115,7 +1077,6 @@ function Presentation() {
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.)",
           borderRadius: "50%",
         }}
-        onClick={() => window.open("https://wa.me/6281212154019", "_blank")}
       >
         <img
           src="/wa.webp"

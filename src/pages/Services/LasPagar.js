@@ -18,6 +18,7 @@ import pagarImage from "assets/images/pagar/pagar1.webp";
 
 function LasPagar() {
   const handleWhatsApp = () => {
+    if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { event_category: "conversion" });
     window.open(
       "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las pagar",
       "_blank"

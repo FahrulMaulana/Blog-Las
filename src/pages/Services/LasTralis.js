@@ -16,6 +16,7 @@ import bgImage from "assets/images/teralis/teralis4.jpg";
 
 function LasTralis() {
   const handleWhatsApp = () => {
+    if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { event_category: "conversion" });
     window.open(
       "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las tralis",
       "_blank"

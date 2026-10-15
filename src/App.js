@@ -84,7 +84,7 @@ export default function App() {
                 path="/blog/harga-jasa-las-terbaru-2026"
                 element={<HargaJasaLasTerbaru2026 />}
               />
-              <Route path="/jasa-las-:location" element={<LocationPage />} />
+              <Route path="/:locationSlug" element={<LocationPage />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </Suspense>

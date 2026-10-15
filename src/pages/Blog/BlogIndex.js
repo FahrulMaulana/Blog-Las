@@ -70,6 +70,18 @@ function BlogIndex() {
           content="blog las, artikel kanopi, harga las 2026, tips memilih tukang las, panduan las"
         />
         <link rel="canonical" href="https://indianjayalas.com/blog" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "@id": "https://indianjayalas.com/blog#blog",
+            url: "https://indianjayalas.com/blog",
+            name: "Blog & Artikel Seputar Jasa Las",
+            description: "Tips, Panduan, dan Update Harga Terbaru",
+            inLanguage: "id-ID",
+            publisher: { "@type": "Organization", name: "Indian Jaya Las", url: "https://indianjayalas.com" },
+          })}
+        </script>
       </Helmet>
 
       <DefaultNavbar

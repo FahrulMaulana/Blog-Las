@@ -18,6 +18,7 @@ import kanopiImage from "assets/images/kanopi11.jpg";
 
 function LasKanopi() {
   const handleWhatsApp = () => {
+    if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { event_category: "conversion" });
     window.open(
       "https://wa.me/6281212154019?text=Halo, saya ingin konsultasi tentang jasa las kanopi",
       "_blank"

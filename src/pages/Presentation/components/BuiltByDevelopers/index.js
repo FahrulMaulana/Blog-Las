@@ -39,11 +39,11 @@ function BuiltByDevelopers() {
     >
       <Container>
         <Grid container item xs={12} lg={10} sx={{ ml: { xs: 0, lg: 5 }, textAlign: "justify" }}>
-          <MKTypography variant="h1" color="white" mb={1}>
+          <MKTypography variant="h2" color="white" mb={1}>
             Tentang Kami
           </MKTypography>
           <MKTypography variant="body2" color="white" opacity={0.8} mb={2}>
-            Bengkel Las India Jaya adalah mitra terpercaya Anda dalam jasa las berkualitas yang
+            Bengkel Las Indian Jaya adalah mitra terpercaya Anda dalam jasa las berkualitas yang
             telah berdiri selama lebih dari 15 tahun. Berlokasi di Jl. Bambu Kuning RT 006 RW 001,
             Pondok Petir, Bojongsari, Kota Depok, kami telah menjadi pilihan utama bagi masyarakat
             sekitar dalam memenuhi kebutuhan las, konstruksi, dan pembuatan produk berbahan dasar

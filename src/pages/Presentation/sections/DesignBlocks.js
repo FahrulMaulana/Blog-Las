@@ -13,9 +13,6 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// react-router-dom components
-import { Link } from "react-router-dom";
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -46,11 +43,11 @@ function DesignBlocks() {
       </Grid>
       <Grid item xs={12} lg={9}>
         <Grid container spacing={3}>
-          {items.map(({ image, name, count, route, pro }, index) => (
+          {items.map(({ image, name, count, pro }, index) => (
             <Grid item xs={12} md={4} sx={{ mb: 2 }} key={`${title}-${index}`}>
-              <Link to={pro ? "/" : route || "/"} aria-label={`Lihat gambar ${title} ${index + 1}`}>
-                <ExampleCard image={image} name={name} count={count} pro={pro} />
-              </Link>
+              <a href={image} target="_blank" rel="noopener noreferrer" aria-label={`Lihat gambar ${title} ${index + 1} ukuran penuh`}>
+                <ExampleCard image={image} alt={`Contoh produk ${title} Indian Jaya ${index + 1}`} name={name} count={count} pro={pro} />
+              </a>
             </Grid>
           ))}
         </Grid>
@@ -89,7 +86,6 @@ function DesignBlocks() {
           <MKTypography variant="h2" fontWeight="bold">
             Produk Kami
           </MKTypography>
-          <MKTypography variant="body1" color="text"></MKTypography>
         </Grid>
       </Container>
       <Container sx={{ mt: 6 }}>{renderData}</Container>

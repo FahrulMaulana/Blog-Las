@@ -20,6 +20,13 @@ import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("root");
 
+// Keep the static snapshot until the app bundle is ready. Browser snapshots
+// are not React SSR markup and must not be hydrated.
+if (container.dataset.prerendered === "true") {
+  container.replaceChildren();
+  delete container.dataset.prerendered;
+}
+
 if (container.hasChildNodes()) {
   hydrateRoot(
     container,

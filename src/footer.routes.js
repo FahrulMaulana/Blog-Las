@@ -16,16 +16,20 @@ export default {
   menus: [
     {
       name: "Informasi Kami :",
-      items: [{ name: "Home" }, { name: "Produk" }, { name: "Kontak" }],
+      items: [
+        { name: "Home", href: "/#home" },
+        { name: "Produk", href: "/#portfolio" },
+        { name: "Kontak", href: "/#kontak" },
+      ],
     },
     {
       name: "Layanan Kami :",
       items: [
-        { name: "Kanopi" },
-        { name: "Pagar" },
-        { name: "Tangga" },
-        { name: "Teralis" },
-        { name: "Kusen Alumuniumium" },
+        { name: "Kanopi", route: "/las-kanopi" },
+        { name: "Pagar", route: "/las-pagar" },
+        { name: "Tangga", href: "/#portfolio" },
+        { name: "Teralis", route: "/las-tralis" },
+        { name: "Kusen Alumunium", href: "/#kontak" },
         // { name: "bits & snippets", href: "https://www.creative-tim.com/bits" },
         // { name: "affiliate program", href: "https://www.creative-tim.com/affiliates/new" },
       ],
@@ -42,7 +46,7 @@ export default {
       items: [
         {
           name: "JL.Bambu Kuning RT 006 RW 001 Pondok Petir Bojongsari Kota Depok.",
-          href: "https://www.creative-tim.com/terms",
+          href: "https://www.google.com/maps/search/?api=1&query=JL.Bambu%20Kuning%20RT%20006%20RW%20001%20Pondok%20Petir%20Bojongsari%20Kota%20Depok",
         },
       ],
     },

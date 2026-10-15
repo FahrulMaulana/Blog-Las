@@ -33,7 +33,7 @@ import MKTypography from "components/MKTypography";
 // Material Kit 2 React example components
 import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 
-function DefaultNavbarMobile({ routes, open }) {
+function DefaultNavbarMobile({ routes, open, onClose }) {
   const [collapse, setCollapse] = useState("");
 
   const handleSetCollapse = (name) => (collapse === name ? setCollapse(false) : setCollapse(name));
@@ -46,6 +46,7 @@ function DefaultNavbarMobile({ routes, open }) {
         icon={icon}
         collapseStatus={name === collapse}
         onClick={() => {
+          if (!navCollapse && onClose) onClose();
           if (typeof route === "function") {
             route();
             setCollapse("");
@@ -160,7 +161,7 @@ function DefaultNavbarMobile({ routes, open }) {
   );
 
   return (
-    <Collapse in={Boolean(open)} timeout="auto" unmountOnExit>
+    <Collapse id="mobile-navigation" in={Boolean(open)} timeout="auto" unmountOnExit onKeyDown={(event) => { if (event.key === "Escape" && onClose) onClose(); }}>
       <MKBox width="calc(100% + 1.625rem)" my={2} ml={-2}>
         {renderNavbarItems}
       </MKBox>
@@ -170,6 +171,7 @@ function DefaultNavbarMobile({ routes, open }) {
 
 // Typechecking props for the DefaultNavbarMobile
 DefaultNavbarMobile.propTypes = {
+  onClose: PropTypes.func,
   routes: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   open: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
 };

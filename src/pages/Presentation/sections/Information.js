@@ -42,7 +42,7 @@ function Information() {
                 icon="phone"
                 title={
                   <>
-                    Indian jaya
+                    Indian Jaya
                     <br />
                     081212154019
                   </>

@@ -16,6 +16,7 @@ import lasImage from "assets/images/las.jpg";
 
 function LasPanggilan() {
   const handleWhatsApp = () => {
+    if (typeof window.gtag === "function") window.gtag("event", "whatsapp_click", { event_category: "conversion" });
     window.open(
       "https://wa.me/6281212154019?text=Halo, saya ingin panggil tukang las ke lokasi",
       "_blank"

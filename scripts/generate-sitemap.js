@@ -17,6 +17,13 @@ const pages = [
   { url: "/jasa-las-pamulang", priority: "0.8", changefreq: "monthly" },
   { url: "/jasa-las-bsd", priority: "0.8", changefreq: "monthly" },
   { url: "/jasa-las-ciputat", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-jakarta-selatan", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-bogor", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-bekasi", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-tangerang", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-sawangan", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-parung", priority: "0.8", changefreq: "monthly" },
+  { url: "/jasa-las-cinere", priority: "0.8", changefreq: "monthly" },
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

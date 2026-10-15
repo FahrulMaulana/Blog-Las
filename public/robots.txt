@@ -8,5 +8,27 @@ Disallow: /dashboard/
 Disallow: /private/
 Disallow: /api/
 
+# AI Search Crawlers — Allow ALL for maximum visibility in AI answers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+
 # Sitemap location
 Sitemap: https://indianjayalas.com/sitemap.xml
